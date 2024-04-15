@@ -1,7 +1,6 @@
-// HomePage.jsx
-
 import React from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image'; // Import next/image
 
 const HomePage = () => {
   const router = useRouter();
@@ -13,8 +12,11 @@ const HomePage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Header Section */}
-      <header className="bg-gray-800 text-white py-4 px-6">
-        <h1 className="text-4xl font-bold">Welcome to My Next.js Homepage</h1>
+      <header className="bg-blue-500 text-white py-1 px-6 flex items-center justify-between">
+        {/* Display the image using next/image */}
+        <Image src="/images/MIU.png" alt="Logo" width={40} height={30} />
+
+        <h1 className="text-4xl font-bold">Mongolia International University</h1>
       </header>
 
       {/* Main Content */}
