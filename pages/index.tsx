@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image
+import Header from '../components/header'; // Import Header component
 
 const HomePage = () => {
   const router = useRouter();
@@ -9,15 +9,14 @@ const HomePage = () => {
     router.push('/about');
   };
 
+  const navigateToApply = () => {
+    router.push('/apply');
+  };
+
   return (
     <div className="bg-white min-h-screen">
-      {/* Header Section */}
-      <header className="bg-blue-500 text-white py-1 px-6 flex items-center ">
-        {/* Display the image using next/image */}
-        <Image src="/images/MIU.png" alt="Logo" width={40} height={30} />
-
-        <h1 className="text-2xl font-bold pl-5">Mongolia International University</h1>
-      </header>
+      {/* Use the Header component */}
+      <Header />
 
       {/* Main Content */}
       <div className="p-8">
@@ -27,6 +26,12 @@ const HomePage = () => {
           onClick={navigateToAbout}
         >
           Go to About Us
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4"
+          onClick={navigateToApply} // Call navigateToApply on button click
+        >
+          Apply
         </button>
       </div>
     </div>
