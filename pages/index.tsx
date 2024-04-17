@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Header from '../components/header'; // Import Header component
 import Menu from '../components/menu'; // Import Menu component
-
+import Footer from '@/components/footer';
 const HomePage = () => {
   const router = useRouter();
 
@@ -16,9 +16,45 @@ const HomePage = () => {
       <Menu />
 
       {/* Main Content */}
-      <div className="p-8">
+      <div className="p-8 ">
         <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
       </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      
+      <Footer/>
     </div>
   );
 };
