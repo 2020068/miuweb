@@ -26,8 +26,20 @@
       rgb(var(--background-start-rgb));
   }
 
-  @layer utilities {
-    .text-balance {
-      text-wrap: balance;
-    }
-  }
+
+h1 {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: 'Helvetica', sans-serif;
+}
+
+h3 {
+  font-family: 'Helvetica', sans-serif;
+}
+button{
+  font-family: 'Helvetica';
+}

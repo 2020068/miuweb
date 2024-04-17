@@ -1,0 +1,45 @@
+
+.container {
+    color: black;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+.box {
+  background-color: #01298E;
+  width: 80%;
+  border-radius: 60px;
+  padding: 2px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.box h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.logoContainer {
+    background-color: #0073ff;
+    display: inline-block;
+    border-radius: 45px;
+    
+}
+
+.background-image {
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    background-image: url('/images/LEIbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
