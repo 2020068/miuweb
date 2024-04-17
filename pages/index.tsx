@@ -16,7 +16,41 @@ const HomePage = () => {
       <Menu />
 
       {/* Main Content */}
-      <div className="p-8">
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
         <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
       </div>
       
