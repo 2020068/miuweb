@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --foreground-color: #000; /* Default foreground color */
   --background-color: #fff; /* Default background color */
@@ -7,9 +8,18 @@
   :root {
     --foreground-color: #fff; /* Light mode foreground color */
     --background-color: #000; /* Light mode background color */
+=======
+/** @format */
+
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+>>>>>>> e3efd586cdb22118468413318d4866d618b85d29
   }
 }
 
+<<<<<<< HEAD
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
@@ -17,6 +27,20 @@ body {
 }
 @media (max-width: 768px) {
   /* Adjustments for tablets and mobile devices */
+=======
+  @media (prefers-color-scheme: light) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 255, 255, 255;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+  @import "tailwindcss/base";
+  @import "tailwindcss/components";
+  @import "tailwindcss/utilities";
+
+>>>>>>> e3efd586cdb22118468413318d4866d618b85d29
   body {
     font-size: 14px;
   }
@@ -32,6 +56,7 @@ body {
 
 
 
+<<<<<<< HEAD
 h1 {
 font-family: 'Helvetica';
 font-style: italic;
@@ -73,4 +98,49 @@ button.secondary {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+=======
+
+/* teacher-swiper.css */
+
+.teacher-swiper {
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  margin: 0 auto;
+  position: relative;
+}
+
+.teacher-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.teacher-profile img {
+  width: 100%;
+  max-width: 200px; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.teacher-info {
+  text-align: center;
+}
+
+.teacher-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.teacher-info p {
+  font-size: 1rem;
+  color: blue;
+>>>>>>> e3efd586cdb22118468413318d4866d618b85d29
 }
