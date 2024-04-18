@@ -1,36 +1,76 @@
+:root {
+  --foreground-color: #000; /* Default foreground color */
+  --background-color: #fff; /* Default background color */
+}
+
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 255,255,255;
-    --background-end-rgb: 255, 255, 255;
+    --foreground-color: #fff; /* Light mode foreground color */
+    --background-color: #000; /* Light mode background color */
+  }
+}
+
+body {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  /* Adjustments for tablets and mobile devices */
+  body {
+    font-size: 14px;
   }
 
-  @media (prefers-color-scheme: light) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 255, 255, 255;
-      --background-end-rgb: 0,0,0;
-    }
+  h1 {
+    font-size: 2rem;
   }
+}
 
-  @import 'tailwindcss/base';
-  @import 'tailwindcss/components';
-  @import 'tailwindcss/utilities';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 
 
 h1 {
-  font-family: 'Helvetica';
-  font-style: italic;
-  font-weight: 300;
+font-family: 'Helvetica';
+font-style: italic;
+font-weight: 300;
 }
 
 h2 {
-  font-family: 'Helvetica', sans-serif;
+font-family: 'Helvetica', sans-serif;
 }
 
 h3 {
-  font-family: 'Helvetica', sans-serif;
+font-family: 'Helvetica', sans-serif;
 }
-button{
-  font-family: 'Helvetica';
+button {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Example of button color variants */
+button.primary {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+}
+
+button.secondary {
+  background-color: #6c757d; /* Gray */
+  color: #fff;
+}
+
+/* Responsive button styles */
+@media (max-width: 768px) {
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 }
