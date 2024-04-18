@@ -7,7 +7,7 @@ import TeacherSwiper from "../components/slideshow/slideshow";
 
 // Sample data for teachers
 import { teachers } from "@/components/teachers";
-
+import Footer from '@/components/footer';
 const HomePage = () => {
   return (
     <div className='bg-white min-h-screen'>
@@ -16,11 +16,49 @@ const HomePage = () => {
       {/* Pass the 'teachers' data as a prop to the TeacherSwiper component */}
       <TeacherSwiper teachers={teachers} />
       {/* Main Content */}
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div>
+      <div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
+      </div><div className="p-8 ">
+        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
       <div className='p-8'>
         <p className='text-lg text-gray-700 mb-4'>
           This is the content of the homepage.
         </p>
       </div>
+      
+      <Footer/>
     </div>
   );
 };
