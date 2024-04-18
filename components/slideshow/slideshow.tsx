@@ -1,157 +1,52 @@
 /** @format */
 
-import React, { useEffect } from "react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper-bundle.min.js";
-import "../styles/slide.css";
-import Swiper from "swiper";
+import React, { useState } from "react";
+import Image from "next/image";
 
-const SlideShow: React.FC = () => {
-  useEffect(() => {
-    const swiper = new Swiper("..swiper-container", {
-      // Swiper options here...
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  }, []);
+interface Teacher {
+  name: string;
+  image: string; // Update the type to string for the image URL
+  description: string;
+}
+
+interface TeacherSwiperProps {
+  teachers: Teacher[];
+}
+
+const TeacherSwiper: React.FC<TeacherSwiperProps> = ({ teachers }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === teachers.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? teachers.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
-    <div className='slide-container swiper'>
-      <div className='slide-content'>
-        <div className='card-wrapper swiper-wrapper'>
-          <div className='card swiper-slide'>
-            <div className='image-content'>
-              <span className='overlay'></span>
-              <div className='card-image'>
-                <img
-                  src='../../public/images/slideimg/profile1.jpg'
-                  alt=''
-                  className='card-img'
-                />
-              </div>
-            </div>
-
-            <div className='card-content'>
-              <h2 className='name'>CS teacher</h2>
-              <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vestibulum, arcu vitae consequat molestie, ligula ipsum viverra
-                mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc
-                vitae arcu ultricies sollicitud
-              </p>
-
-              <button className='button'>View more</button>
-            </div>
-          </div>
-          <div className='card swiper-slide'>
-            <div className='image-content'>
-              <span className='overlay'></span>
-              <div className='card-image'>
-                <img
-                  src='../../public/images/slideimg/profile2.jpg'
-                  alt=''
-                  className='card-img'
-                />
-              </div>
-            </div>
-
-            <div className='card-content'>
-              <h2 className='name'>CS teacher</h2>
-              <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vestibulum, arcu vitae consequat molestie, ligula ipsum viverra
-                mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc
-                vitae arcu ultricies sollicitud
-              </p>
-
-              <button className='button'>View more</button>
-            </div>
-          </div>
-          <div className='card swiper-slide'>
-            <div className='image-content'>
-              <span className='overlay'></span>
-              <div className='card-image'>
-                <img
-                  src='../../public/images/slideimg/profile3.jpg'
-                  alt=''
-                  className='card-img'
-                />
-              </div>
-            </div>
-
-            <div className='card-content'>
-              <h2 className='name'>CS teacher</h2>
-              <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vestibulum, arcu vitae consequat molestie, ligula ipsum viverra
-                mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc
-                vitae arcu ultricies sollicitud
-              </p>
-
-              <button className='button'>View more</button>
-            </div>
-          </div>
-          <div className='card swiper-slide'>
-            <div className='image-content'>
-              <span className='overlay'></span>
-              <div className='card-image'>
-                <img
-                  src='../../public/images/slideimg/profile4.jpg'
-                  alt=''
-                  className='card-img'
-                />
-              </div>
-            </div>
-
-            <div className='card-content'>
-              <h2 className='name'>CS teacher</h2>
-              <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vestibulum, arcu vitae consequat molestie, ligula ipsum viverra
-                mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc
-                vitae arcu ultricies sollicitud
-              </p>
-
-              <button className='button'>View more</button>
-            </div>
-          </div>
-          <div className='card swiper-slide'>
-            <div className='image-content'>
-              <span className='overlay'></span>
-              <div className='card-image'>
-                <img
-                  src='../../public/images/slideimg/profile5.jpg'
-                  alt=''
-                  className='card-img'
-                />
-              </div>
-            </div>
-
-            <div className='card-content'>
-              <h2 className='name'>CS teacher</h2>
-              <p className='description'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vestibulum, arcu vitae consequat molestie, ligula ipsum viverra
-                mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc
-                vitae arcu ultricies sollicitud
-              </p>
-
-              <button className='button'>View more</button>
-            </div>
-          </div>
+    <div className='teacher-swiper'>
+      <button onClick={prevSlide}>Prev</button>
+      <div className='teacher-profile'>
+        {/* Use the Image component with the correct source */}
+        <Image
+          src={teachers[currentIndex].image}
+          alt={teachers[currentIndex].name}
+          width={200} // Specify the width of the image
+          height={200} // Specify the height of the image
+        />
+        <div className='teacher-info'>
+          <h2>{teachers[currentIndex].name}</h2>
+          <p>{teachers[currentIndex].description}</p>
         </div>
       </div>
-      <div className='swiper-button-next swiper-navBtn'></div>
-      <div className='swiper-button-prev swiper-navBtn'></div>
-      <div className='swiper-pagination'></div>
+      <button onClick={nextSlide}>Next</button>
     </div>
   );
 };
 
-export default SlideShow;
+export default TeacherSwiper;
