@@ -21,11 +21,7 @@ const Menu = () => {
     setShowPrograms(!showPrograms);
   };
 
-  const navigateToPrograms = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    // Get the program value from the button element
-    const program = event.currentTarget.getAttribute('data-program');
-    
-    // Navigate to the programs page
+  const navigateToPrograms = (program:string) => {
     router.push(`/programs/${program}`);
   };
   const navigateToMenu = () => {
@@ -82,13 +78,30 @@ const Menu = () => {
         </button>
         <button
           className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]"
-          onClick={navigateToPrograms }
+          onClick={() => navigateToPrograms('see-all') }
         >
           Programs
         </button>
+        {showPrograms && (
+          <div className="absolute z-10 right-0 mt-2 bg-white border border-gray-200 rounded program-list-container">
+            <button
+              className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
+              onClick={() => navigateToPrograms('academic-programs')}
+            >
+              academic-programs
+            </button>
+            <button
+              className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
+              onClick={() => navigateToPrograms('LEIPage')}
+            >
+              LEI
+            </button>
+            {/* Add more program buttons as needed */}
+          </div>
+        )}
       </div>
     </div>
-  );
+  ); 
 };
 
 export default Menu;

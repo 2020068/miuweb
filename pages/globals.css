@@ -1,8 +1,6 @@
-/** @format */
-
   :root {
     --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 255, 255, 255;
+    --background-start-rgb: 255,255,255;
     --background-end-rgb: 255, 255, 255;
   }
 
@@ -10,66 +8,29 @@
     :root {
       --foreground-rgb: 255, 255, 255;
       --background-start-rgb: 255, 255, 255;
-      --background-end-rgb: 0, 0, 0;
+      --background-end-rgb: 0,0,0;
     }
   }
 
-  @import "tailwindcss/base";
-  @import "tailwindcss/components";
-  @import "tailwindcss/utilities";
-
-  body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  }
+  @import 'tailwindcss/base';
+  @import 'tailwindcss/components';
+  @import 'tailwindcss/utilities';
 
 
 
-/* teacher-swiper.css */
-
-.teacher-swiper {
-  width: 100%;
-  max-width: 600px; /* Adjust width as needed */
-  margin: 0 auto;
-  position: relative;
+h1 {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: 300;
 }
 
-.teacher-profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+h2 {
+  font-family: 'Helvetica', sans-serif;
 }
 
-.teacher-profile img {
-  width: 100%;
-  max-width: 200px; /* Adjust image width as needed */
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
+h3 {
+  font-family: 'Helvetica', sans-serif;
 }
-
-.teacher-info {
-  text-align: center;
-}
-
-.teacher-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: blue;
-}
-
-.teacher-info p {
-  font-size: 1rem;
-  color: blue;
+button{
+  font-family: 'Helvetica';
 }
