@@ -57,7 +57,7 @@ const HomePage = () => {
           This is the content of the homepage.
         </p>
       </div>
-      
+      </div>
       <Footer/>
     </div>
   );
