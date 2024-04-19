@@ -78,7 +78,7 @@ const Menu = () => {
         </button>
         <button
           className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]"
-          onClick={() => navigateToPrograms('see-all') }
+          onClick={() => togglePrograms() }
         >
           Programs
         </button>
@@ -92,7 +92,7 @@ const Menu = () => {
             </button>
             <button
               className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
-              onClick={() => navigateToPrograms('LEIPage')}
+              onClick={() => navigateToPrograms('LEI')}
             >
               LEI
             </button>
