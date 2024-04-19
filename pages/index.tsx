@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Header from '../components/header'; // Import Header component
 import Menu from '../components/menu'; // Import Menu component
 import Footer from '@/components/footer';
+import Spline from '@splinetool/react-spline';
 const HomePage = () => {
   const router = useRouter();
 
