@@ -63,3 +63,6 @@ font-family: 'Helvetica', sans-serif;
     padding: 0.5rem 1rem;
   }
 }
+.-translate-x-full {
+  --tw-translate-x: -160%;
+}
