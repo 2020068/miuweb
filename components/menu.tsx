@@ -1,47 +1,73 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { MenuIcon, SearchIcon, EventIcon } from '../assets/iconImports';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { MenuIcon, SearchIcon, EventIcon } from "../assets/iconImports";
+import Link from "next/link";
+
 const Menu = () => {
   const router = useRouter();
   const [showPrograms, setShowPrograms] = useState(false);
-  
+  const [hoverPrograms, setHoverPrograms] = useState(false);
+  const [sidebarMenuOpen, setSidebarMenuOpen] = useState(false);
+
   const navigateToAbout = () => {
-    router.push('/about');
+    router.push("/about");
   };
 
   const navigateToApply = () => {
-    router.push('/apply');
+    router.push("/apply");
   };
 
   const navigateToVisit = () => {
-    router.push('/visit');
+    router.push("/visit");
   };
 
   const togglePrograms = () => {
     setShowPrograms(!showPrograms);
   };
 
-  const navigateToPrograms = (program:string) => {
+  const navigateToPrograms = (program: string) => {
     router.push(`/programs/${program}`);
   };
-  const navigateToMenu = () => {
-    console.log('Navigate to Menu');
-    // Add logic to toggle menu visibility or close the menu
+
+  const handleHover = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (event.type === "mouseenter") {
+      setHoverPrograms(true);
+    } else {
+      setHoverPrograms(false);
+    }
   };
 
-  const navigateToSearch = () => {
-    console.log('Navigate to Search');
-    // Add logic to navigate to search page
-  };
-
-  const navigateToNewsEvents = () => {
-    console.log('Navigate to News-Events');
-    // Add logic to navigate to news-events page
+  const toggleSidebarMenu = () => {
+    setSidebarMenuOpen(!sidebarMenuOpen);
   };
 
   return (
-    <div className="fixed top-0 right-0 h-screen  bg-gray-500 bg-opacity-0 transform mt-8 -translate-y-1/2 "> {/* Set z-index to 10 to ensure the menu is above other content */}
+    <div>
+      {/* Main Menu */}
+      <div
+        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0 transform mt-8
+       ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
+        -translate-y-1/2 transition-transform duration-500 ease-in-out`}
+      >
+        <div className="flex flex-col items-end justify-end h-full">
+          {/* Larger Buttons */}
+          <button
+            className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
+            onClick={toggleSidebarMenu}
+          >
+            <MenuIcon />
+            Menu
+          </button>
+          <button className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]">
+            <SearchIcon />
+            Search
+          </button>
+          <button className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]">
+            <EventIcon />
+            News-Events
+          </button>
 
+<<<<<<< HEAD
       <div className="flex flex-col items-end justify-end h-full">
         {/* Larger Buttons */}
         <button
@@ -84,12 +110,33 @@ const Menu = () => {
         </button>
         {showPrograms && (
           <div className="absolute z-10 right-0 mt-2 bg-white border border-gray-200 rounded program-list-container">
+=======
+          {/* Smaller Buttons */}
+          <Link
+            className="bg-white-500 hover:bg-blue-700 text-center text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
+            href="/apply"
+          >
+            Apply
+          </Link>
+          <button
+            className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
+            onClick={navigateToVisit}
+          >
+            Visit
+          </button>
+          <div
+            className={`relative`}
+            onMouseEnter={() => setHoverPrograms(true)}
+            onMouseLeave={() => setHoverPrograms(false)}
+          >
+>>>>>>> 618a11a64e86cd29b6f8efeec4859087fd75e8ef
             <button
-              className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
-              onClick={() => navigateToPrograms('academic-programs')}
+              className={`bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]`}
+              onClick={() => navigateToPrograms("see-all")}
             >
-              academic-programs
+              Programs
             </button>
+<<<<<<< HEAD
             <button
               className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
               onClick={() => navigateToPrograms('LEI')}
@@ -97,11 +144,60 @@ const Menu = () => {
               LEI
             </button>
             {/* Add more program buttons as needed */}
+=======
+            {hoverPrograms && (
+              <div className="absolute z-10 right-0 bg-white border border-gray-200 rounded">
+                <button
+                  className="block w-full px-4 py-2 text-blue-500 text-gray-800 hover:bg-blue-100"
+                  onClick={() => navigateToPrograms("academic-programs")}
+                >
+                  academic-programs
+                </button>
+                <button
+                  className="block w-full px-4 py-2 text-blue-500 text-gray-800 hover:bg-blue-100"
+                  onClick={() => navigateToPrograms("LEI")}
+                >
+                  LEI
+                </button>
+                {/* Add more program buttons as needed */}
+              </div>
+            )}
+>>>>>>> 618a11a64e86cd29b6f8efeec4859087fd75e8ef
           </div>
-        )}
+        </div>
+      </div>
+      {/* Sidebar Menu */}
+      <div
+        className={`fixed top-0 right-0 h-screen w-64 bg-blue-700 z-50
+         ${
+           sidebarMenuOpen ? "-translate-x-0" : "translate-x-[100%]"
+         } transition-transform duration-500 ease-in-out`}
+      >
+        <div>
+          <p className="text-white text-lg font-semibold mt-4 ml-4">
+            Sidebar Menu
+          </p>
+          <ul className="mt-2">
+            <li className="text-white ml-4 mt-2 cursor-pointer">
+              <Link href="/about">About MIU</Link>
+            </li>
+            <li className="text-white ml-4 mt-2 cursor-pointer">
+              <Link href="/academics">Academics</Link>
+            </li>
+            <li className="text-white ml-4 mt-2 cursor-pointer">
+              <Link href="/admission">Admission</Link>
+            </li>
+            <li className="text-white ml-4 mt-2 cursor-pointer">
+              <Link href="/miu-life">MIU Life</Link>
+            </li>
+            <li className="text-white ml-4 mt-2 cursor-pointer">
+              <Link href="/LEI">LEI</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  ); 
+  );
 };
 
 export default Menu;
