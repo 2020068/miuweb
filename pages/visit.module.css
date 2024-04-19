@@ -1,0 +1,33 @@
+  .miulogo {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .miulgo img {
+    width: 50px; 
+    height: 100px; 
+  }
+
+  .visit_photo {
+    position: absolute; /* Use absolute position to hold the photo in place */
+    top: 0; /* Position from the top of the viewport */
+    width: 100%;
+    height: 70%; /* Set height to 70% of viewport height */
+    opacity: 0.3; /* Adjust opacity if needed */
+    background-image: url('../public/images/visit_image.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire element with the background image */
+    background-position: center; /* Center the background image */
+    z-index: -1; /* Set a z-index lower than other content to ensure it's in the background */
+  }
+  
+  .menu {
+    z-index: 999;
+    position: relative;
+  }
+
+  .background {
+    background-color: white;
+    width: 100%;
+    height: 30vh; /* Adjusted height to 30% of viewport height */
+  }
