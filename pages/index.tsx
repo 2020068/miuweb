@@ -8,6 +8,7 @@ import TeacherSwiper from "../components/slideshow/slideshow";
 // Sample data for teachers
 import { teachers } from "@/components/teachers";
 import Footer from '@/components/footer';
+import Spline from '@splinetool/react-spline';
 const HomePage = () => {
   return (
     <div className='bg-white min-h-screen'>

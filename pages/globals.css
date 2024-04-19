@@ -61,6 +61,7 @@ body {
   border-radius: 50%;
   margin-bottom: 20px;
 }
+<<<<<<< HEAD
 
 .teacher-info {
   text-align: center;
@@ -75,4 +76,26 @@ body {
 .teacher-info p {
   font-size: 1rem;
   color: blue;
+=======
+.program-list-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+.showPrograms.program-list-container {
+  display: block;
+}
+/* Responsive button styles */
+@media (max-width: 768px) {
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+>>>>>>> daab9c12d5361f75f716b4c159b17fb6c249b36f
+}
+.-translate-x-full {
+  --tw-translate-x: -160%;
 }

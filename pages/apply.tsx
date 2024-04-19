@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '@/components/header';
- 
 
 const ApplyPage = () => {
   return (
@@ -27,6 +26,29 @@ const ApplyPage = () => {
           <label htmlFor="phoneNumber">Phone Number:</label>
           <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" />
         </div>
+        <div className="form-group">
+          <label htmlFor="registrationNo">Registration No.:</label>
+          <input type="text" id="registrationNo" name="registrationNo" placeholder="Enter your registration number" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="programFirstChoice">Program of Study (1st choice):</label>
+          <select id="programFirstChoice" name="programFirstChoice">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business Administration">Business Administration</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="programSecondChoice">Program of Study (2nd choice):</label>
+          <select id="programSecondChoice" name="programSecondChoice">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business Administration">Business Administration</option>
+            {/* Add more options as needed */}
+          </select>
+        </div>
+        
         {/* Add more form fields for undergraduate application */}
         <button className="submit-btn">Submit</button>
       </div>
