@@ -2,39 +2,19 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { MenuIcon, SearchIcon, EventIcon } from "../assets/iconImports";
 import Link from "next/link";
+import Sidebar from "./sidebarmenu";
 
 const Menu = () => {
   const router = useRouter();
-  const [showPrograms, setShowPrograms] = useState(false);
   const [hoverPrograms, setHoverPrograms] = useState(false);
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState(false);
-
-  const navigateToAbout = () => {
-    router.push("/about");
-  };
-
-  const navigateToApply = () => {
-    router.push("/apply");
-  };
 
   const navigateToVisit = () => {
     router.push("/visit");
   };
 
-  const togglePrograms = () => {
-    setShowPrograms(!showPrograms);
-  };
-
-  const navigateToPrograms = (program: string) => {
+  const navigateToPrograms = (program:string) => {
     router.push(`/programs/${program}`);
-  };
-
-  const handleHover = (event: React.MouseEvent<HTMLButtonElement>) => {
-    if (event.type === "mouseenter") {
-      setHoverPrograms(true);
-    } else {
-      setHoverPrograms(false);
-    }
   };
 
   const toggleSidebarMenu = () => {
@@ -111,36 +91,9 @@ const Menu = () => {
           </div>
         </div>
       </div>
+
       {/* Sidebar Menu */}
-      <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-blue-700 z-50
-         ${
-           sidebarMenuOpen ? "-translate-x-0" : "translate-x-[100%]"
-         } transition-transform duration-500 ease-in-out`}
-      >
-        <div>
-          <p className="text-white text-lg font-semibold mt-4 ml-4">
-            Sidebar Menu
-          </p>
-          <ul className="mt-2">
-            <li className="text-white ml-4 mt-2 cursor-pointer">
-              <Link href="/about">About MIU</Link>
-            </li>
-            <li className="text-white ml-4 mt-2 cursor-pointer">
-              <Link href="/academics">Academics</Link>
-            </li>
-            <li className="text-white ml-4 mt-2 cursor-pointer">
-              <Link href="/admission">Admission</Link>
-            </li>
-            <li className="text-white ml-4 mt-2 cursor-pointer">
-              <Link href="/miu-life">MIU Life</Link>
-            </li>
-            <li className="text-white ml-4 mt-2 cursor-pointer">
-              <Link href="/LEI">LEI</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Sidebar isOpen={sidebarMenuOpen} />
     </div>
   );
 };
