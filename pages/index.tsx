@@ -15,6 +15,9 @@ const HomePage = () => {
 
       {/* Use the Menu component */}
       <Menu />
+     
+      <Spline className='splinescene' scene="https://prod.spline.design/1hmDomiBXtwbRtQZ/scene.splinecode" />
+      
 
       {/* Main Content */}
       <div className="p-8 ">
