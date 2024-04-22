@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
+const MongoliansvgUrl = 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg';
+const AmericansvgUrl = 'https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_the_U.S..svg';
 const Header = () => {
   const router = useRouter();
+  const [flag, setFlag] = useState(MongoliansvgUrl);
 
-  const navigateToAbout = () => {
-    router.push('/about');
+  const toggleFlag = () => {
+    setFlag(flag === MongoliansvgUrl ? AmericansvgUrl : MongoliansvgUrl);
   };
 
   return (
-    <header className="bg-blue-500 text-white py-1 px-6 flex items-center">
-      <Image src="/images/MIU.png" alt="Logo" width={40} height={30} />
-      <h1 className="text-2xl pl-5">Mongolia International University</h1>
-      {/* You can add more header elements here */}
+    <header className="bg-blue-500 text-white py-1 px-6 flex items-center justify-between">
+      <div className="flex items-center justify-center flex-grow">
+        <Image src="/images/MIU.png" alt="Logo" width={40} height={30} />
+      </div>
+      <div className="flex items-center">
+        <Image src={flag} width={40} height={30} alt="Flag" className="ml-2 z-10" onClick={toggleFlag} />
+      </div>
     </header>
   );
 };
