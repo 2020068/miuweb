@@ -17,7 +17,7 @@ const HomePage = () => {
   const router = useRouter();
 
   return (
-    <div className='bg-white min-h-screen'>
+    <div className='bg-white min-h-screen theme-light'>
       {/* Use the Header component */}
       <Header />
 

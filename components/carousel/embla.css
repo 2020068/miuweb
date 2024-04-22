@@ -149,6 +149,7 @@
 
 .embla__dot:after {
   box-shadow: 0 0 0 1px var(--brand-primary, rgb(47, 112, 193));
+  background-color: transparent;
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
