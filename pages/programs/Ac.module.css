@@ -234,6 +234,14 @@
 
     opacity: 1; 
 }
+.viewProgram {
+    display: none;
+}
+.Exbox1:hover .viewProgram:hover {
+    opacity: 1;
+    background-color: none;
+    color: #4070f4;
+}
 
 .Exbox2:hover .Eximg2 {
     margin-right: 400%;
@@ -250,7 +258,31 @@
     height: 100%;
 
 }
-
+.Exbox2:hover .TpTprogram {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    border-radius: 45px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; 
+    top: calc(90% + 5px); 
+    left: -50%; 
+    transform: translateX(-100%);
+    z-index: 30;
+    opacity: 1; 
+}
+.TpTprogram {
+    display: none;
+}
+.Exbox2:hover .TpTprogram:hover {
+    opacity: 1;
+    background-color: none;
+    color: #4070f4;
+}
 .Exbox3:hover .Eximg3 {
     margin-right: 400%;
     margin-top: -133.4%;
@@ -268,13 +300,7 @@
 
 }
 
-.viewProgram {
-    display: none;
-}
-.viewProgram:hover {
-    opacity: 1;
-    background-color: none;
-}
+
 
 .footer {
     grid-column: 1/4;

@@ -7,7 +7,10 @@ import { useRouter } from "next/router";
 const academicProgramPage: React.FC = () => {
   const router = useRouter();
   const navigateToUsProgram = () => {
-      router.push("Usprograms")
+      router.push("Usprograms");
+  }
+  const navigateToTpTprogram = () => {
+    router.push("TpTprogram");
   }
   return (
     <div className={styles.container}>
@@ -44,6 +47,10 @@ const academicProgramPage: React.FC = () => {
         </div>
         <div className={styles.Exbox2}>
           2+2 Program
+          <button className={styles.TpTprogram}
+           onClick={navigateToTpTprogram}>
+            See more
+          </button>
           <div className={styles.ExText2}>
             
 MIU undergraduate and graduate school students have a unique opportunity to receive concurrent diplomas from MIU and from a partner university in another state; the USA or Republic of Korea. Depending on the program, students study their first or two years at MIU and then continue their studies in one of our partnering universities; for undergraduate, The State University of New York, Albany (SUNY Albany) in the US, as for graduate, Hanyang University, and Chungnam National University in the Republic of Korea.
