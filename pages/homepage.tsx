@@ -18,10 +18,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Use the Header component */}
       <Header />
-
-      {/* Use the Menu component */}
       <div className="splinescene relative">
         <div className="absolute h-full w-full z-0">
           <img
