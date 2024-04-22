@@ -15,7 +15,6 @@
     z-index: 10;
   }
   
-
   .visit_photo {
     position: absolute; /* Use absolute position to hold the photo in place */
     top: 0; /* Position from the top of the viewport */
@@ -38,10 +37,11 @@
     width: 100%;
     height: 30vh; /* Adjusted height to 30% of viewport height */
   }
+
   .google_map {
     position: absolute;
     width: 90%;
-    height: 60%;
+    height: 70%;
     display: flex;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
@@ -55,7 +55,7 @@
     top: 72%; /* Position from the top of the viewport */
     left: 27.5%;
     width: 5%;
-    height: 17%; /* Set height to 70% of viewport height */
+    height: 10%; /* Set height to 70% of viewport height */
     border: rgba(0,0,0,1) solid 1px;
     }
 
@@ -63,8 +63,12 @@
     position: absolute;
     font-size: 75px; 
     color: black; 
-    margin-top: 41%;
-    margin-left: 33%;
+   /* margin-top: 41%;
+    margin-left: 33%; */
+    top: 70%;
+    left: 33%;
+    border: 10px solid black; /* Add a 10px solid black border */
+    padding: 20px 50px;
   }
 
   .footer {

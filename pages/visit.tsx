@@ -21,18 +21,13 @@ const VisitorPage: React.FC = () => {
       <div className={styles.google_map}> </div>
       <div className={styles.map}>
         <Link href="https://www.google.com/maps/place/Mongolia+International+University/@47.9146792,106.9711992,17z/data=!3m1!4b1!4m6!3m5!1s0x5d96919485d76a77:0xc3c65e3fb66fde11!8m2!3d47.9146756!4d106.9737741!16s%2Fm%2F02x0l38?entry=ttu" target="_blank">
-        
-          <Image src= '/images/map.png'  alt="Map Logo" width={100} height={100} />
-  
+          <Image src= '/images/map.png'  alt="Map Logo" width={200} height={200} />
         </Link>
       </div>
 
-         {/* Main Content */}
-   
          <div className= {styles.visit_comment}>
         <p>VISIT</p>
       </div>
-
 
            {/* Google Map */}
      <div className={styles.google_map}>
@@ -50,7 +45,6 @@ const VisitorPage: React.FC = () => {
               <Marker position={{ lat: 47.91485497895525, lng: 106.97356077908525 }} title="Mongolia International University" />
             </GoogleMap>
           </LoadScript>
-          
         </div>
 
       <div className={styles.footer}> <Footer/> </div>
