@@ -13,8 +13,11 @@ const academicProgramPage: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.menu}><Menu/></div>
       <div className={styles.backgroundImg}></div>
+      
       <div className={styles.logoContainer}>
+      <a href="/">
       <Image src="/images/MIU.png" alt="MIU logo" width={45} height={45} />
+      </a>
       </div>
       <div className={styles.box}>
         <h1>Mongolian International University</h1>

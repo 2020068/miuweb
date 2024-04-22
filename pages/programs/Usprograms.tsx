@@ -3,14 +3,60 @@ import Footer from "@/components/footer";
 import Menu from "@/components/menu";
 import styles from "./Us.module.css"
 import Image from "next/image";
+import { useRouter } from "next/router";
 const UsPrograms: React.FC = () => {
+    const router = useRouter();
+    const goToIM = () => {
+        router.push("departments/IM");
+    }
+    const goToMIM = () => {
+        router.push("departments/MIM");
+    }
+    const goToHTM = () => {
+        router.push("departments/HTM");
+    }
+    const goToCS = () => {
+        router.push("departments/CS");
+    }
+    const goToSE = () => {
+        router.push("departments/SE");
+    }
+    const goToMSE = () => {
+        router.push("departments/MSE");
+    }
+    const goToMC = () => {
+        router.push("departments/MC");
+    }
+    const goToIR = () => {
+        router.push("departments/IR");
+    }
+    const goToMPA = () => {
+        router.push("departments/MPA");
+    }
+    const goToEE = () => {
+        router.push("departments/EE");
+    }
+    const goToME = () => {
+        router.push("departments/ME");
+    }
+    const goToFLE = () => {
+        router.push("departments/FLE");
+    }
+    const goToFD = () => {
+        router.push("departments/FD");
+    }
+
+
+
 
     return(
         
         <div className={styles.container}>
             <div className={styles.backgroundImg}></div>
             <div className={styles.logoContainer}>
+            <a href="/">
             <Image src='/images/MIU.png' alt="MIU logo" width={45} height={45}/>
+            </a>
             </div>
             <div className={styles.menu}>
                 <Menu/>
@@ -24,67 +70,68 @@ const UsPrograms: React.FC = () => {
             <div className={styles.programBox1}>
                 School of Management
                 <div className={styles.PgText1}>
-                    <div className={styles.IM}>
+                    <button className={styles.IM}>
                         Department of International Management(IM)
-                        </div>
-                    <div className={styles.MIM}>
+                        </button>
+                    <button className={styles.MIM}>
                     Master In International Management(MIM)
-                    </div>
-                    <div className={styles.HTM}>
+                    </button>
+                    <button className={styles.HTM}>
                     Department of Hotel & Tourism Management(HTM)
-                    </div>
+                    </button>
                 </div>
                 </div>
             <div className={styles.programBox2}>
                 School of Computer Science
                 <div className={styles.PgText2}>
-                    <div className={styles.CS}>
+                    <button className={styles.CS}
+                    onClick={() => goToCS()}>
                         Department of Computer Science(CS)
-                        </div>
-                    <div className={styles.SE}>
+                        </button>
+                    <button className={styles.SE}>
                         Department of Software Engineering(SE)
-                        </div>
-                    <div className={styles.MSE}>
+                        </button>
+                    <button className={styles.MSE}>
                         Master In Software Engineering(MSE)
-                        </div>
+                        </button>
             
                 </div>
                 </div>
                 <div className={styles.programBox3}>
                 School of International Studies and Communication
                 <div className={styles.PgText3}>
-                    <div className={styles.IR}>
+                    <button className={styles.IR}>
                         Department of International Relations(IR)
-                        </div>
-                    <div className={styles.MC}>
+                        </button>
+                    <button className={styles.MC}>
                         Department of Media and Comunication(MC)
-                        </div>
-                    <div className={styles.MPA}>
+                        </button>
+                    <button className={styles.MPA}>
                         Master In Public Administration (MPA)
-                        </div>        
+                        </button>        
                 </div>
                 </div>
             <div className={styles.programBox4}>
                 Department of  Education
                 <div className={styles.PgText4}>
-                    <div className={styles.EE}>
+                    <button className={styles.EE}>
                     Department of English Education(EE)
-                        </div>
-                    <div className={styles.ME}>
+                        </button>
+                    <button className={styles.ME}>
                     Department of Music Education(ME)
-                        </div>
-                    <div className={styles.FLE}>
+                        </button>
+                    <button className={styles.FLE}>
                     Master In Foreign Language Education (FLE)
-                        </div>
+                        </button>
             
                 </div>
                 </div>
             <div className={styles.programBox5}>
                 other Programs
                 <div className={styles.PgText5}>
-                    <div className={styles.FD}>
+                    <button className={styles.FD}>
                         Department of Fashion Design(FD)
-                        </div>      
+                        </button>      
                 </div>
                 </div>
             <div className={styles.footer}>

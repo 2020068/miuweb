@@ -67,7 +67,6 @@ const Menu = () => {
           >
             <button
               className={`bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]`}
-              onClick={() => navigateToPrograms("see-all")}
             >
               Programs
             </button>
