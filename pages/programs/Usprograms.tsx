@@ -70,13 +70,16 @@ const UsPrograms: React.FC = () => {
             <div className={styles.programBox1}>
                 School of Management
                 <div className={styles.PgText1}>
-                    <button className={styles.IM}>
+                    <button className={styles.IM}
+                    onClick={() => goToIM()}>
                         Department of International Management(IM)
                         </button>
-                    <button className={styles.MIM}>
+                    <button className={styles.MIM}
+                    onClick={() => goToMIM()}>
                     Master In International Management(MIM)
                     </button>
-                    <button className={styles.HTM}>
+                    <button className={styles.HTM}
+                    onClick={() => goToHTM()}>
                     Department of Hotel & Tourism Management(HTM)
                     </button>
                 </div>
@@ -88,10 +91,12 @@ const UsPrograms: React.FC = () => {
                     onClick={() => goToCS()}>
                         Department of Computer Science(CS)
                         </button>
-                    <button className={styles.SE}>
+                    <button className={styles.SE}
+                    onClick={() => goToSE()}>
                         Department of Software Engineering(SE)
                         </button>
-                    <button className={styles.MSE}>
+                    <button className={styles.MSE}
+                    onClick={() => goToMSE()}>
                         Master In Software Engineering(MSE)
                         </button>
             
@@ -100,13 +105,16 @@ const UsPrograms: React.FC = () => {
                 <div className={styles.programBox3}>
                 School of International Studies and Communication
                 <div className={styles.PgText3}>
-                    <button className={styles.IR}>
+                    <button className={styles.IR}
+                    onClick={() => goToIR()}>
                         Department of International Relations(IR)
                         </button>
-                    <button className={styles.MC}>
+                    <button className={styles.MC}
+                    onClick={() => goToMC()}>
                         Department of Media and Comunication(MC)
                         </button>
-                    <button className={styles.MPA}>
+                    <button className={styles.MPA}
+                    onClick={() => goToMPA()}>
                         Master In Public Administration (MPA)
                         </button>        
                 </div>
@@ -114,13 +122,16 @@ const UsPrograms: React.FC = () => {
             <div className={styles.programBox4}>
                 Department of  Education
                 <div className={styles.PgText4}>
-                    <button className={styles.EE}>
+                    <button className={styles.EE}
+                    onClick={() => goToEE()}>
                     Department of English Education(EE)
                         </button>
-                    <button className={styles.ME}>
+                    <button className={styles.ME}
+                    onClick={() => goToME()}>
                     Department of Music Education(ME)
                         </button>
-                    <button className={styles.FLE}>
+                    <button className={styles.FLE}
+                    onClick={() => goToFLE()}>
                     Master In Foreign Language Education (FLE)
                         </button>
             
@@ -129,7 +140,8 @@ const UsPrograms: React.FC = () => {
             <div className={styles.programBox5}>
                 other Programs
                 <div className={styles.PgText5}>
-                    <button className={styles.FD}>
+                    <button className={styles.FD}
+                    onClick={() => goToFD()}>
                         Department of Fashion Design(FD)
                         </button>      
                 </div>

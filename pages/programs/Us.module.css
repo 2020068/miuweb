@@ -16,7 +16,6 @@
     display: flex;
     z-index: 3;
     opacity: 0.7;
-    left: 13px;
 }
 .backgroundImg {
     grid-column: 1 / 4;
@@ -131,10 +130,11 @@
 .ME,
 .FLE,
 .FD {
-    width: 800px;
+    width: 600px;
     position: absolute;
     color: black;
     font-size: 20px;
+
 }
 /* left texts */
 .IM {
@@ -161,21 +161,45 @@
 /* right texts */
 .CS {
     margin: -23% -320% 5%;
+    left: 150%;
 }
 .SE {
     margin: -3% -320% 5%;
+    left: 150%;
 }
 .MSE {
     margin: 17% -320% 5%;
+    left: 150%;
 }
 .EE {
     margin: -23% -316% 5%;
+    left: 150%;
 }
 .ME {
     margin: -3% -316% 5%;
+    left: 150%;
 }
 .FLE {
     margin: 17% -316% 5%;
+    left: 150%;
+}
+.IM:hover,
+.MIM:hover,
+.HTM:hover,
+.CS:hover,
+.SE:hover,
+.MSE:hover,
+.MC:hover,
+.IR:hover,
+.MPA:hover,
+.EE:hover,
+.ME:hover,
+.FLE:hover,
+.FD:hover {
+    width: 600px;
+    color: #4070f4;
+    transition: ease 0.5s;
+
 }
 
 
