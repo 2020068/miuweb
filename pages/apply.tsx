@@ -1,25 +1,39 @@
-import React from 'react';
+// ApplyPage.jsx
+
+import React, { useState } from 'react';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 
 const ApplyPage = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
+  const handleUpload = () => {
+    // Handle file upload logic here
+    console.log(selectedFile);
+    // You can use APIs like FormData or File API for further handling
+  };
+
   return (
     <div>
       <Header />
       <div className="apply-container">
         <div className="apply-header"></div>
         <div className="apply-form">
-          {/* Undergraduate form */}
           <div className="form-group">
-  <div className="input-group">
-    <label htmlFor="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" />
-  </div>
-  <div className="input-group">
-    <label htmlFor="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" />
-  </div>
-</div>
+            <div className="input-group">
+              <label htmlFor="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" />
+            </div>
+            <div className="input-group">
+              <label htmlFor="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" />
+            </div>
+          </div>
 
           <div className="form-group">
             <label htmlFor="email">Email:</label>
@@ -37,30 +51,30 @@ const ApplyPage = () => {
               <option value="Computer Science">Computer Science</option>
               <option value="Engineering">Engineering</option>
               <option value="Business Administration">Business Administration</option>
-              {/* Add more options as needed */}
             </select>
             <label htmlFor="programSecondChoice">Program of Study (2nd choice):</label>
             <select id="programSecondChoice" name="programSecondChoice">
               <option value="Computer Science">Computer Science</option>
               <option value="Engineering">Engineering</option>
               <option value="Business Administration">Business Administration</option>
-              {/* Add more options as needed */}
             </select>
           </div>
-          {/* Add more form fields for undergraduate application */}
-          <button className="submit-btn">Submit</button>
+          <button className="submit-btn">Submit Application</button>
         </div>
         <div className="form-group">
-  <label htmlFor="degreeType">Degree Type:</label>
-  <div className="button-group">
-    <button className="degree-btn" value="undergraduate">Undergraduate</button>
-    <button className="degree-btn" value="masters">Master's degree</button>
-    <button className="degree-btn" value="LEI">LEI</button>
-  </div>
-</div>
-
-
+          <label htmlFor="degreeType">Degree Level:</label>
+          <div className="button-group">
+            <button className="degree-btn" value="undergraduate">Undergraduate</button>
+            <button className="degree-btn" value="masters">Master's degree</button>
+          </div>
+        </div>
+        <div className="form-group">
+          <label htmlFor="fileUpload">Documentation:</label>
+          <button className='button-group' onClick={handleUpload}>JPG,PDF,PNG</button>
+          <input type="file" id="fileUpload" name="fileUpload" onChange={handleFileChange} />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
