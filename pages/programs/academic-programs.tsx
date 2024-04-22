@@ -3,7 +3,12 @@ import styles from './Ac.module.css'
 import Menu from '@/components/menu';
 import Footer from '@/components/footer';
 import Image from 'next/image';
+import { useRouter } from "next/router";
 const academicProgramPage: React.FC = () => {
+  const router = useRouter();
+  const navigateToUsProgram = () => {
+      router.push("Usprograms")
+  }
   return (
     <div className={styles.container}>
       <div className={styles.menu}><Menu/></div>
@@ -28,6 +33,10 @@ const academicProgramPage: React.FC = () => {
           Exchange Program Contact Emails:
           student2@miu.edu.mn / dir_student@miu.edu.mn
           </div>
+          <button className={styles.viewProgram}
+           onClick={navigateToUsProgram}>
+            View our programs
+          </button>
           <div className={styles.Eximg1}></div>
         </div>
         <div className={styles.Exbox2}>

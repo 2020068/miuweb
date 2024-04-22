@@ -67,50 +67,6 @@ const Menu = () => {
             News-Events
           </button>
 
-<<<<<<< HEAD
-      <div className="flex flex-col items-end justify-end h-full">
-        {/* Larger Buttons */}
-        <button
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
-          onClick={navigateToMenu}
-        ><MenuIcon />
-          Menu
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
-          onClick={navigateToSearch}
-        ><SearchIcon />
-          Search
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
-          onClick={navigateToNewsEvents}
-        ><EventIcon/>
-          News-Events
-        </button>
-
-        {/* Smaller Buttons */}
-        <button
-          className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
-          onClick={navigateToApply}
-        >
-          Apply
-        </button>
-        <button
-          className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
-          onClick={navigateToVisit}
-        >
-          Visit
-        </button>
-        <button
-          className="bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]"
-          onClick={() => togglePrograms() }
-        >
-          Programs
-        </button>
-        {showPrograms && (
-          <div className="absolute z-10 right-0 mt-2 bg-white border border-gray-200 rounded program-list-container">
-=======
           {/* Smaller Buttons */}
           <Link
             className="bg-white-500 hover:bg-blue-700 text-center text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
@@ -129,22 +85,12 @@ const Menu = () => {
             onMouseEnter={() => setHoverPrograms(true)}
             onMouseLeave={() => setHoverPrograms(false)}
           >
->>>>>>> 618a11a64e86cd29b6f8efeec4859087fd75e8ef
             <button
               className={`bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]`}
               onClick={() => navigateToPrograms("see-all")}
             >
               Programs
             </button>
-<<<<<<< HEAD
-            <button
-              className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
-              onClick={() => navigateToPrograms('LEI')}
-            >
-              LEI
-            </button>
-            {/* Add more program buttons as needed */}
-=======
             {hoverPrograms && (
               <div className="absolute z-10 right-0 bg-white border border-gray-200 rounded">
                 <button
@@ -162,7 +108,6 @@ const Menu = () => {
                 {/* Add more program buttons as needed */}
               </div>
             )}
->>>>>>> 618a11a64e86cd29b6f8efeec4859087fd75e8ef
           </div>
         </div>
       </div>
