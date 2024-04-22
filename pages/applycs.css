@@ -9,20 +9,21 @@
 }
 
 .apply-form {
-  background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+  background-color: rgba(70, 114, 245, 0.664); /* Add transparency to the background color */
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   width: 35%;
 }
 
 .form-group {
   margin-bottom: wrap content;
+  margin-left: 40px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  color: #000000;
+  color: #ffffff;
   
 }
 
@@ -48,6 +49,7 @@ select {
   display: inline-block; /* Display submit button inline */
   padding: 10px 20px; /* Add padding for button */
   background-color: #007bff;
+  margin-left : 40px;
   color: #fff;
   border: none;
   border-radius: 3px;

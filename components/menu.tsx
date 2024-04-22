@@ -13,7 +13,7 @@ const Menu = () => {
     router.push("/visit");
   };
 
-  const navigateToPrograms = (program:string) => {
+  const navigateToPrograms = (program: string) => {
     router.push(`/programs/${program}`);
   };
 
@@ -25,7 +25,7 @@ const Menu = () => {
     <div>
       {/* Main Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0 transform mt-8
+        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0 z-3 transform mt-8
        ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
         -translate-y-1/2 transition-transform duration-500 ease-in-out`}
       >
@@ -67,7 +67,6 @@ const Menu = () => {
           >
             <button
               className={`bg-white-500 hover:bg-blue-700 text-blue-500 font-bold py-2 rounded-l w-[120px]`}
-              onClick={() => navigateToPrograms("see-all")}
             >
               Programs
             </button>
