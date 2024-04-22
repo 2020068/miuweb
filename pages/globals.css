@@ -57,11 +57,9 @@ font-family: 'Helvetica', sans-serif;
   display: block;
 }
 
-.splinescene {
-  canvas {
-    width: 100%;
-    height: 500px;
-  }
+.splinescene canvas {
+  max-width: 100%;
+  height: 500px;
 }
 /* Responsive button styles */
 @media (max-width: 768px) {
