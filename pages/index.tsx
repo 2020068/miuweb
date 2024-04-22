@@ -1,67 +1,13 @@
-/** @format */
-
-import React from "react";
-import Header from "../components/header";
+import HomePage from "./homepage";
 import Menu from "../components/menu";
-import TeacherSwiper from "../components/slideshow/slideshow";
 
-// Sample data for teachers
-import { teachers } from "@/components/teachers";
-import Footer from '@/components/footer';
-import Spline from '@splinetool/react-spline';
-const HomePage = () => {
+const App = () => {
   return (
-    <div className='bg-white min-h-screen'>
-      <Header />
+    <div className="min-h-screen relative">
+      <HomePage />
       <Menu />
-      {/* Pass the 'teachers' data as a prop to the TeacherSwiper component */}
-      <TeacherSwiper teachers={teachers} />
-      {/* Main Content */}
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div>
-      <div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      </div><div className="p-8 ">
-        <p className="text-lg text-gray-700 mb-4">This is the content of the homepage.</p>
-      <div className='p-8'>
-        <p className='text-lg text-gray-700 mb-4'>
-          This is the content of the homepage.
-        </p>
-      </div>
-      </div>
-      <Footer/>
     </div>
   );
 };
 
-export default HomePage;
+export default App;
