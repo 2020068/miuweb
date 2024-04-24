@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import "./applycs.css";
+import "./about/about.css";
 import "/components/carousel/embla.css";
 import type { AppProps } from "next/app";
 
