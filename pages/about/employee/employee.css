@@ -1,5 +1,125 @@
 /** @format */
 
-.about-text {
-  font-size: 99px;
+.container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url("../../../public//images/aboutpage/flowerschool.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 400px;
+  /* opacity: 70%; */
+}
+.header {
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-stroke: 3px rgb(47, 112, 193);
+  color: white;
+  background-color: transparent;
+  z-index: 999;
+  margin-top: 80px;
+  margin-left: 480px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.employee-list {
+  margin: auto;
+  --slide-height: 10rem;
+  --slide-spacing: 1rem;
+  --slide-size: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: var(--slide-spacing);
+}
+
+.employee-item {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+  height: 300px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.employee-item img {
+  height: 145px;
+  width: 145px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+  background-color: #efefef;
+}
+
+.employee-item .employee-details {
+  align-items: center;
+  border-radius: 10px;
+  /* background-color: #ebe9e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 10px;
+}
+.employee-details {
+  /* background-color: #ebe9e9; */
+  border-radius: 10px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+}
+.employee-img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  background: #efefef;
+  padding: 3px;
+  margin-bottom: 30px;
+}
+
+.employee-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 1rem;
+  margin: 0;
+}
+
+.employee-description {
+  font-size: 1.4rem;
+  color: #666666;
+  margin-top: 5px;
+  line-height: 1.6;
+  margin: 0;
+}
+.employeeG {
+  font-display: none;
+}
+.button {
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

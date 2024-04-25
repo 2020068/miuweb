@@ -13,9 +13,16 @@ const AboutPage: React.FC = () => {
         <div className='header'></div>
         <div className='button-group'>
           <div className='flex flex-col items-end justify-end h-full'>
-            <button className='bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[160px]'>
-              Campus
-            </button>
+            <Link href='..'>
+              <button className='bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[160px]'>
+                Back
+              </button>
+            </Link>
+            <Link href='./about/campus/campus'>
+              <button className='bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[160px]'>
+                Campus
+              </button>
+            </Link>
             <Link href='./about/employee/employee'>
               <button className='bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[160px]'>
                 Employee
