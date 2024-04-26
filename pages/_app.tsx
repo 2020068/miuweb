@@ -1,12 +1,20 @@
-/** @format */
-
 import "./globals.css";
 import "./applycs.css";
 import "/components/carousel/embla.css";
-import type { AppProps } from "next/app";
+import { AppProps } from "next/app";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <div className="app-container">
+      <Header />
+      <main className="main-content">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default MyApp;
