@@ -23,15 +23,25 @@ const MBuilding: React.FC<PropType> = (props) => {
     }
   }, [emblaApi]);
 
+  const descriptions = [
+    "M Building center which has 4 floors including basement.",
+    "First floor we have almost whole office here thats academic affairs, general affairs, financial, planning affairs and marketing etc...",
+    "Second floor is the section of Language Education Institute.",
+    "In the basement wqe have music education department.",
+    "Music studio and the free usable room for students.",
+  ];
   return (
     <div className='cc'>
       <div className='cc__viewport' ref={emblaRef}>
         <div className='cc__container'>
           {slides.map((MBuilding, index) => (
             <div className='cc__slide cc__class-names' key={index}>
+              <div className='cc__content'>
+                <p className='description'>{descriptions[index]}</p>
+              </div>
               <img
                 className='cc__slide__img'
-                src={`/images/MBuilding/MBuilding${index + 1}.jpg`}
+                src={`/aboutPage/campus/MBuilding/MBuilding${index + 1}.jpg`}
                 alt='Your alt text'
               />
             </div>

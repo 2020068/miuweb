@@ -32,3 +32,13 @@
 .cc__slide:not(.is-snapped) {
   opacity: 0;
 }
+.cc__content {
+  padding: 10px;
+}
+.description {
+  font-size: 1.4rem;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  border-inline-end: 2px solid #173992;
+}

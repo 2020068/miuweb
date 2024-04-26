@@ -22,16 +22,25 @@ const MIS: React.FC<PropType> = (props) => {
       return () => clearInterval(autoplayInterval);
     }
   }, [emblaApi]);
-
+  const descriptions = [
+    "MIS west side.",
+    "First floor of the MIS.",
+    "Office of the MIS managers.",
+    "Principal's office.",
+    "It is elementary school.",
+  ];
   return (
     <div className='cc'>
       <div className='cc__viewport' ref={emblaRef}>
         <div className='cc__container'>
           {slides.map((MIS, index) => (
             <div className='cc__slide cc__class-names' key={index}>
+              <div className='cc__content'>
+                <p className='description'>{descriptions[index]}</p>
+              </div>
               <img
                 className='cc__slide__img'
-                src={`/images/MIS/MIS${index + 1}.jpg`}
+                src={`/aboutPage/campus/MIS/MIS${index + 1}.jpg`}
                 alt='Your alt text'
               />
             </div>

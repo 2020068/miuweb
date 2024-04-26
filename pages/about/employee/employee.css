@@ -4,19 +4,19 @@
   position: relative;
   max-width: 100%;
   margin: 0 auto;
-  background-image: url("../../../public//images/aboutpage/flowerschool.jpg");
+  background-image: url("../../../public/aboutPage/employee/flowerschool.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 400px;
   /* opacity: 70%; */
 }
-.header {
+.headerTitle {
   position: absolute;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
-  -webkit-text-stroke: 3px rgb(47, 112, 193);
+  -webkit-text-stroke: 3px #173992;
   color: white;
   background-color: transparent;
   z-index: 999;
@@ -62,7 +62,7 @@
   width: 145px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #4070f4;
+  border: 4px solid #173992;
   background-color: #efefef;
 }
 
@@ -111,6 +111,9 @@
   margin: 0;
 }
 .employeeG {
+  font-display: none;
+}
+.employeeG-img {
   font-display: none;
 }
 .button {

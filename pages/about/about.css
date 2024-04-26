@@ -4,7 +4,7 @@
   position: relative;
   max-width: wrap fit-content;
   margin: 0 auto;
-  background-image: url("../../public/images/aboutpage/graduation.jpg");
+  background-image: url("../../public/aboutPage/aboutpage/graduation.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -38,7 +38,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 30px;
+  font-size: 0px;
   color: rgb(72, 69, 69);
   padding: 10px;
   border: 5px;
@@ -46,11 +46,11 @@
 }
 
 .sight-word {
-  color: rgb(42, 89, 147);
+  color: #173992;
   position: relative;
   max-width: wrap fit-content; /* Adjust as needed */
   margin: 0 auto;
-  width: 1500px;
+  width: 1000px;
   height: 200px;
   text-align: center;
   justify-content: center;
@@ -107,7 +107,7 @@
   position: relative;
   width: 800px;
   height: 500px;
-  background-image: url("../../public/images/DBuilding/DBuilding2.jpg");
+  background-image: url("../../public/aboutPage/aboutpage/Dgraduation.jpg");
   background-size: cover;
   animation: rainbow-bg 10s ease infinite;
 }
@@ -132,7 +132,7 @@
   position: relative;
   width: 800px;
   height: 600px;
-  background-image: url("../../public/images/aboutpage/ceo.jpg");
+  background-image: url("../../public/aboutPage/aboutpage/ceo.jpg");
   background-size: cover;
 }
 
@@ -140,7 +140,7 @@
   position: relative;
   width: 800px;
   height: 600px;
-  background-image: url("../../public/images/aboutpage/leader.jpeg");
+  background-image: url("../../public/aboutPage/aboutpage/leader.jpg");
   background-size: cover;
 }
 
