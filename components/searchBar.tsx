@@ -4,7 +4,9 @@ import { Search } from "@mui/icons-material";
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleSearch = (event: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setSearchTerm(event.target.value);
   };
 
@@ -17,7 +19,12 @@ const SearchBar = () => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearch}
-          style={{ fontSize: "1.5rem", padding: "0.5rem", color: "white", fontStyle: "italic" }}
+          style={{
+            fontSize: "1.5rem",
+            padding: "0.5rem",
+            color: "white",
+            fontStyle: "italic",
+          }}
         />
         <Search className="text-white mr-2 ml-2 cursor-pointer" />
       </div>

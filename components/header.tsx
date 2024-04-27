@@ -35,15 +35,16 @@ const Header = ({ isSearchVisible }: HeaderProps) => {
           onClick={() => router.push("/")}
         />
       </div>
-      
 
-      <div className={`search-bar-container border-b-2 border-white fixed right-[15%] ${isSearchVisible ? "visible" : ""}`}>
-          {isSearchVisible && <SearchBar />}
+      <div
+        className={`search-bar-container border-b-2 border-white fixed right-[15%] ${
+          isSearchVisible ? "visible" : ""
+        }`}
+      >
+        {isSearchVisible && <SearchBar />}
       </div>
-        
+
       <div className="flag flex items-center">
-       
-        
         <Image
           src={flag}
           width={40}

@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Header isSearchVisible={isSearchVisible} />
       <div className="menu-container">
         <Menu toggleSearchBar={toggleSearchBar} />
-
       </div>
       <main className="main-content">
         <Component {...pageProps} />
