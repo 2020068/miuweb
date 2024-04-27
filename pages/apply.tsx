@@ -20,7 +20,7 @@ const ApplyPage = () => {
 
   return (
     <div>
-      <Header />
+      
       <div className="apply-container">
         <div className="apply-header"></div>
         <div className="apply-form">
@@ -61,20 +61,14 @@ const ApplyPage = () => {
           </div>
           <button className="submit-btn">Submit Application</button>
         </div>
-        <div className="form-group">
-          <label htmlFor="degreeType">Degree Level:</label>
-          <div className="button-group">
-            <button className="degree-btn" value="undergraduate">Undergraduate</button>
-            <button className="degree-btn" value="masters">Master's degree</button>
-          </div>
-        </div>
+        
         <div className="form-group">
           <label htmlFor="fileUpload">Documentation:</label>
           <button className='button-group' onClick={handleUpload}>JPG,PDF,PNG</button>
           <input type="file" id="fileUpload" name="fileUpload" onChange={handleFileChange} />
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };

@@ -59,7 +59,7 @@ const Menu = () => {
           </Button>
 
           {/* Smaller Buttons */}
-          <Link href="/apply">
+          <Link href="Applied/appl">
             <Button
               variant="outlined"
               className="bg-white-500 hover:bg-blue-700 hover:text-white text-center text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
