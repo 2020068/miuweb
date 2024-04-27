@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
 import i18n from "../i18n"; // Import i18n instance
-
+import SearchBar from "./searchBar";
+interface HeaderProps {
+  isSearchVisible: boolean;
+}
 const MongoliansvgUrl =
   "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg";
 const AmericansvgUrl =
   "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_the_U.S..svg";
 
-const Header = () => {
+const Header = ({ isSearchVisible }: HeaderProps) => {
   const { t } = useTranslation();
   const router = useRouter();
   const [flag, setFlag] = useState(AmericansvgUrl);
@@ -25,19 +27,24 @@ const Header = () => {
     <header className="bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
       <div className="flex items-center justify-center flex-grow">
         <Image
-          src="/images/MIU.png"
+          src="/logos/MIU.png"
           alt={t("header.logo.alt")}
           width={40}
           height={30}
         />
       </div>
-      <div className="flex items-center">
+      {/* <div  className="absolute right-0">
+        {isSearchVisible && <SearchBar />}
+      </div> */}
+
+      <div className="flag flex items-center">
+        {isSearchVisible && <SearchBar />}
         <Image
           src={flag}
           width={40}
           height={30}
           alt={t("header.flag.alt")}
-          className="ml-2 z-10"
+          className="ml-2 cursor-pointer"
           onClick={toggleFlag}
         />
       </div>

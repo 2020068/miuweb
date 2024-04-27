@@ -16,7 +16,19 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+.app-container {
+  position: relative;
+}
 
+.menu-container {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  z-index: 11;
+}
+.flag{
+  z-index: 12;
+}
 h1 {
   font-family: "Helvetica";
   font-style: italic;
