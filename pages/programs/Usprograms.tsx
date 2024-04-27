@@ -55,7 +55,7 @@ const UsPrograms: React.FC = () => {
             <div className={styles.backgroundImg}></div>
             <div className={styles.logoContainer}>
             <a href="/">
-            <Image src='/images/MIU.png' alt="MIU logo" width={45} height={45}/>
+            <Image src='/logos/MIU.png' alt="MIU logo" width={45} height={45}/>
             </a>
             </div>
             <div className={styles.menu}>
