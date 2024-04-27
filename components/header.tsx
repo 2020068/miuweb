@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import i18n from "../i18n"; // Import i18n instance
 import SearchBar from "./searchBar";
 interface HeaderProps {
@@ -24,21 +24,26 @@ const Header = ({ isSearchVisible }: HeaderProps) => {
   };
 
   return (
-    <header className="bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
+    <header className="h-fit relative bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
       <div className="flex items-center justify-center flex-grow">
         <Image
           src="/logos/MIU.png"
           alt={t("header.logo.alt")}
           width={40}
           height={30}
+          className="static"
+          onClick={() => router.push("/")}
         />
       </div>
-      {/* <div  className="absolute right-0">
-        {isSearchVisible && <SearchBar />}
-      </div> */}
+      
 
+      <div className={`search-bar-container border-b-2 border-white fixed right-[15%] ${isSearchVisible ? "visible" : ""}`}>
+          {isSearchVisible && <SearchBar />}
+      </div>
+        
       <div className="flag flex items-center">
-        {isSearchVisible && <SearchBar />}
+       
+        
         <Image
           src={flag}
           width={40}
