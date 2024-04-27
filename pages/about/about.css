@@ -1,0 +1,166 @@
+/** @format */
+
+.about-container {
+  position: relative;
+  max-width: wrap fit-content;
+  margin: 0 auto;
+  background-image: url("../../public/aboutPage/aboutpage/graduation.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 300px;
+}
+
+.about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;
+}
+.button-group {
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.about-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0px;
+  color: rgb(72, 69, 69);
+  padding: 10px;
+  border: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sight-word {
+  color: #173992;
+  position: relative;
+  max-width: wrap fit-content; /* Adjust as needed */
+  margin: 0 auto;
+  width: 1000px;
+  height: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: row;
+  margin-top: 50px;
+}
+.sight-word1 {
+  position: inherit;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;
+}
+
+.sight-word2 {
+  position: inherit;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;
+}
+
+.box1 {
+  position: relative;
+  max-width: wrap fit-content;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  width: 90%;
+  margin-bottom: 30px;
+  display: row;
+  animation: rainbow-bg 10s ease infinite;
+}
+
+@keyframes rainbow-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.box2 {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.boxImg {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-image: url("../../public/aboutPage/aboutpage/Dgraduation.jpg");
+  background-size: cover;
+  animation: rainbow-bg 10s ease infinite;
+}
+
+.boxDescription {
+  margin-right: 100px;
+  width: 800px;
+  height: 500px;
+  position: relative;
+  /* border: rgb(47, 112, 193) solid 1px; */
+  padding: 20px;
+}
+.CeoDescription {
+  margin-right: 100px;
+  width: 800px;
+  height: 600px;
+  position: relative;
+  /* border: rgb(47, 112, 193) solid 1px; */
+  padding: 20px;
+}
+.CeoImg {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url("../../public/aboutPage/aboutpage/ceo.jpg");
+  background-size: cover;
+}
+
+.LeaderImg {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url("../../public/aboutPage/aboutpage/leader.jpg");
+  background-size: cover;
+}
+
+.LeaderDescription {
+  margin-left: 100px;
+  width: 800px;
+  height: 600px;
+  position: relative;
+  /* border: rgb(47, 112, 193) solid 1px; */
+  padding: 20px;
+}
+.title1 {
+  color: rgb(42, 89, 147);
+  font-size: xx-large;
+}
+.title2 {
+  color: rgb(42, 89, 147);
+  font-size: xx-large;
+}
+.title3 {
+  color: rgb(42, 89, 147);
+  font-size: xx-large;
+}
