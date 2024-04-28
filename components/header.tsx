@@ -24,14 +24,14 @@ const Header = ({ isSearchVisible }: HeaderProps) => {
   };
 
   return (
-    <header className="h-fit relative bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
+    <header className="h-fit bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
       <div className="flex items-center justify-center flex-grow">
         <Image
           src="/logos/MIU.png"
           alt={t("header.logo.alt")}
           width={40}
           height={30}
-          className="static"
+          className="static cursor-pointer"
           onClick={() => router.push("/")}
         />
       </div>

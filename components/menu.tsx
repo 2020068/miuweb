@@ -33,7 +33,7 @@ const Menu: React.FC<MenuProps> = ({ toggleSearchBar }) => {
     <div>
       {/* Main Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0 z-11 transform mt-8
+        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0  transform mt-8
           ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
           -translate-y-1/2 transition-transform duration-500 ease-in-out`}
       >

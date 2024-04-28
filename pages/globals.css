@@ -24,12 +24,12 @@
   position: absolute;
   top: 0; 
   left: 0; 
-  z-index: 11;
+  z-index: 998;
 }
 .flag{
   position: fixed;
   right: 10px;
-  z-index: 12;
+  z-index: 999;
 }
 .search-bar-container {
   opacity: 0;

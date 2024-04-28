@@ -2,7 +2,7 @@ import HomePage from "./homepage";
 
 const App = () => {
   return (
-    <div>
+    <div className="min-h-screen relative theme-light">
       <HomePage />
     </div>
   );
