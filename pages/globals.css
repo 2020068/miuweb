@@ -19,10 +19,18 @@
 .app-container {
   position: relative;
 }
-
-.sidebar {
-  z-index: 1000;
+.menu-container{
   position: fixed;
+  right: 0;
+  z-index: 998;
+}
+header{
+  position: relative;
+  z-index: 1000;
+}
+.sidebar {
+  position: absolute;
+  z-index: 1000;
 }
 .flag{
   position: absolute;
@@ -31,6 +39,7 @@
 }
 .search-bar-container {
   position: absolute;
+  z-index: 999;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

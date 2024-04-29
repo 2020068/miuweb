@@ -3,13 +3,17 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Sidebar from "./sidebarmenu";
+
 import Button from "@mui/material/Button";
 interface MenuProps {
   toggleSearchBar: () => void;
+  toggleSidebarMenuParent: () => void;
 }
 
-const Menu: React.FC<MenuProps> = ({ toggleSearchBar }) => {
+const Menu: React.FC<MenuProps> = ({
+  toggleSearchBar,
+  toggleSidebarMenuParent,
+}) => {
   const { t } = useTranslation(); // Ensure that useTranslation is called unconditionally
   const router = useRouter();
   const [hoverPrograms, setHoverPrograms] = useState(false);
@@ -25,6 +29,7 @@ const Menu: React.FC<MenuProps> = ({ toggleSearchBar }) => {
 
   const toggleSidebarMenu = () => {
     setSidebarMenuOpen(!sidebarMenuOpen);
+    toggleSidebarMenuParent();
   };
   const handleSearchClick = () => {
     toggleSearchBar(); // Call the toggle function passed from the parent
@@ -33,7 +38,7 @@ const Menu: React.FC<MenuProps> = ({ toggleSearchBar }) => {
     <div>
       {/* Main Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0  transform mt-8
+        className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
           ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
           -translate-y-1/2 transition-transform duration-500 ease-in-out`}
       >
@@ -112,9 +117,6 @@ const Menu: React.FC<MenuProps> = ({ toggleSearchBar }) => {
           </div>
         </div>
       </div>
-
-      {/* Sidebar Menu */}
-      <Sidebar isOpen={sidebarMenuOpen} />
     </div>
   );
 };

@@ -10,19 +10,30 @@ import "./about/employee/employee.css";
 import "./about/campus/campus.css";
 import "./about/campus/CCElements/CC.css";
 import "/components/carousel/embla.css";
+import Sidebar from "@/components/sidebarmenu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isSearchVisible, setSearchVisible] = useState(false);
-
+  const [sidebarMenuOpen, setSidebarMenuOpen] = useState(false);
   const toggleSearchBar = () => {
     setSearchVisible(!isSearchVisible);
+  };
+  const toggleSidebarMenu = () => {
+    setSidebarMenuOpen(!sidebarMenuOpen);
   };
   return (
     <div className="app-container">
       <Header isSearchVisible={isSearchVisible} />
       <div className="menu-container">
-        <Menu toggleSearchBar={toggleSearchBar} />
+        <Menu
+          toggleSearchBar={toggleSearchBar}
+          toggleSidebarMenuParent={toggleSidebarMenu}
+        />
       </div>
+      <div className="sidebar">
+        <Sidebar isOpen={sidebarMenuOpen}></Sidebar>
+      </div>
+
       <main className="main-content">
         <Component {...pageProps} />
       </main>
