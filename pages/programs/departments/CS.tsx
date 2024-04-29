@@ -1,13 +1,9 @@
 import React from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
-import EmblaCarousel from "@/components/carousel/EmblaCarousel";
-import Menu from "@/components/menu";
-import { EmblaOptionsType } from "embla-carousel";
+import Faculty from "./DepartmentFaculty";
 
-const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
 
 const CsPage: React.FC = () => {
     return(
@@ -62,11 +58,8 @@ const CsPage: React.FC = () => {
                 ● Artificial Intelligence<br />
                 </div>
             </div>
-            <div className={styles.faculty}>
-                faculties
-
-                <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-
+            <div>
+               <Faculty/>
             </div>
             <div className={styles.alumni}>
                 alumni

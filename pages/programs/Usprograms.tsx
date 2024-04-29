@@ -53,17 +53,8 @@ const UsPrograms: React.FC = () => {
         
         <div className={styles.container}>
             <div className={styles.backgroundImg}></div>
-            <div className={styles.logoContainer}>
-            <a href="/">
-            <Image src='/logos/MIU.png' alt="MIU logo" width={45} height={45}/>
-            </a>
-            </div>
-            <div className={styles.menu}>
-                <Menu/>
-            </div>
-            <div className={styles.box}>
-                <h1>Mongolian International Univirsity</h1>
-            </div>
+
+
             <div className={styles.box1}>
                 Departments 
                 </div>
@@ -146,9 +137,7 @@ const UsPrograms: React.FC = () => {
                         </button>      
                 </div>
                 </div>
-            <div className={styles.footer}>
-                <Footer/>
-            </div>
+
         </div>
         
     );

@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./TpTprogram.module.css";
-import Image from "next/image";
-import Footer from "@/components/footer";
-import Menu from "@/components/menu";
-import Header from "@/components/header";
-import { style } from "@mui/system";
+
 
 const TpTPage: React.FC = () => {
   const introductionRef = useRef<HTMLDivElement>(null);
