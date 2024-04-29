@@ -20,18 +20,17 @@
   position: relative;
 }
 
-.menu-container {
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  z-index: 998;
+.sidebar {
+  z-index: 1000;
+  position: fixed;
 }
 .flag{
-  position: fixed;
+  position: absolute;
   right: 10px;
   z-index: 999;
 }
 .search-bar-container {
+  position: absolute;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
