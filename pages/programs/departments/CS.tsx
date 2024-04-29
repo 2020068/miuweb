@@ -1,21 +1,97 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
-import Faculty from "./DepartmentFaculty";
 
 
+interface FacultyType {
+    // Define properties for EmployeeType here if needed
+  }
+  
+  type PropType = {
+    slides: number[];
+    options?: FacultyType;
+  };
 
-const CsPage: React.FC = () => {
+const CsPage: React.FC<PropType> = (props) => {
+  const overviewRef = useRef<HTMLDivElement>(null);
+  const curriculumRef = useRef<HTMLDivElement>(null);
+  const alumniRef = useRef<HTMLDivElement>(null);
+  const facultyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (
+      overviewRef.current &&
+      curriculumRef.current &&
+      alumniRef.current &&
+      facultyRef.current
+    ) {
+      intersectionObserver.observe(overviewRef.current);
+      intersectionObserver.observe(curriculumRef.current);
+      intersectionObserver.observe(alumniRef.current);
+      intersectionObserver.observe(facultyRef.current);
+    }
+
+    return () => {
+      if (
+        overviewRef.current &&
+        curriculumRef.current &&
+        alumniRef.current &&
+        facultyRef.current
+      ) {
+        intersectionObserver.unobserve(overviewRef.current);
+        intersectionObserver.unobserve(curriculumRef.current);
+        intersectionObserver.unobserve(alumniRef.current);
+        intersectionObserver.unobserve(facultyRef.current);
+      }
+    };
+  }, []);
+
+  const { slides, options } = props;
+  const faculties = [
+    {
+      name: "Jung-ho park",
+      description: "Professor",
+    },
+    {
+      name: "Steven",
+      description: "Professor",
+    },
+    {
+      name: "James Jang",
+      description: "Lecturer",
+    },
+    {
+      name: "Dulguundusal T.",
+      description: "Lecturer",
+    },
+    {
+      name: "Dulamsuren Sharkhuu",
+      description: "Asistant Professor",
+    },    
+
+  ];
+
+
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}></div>
-            
-            
+            <div className={styles.backgroundImg}>
+                <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
+            </div>
             <div className={styles.box1}>
                 Computer Science
             </div>
-            <div className={styles.overview}>
-                overview
+            <div ref={overviewRef} className={`${styles.overview}`}>
+                Overview
                 <div className={styles.h1}>
                 Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
                  Particular interest is placed on making computation fast and efficient. 
@@ -23,8 +99,8 @@ const CsPage: React.FC = () => {
                 </div>
             </div>
             
-            <div className={styles.curriculum}>
-                what you'll learn <br />
+            <div ref={curriculumRef} className={`${styles.curriculum}`}>
+                What you'll learn <br />
                 <a className={styles.a}> Year 1 / Students are introduced to:</a>
                 <div className={styles.h1}>
                  ● Foundation of basic coding <br />
@@ -58,20 +134,38 @@ const CsPage: React.FC = () => {
                 ● Artificial Intelligence<br />
                 </div>
             </div>
-            <div>
-               <Faculty/>
+            <div ref={facultyRef} className={`${styles.faculty}`}>
+            <div className={styles.title}>Faculties</div>
+
+            <div className={styles.facultyList}>
+                {faculties.map((faculty, index) => (
+                <div className={styles.facultyItem} key={index}>
+                    <div className={styles.facultyDetail}>
+                    <img
+                        className={styles.facultyImg}
+                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        alt={`Profile of ${faculty.name}`}
+                    />
+
+                <p className={styles.facultyName}>{faculty.name}</p>
+                <p className={styles.facultyDescription}>{faculty.description}</p>
+                    </div>
+                </div>
+                ))}
             </div>
-            <div className={styles.alumni}>
-                alumni
+            </div>
+            <div ref={alumniRef} className={`${styles.alumni}`}>
+                Alumni
                <h1 className={styles.alumniText}>
-                <span className={styles.textsize1}>Bilegt Gantulga</span> <br /><br />
-                Works at Khaan bank <br /><br />
-                I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time.</h1> 
+                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br />
+                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br />
+                "I’m glad that I learned the basics of information technology in English.
+                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={500} height={500} />
+                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
+                <div className={styles.alumniBox}></div>
 
            
         </div>
