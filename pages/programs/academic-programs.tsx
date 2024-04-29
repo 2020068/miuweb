@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './Ac.module.css'
-import Menu from '@/components/menu';
-import Footer from '@/components/footer';
-import Image from 'next/image';
 import { useRouter } from "next/router";
 const academicProgramPage: React.FC = () => {
   const router = useRouter();
@@ -14,17 +11,10 @@ const academicProgramPage: React.FC = () => {
   }
   return (
     <div className={styles.container}>
-      <div className={styles.menu}><Menu/></div>
+
       <div className={styles.backgroundImg}></div>
-      
-      <div className={styles.logoContainer}>
-      <a href="/">
-      <Image src="/logos/MIU.png" alt="MIU logo" width={45} height={45} />
-      </a>
-      </div>
-      <div className={styles.box}>
-        <h1>Mongolian International University</h1>
-      </div>
+
+
       <div className={styles.box1}>
          <h3>Academic Programs</h3> 
         <h2><br/>Our academic programs support creative practitioners who strive for a world that’s brighter, more inclusive, relentlessly innovative, and ecologically resilient.</h2>
@@ -70,7 +60,7 @@ MIU undergraduate and graduate school students have a unique opportunity to rece
       <div className={styles.ExText}>
           
           </div>
-      <div className={styles.footer}><Footer/></div>
+
     </div>
   );
 };

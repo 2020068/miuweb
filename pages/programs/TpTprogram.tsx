@@ -36,14 +36,10 @@ const TpTPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-          <Header />
-      </div>
+
 
       <div className={styles.backgroundImg}></div>
-      <div className={styles.menu}>
-        <Menu />
-      </div>
+
 
       <div className={`${styles.box1} ${styles.visible}`}>
         2+2 Program
@@ -79,9 +75,7 @@ const TpTPage: React.FC = () => {
         </h5>
         </div>
       </div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+
     </div>
   );
 };

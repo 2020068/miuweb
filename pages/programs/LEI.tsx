@@ -1,25 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import Footer from '@/components/footer';
-import Menu from '@/components/menu';
-import TeacherSwiper from '@/components/slideshow/slideshow';
-import { teachers } from '@/components/teachers';
 import styles from './LEI.module.css';
 
 const LEIPage: React.FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.menu}>
-        <Menu />
-      </div>
-      <div className={styles.logoContainer}>
-        <a href="/">
-        <Image src="/logos/MIU.png" alt="MIU logo" width={45} height={45} />
-        </a>
-      </div>
-      <div className={styles.box}>
-        <h1>Mongolian International University</h1>
-      </div>
+
+
       <div className={styles.box1}>Language Education Institute</div>
       <div className={styles.backgroundImg}></div>
       <div className={styles.rectangle}>
@@ -70,12 +57,7 @@ const LEIPage: React.FC = () => {
         LEI also offers classes in Russian and Korean languages upon request. Because of smaller classes and limited need, these classes must be requested and scheduled in advance. Classes require a minimum of 5 students to open, and the time must be arranged with the teacher.
         </div>
         </div>
-      <div className={styles.teachers}>
-        <TeacherSwiper teachers={teachers} />
-      </div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+
     </div>
   );
 };
