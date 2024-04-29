@@ -1,13 +1,11 @@
+/** @format */
+
 // ApplyPage.jsx
 
-import React, { useState } from 'react';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-
+import React, { useState } from "react";
 
 const ApplyPage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
-
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
   };
@@ -27,36 +25,69 @@ const ApplyPage = () => {
           <div className="form-group">
             <div className="input-group">
               <label htmlFor="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your first name"
+              />
             </div>
             <div className="input-group">
               <label htmlFor="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" />
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your last name"
+              />
             </div>
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+            />
             <label htmlFor="phoneNumber">Phone Number:</label>
-            <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" />
+            <input
+              type="phone"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+            />
           </div>
           <div className="form-group">
             <label htmlFor="registrationNo">Registration No.:</label>
-            <input type="text" id="registrationNo" name="registrationNo" placeholder="Enter your registration number" />
+            <input
+              type="text"
+              id="registrationNo"
+              name="registrationNo"
+              placeholder="Enter your registration number"
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="programFirstChoice">Program of Study (1st choice):</label>
+            <label htmlFor="programFirstChoice">
+              Program of Study (1st choice):
+            </label>
             <select id="programFirstChoice" name="programFirstChoice">
               <option value="Computer Science">Computer Science</option>
               <option value="Engineering">Engineering</option>
-              <option value="Business Administration">Business Administration</option>
+              <option value="Business Administration">
+                Business Administration
+              </option>
             </select>
-            <label htmlFor="programSecondChoice">Program of Study (2nd choice):</label>
+            <label htmlFor="programSecondChoice">
+              Program of Study (2nd choice):
+            </label>
             <select id="programSecondChoice" name="programSecondChoice">
               <option value="Computer Science">Computer Science</option>
               <option value="Engineering">Engineering</option>
-              <option value="Business Administration">Business Administration</option>
+              <option value="Business Administration">
+                Business Administration
+              </option>
             </select>
           </div>
           <button className="submit-btn">Submit Application</button>
@@ -64,8 +95,15 @@ const ApplyPage = () => {
         
         <div className="form-group">
           <label htmlFor="fileUpload">Documentation:</label>
-          <button className='button-group' onClick={handleUpload}>JPG,PDF,PNG</button>
-          <input type="file" id="fileUpload" name="fileUpload" onChange={handleFileChange} />
+          <button className="button-group" onClick={handleUpload}>
+            JPG,PDF,PNG
+          </button>
+          <input
+            type="file"
+            id="fileUpload"
+            name="fileUpload"
+            onChange={handleFileChange}
+          />
         </div>
       </div>
       
