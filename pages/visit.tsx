@@ -1,45 +1,15 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Menu from '@/components/menu';
 import styles from '@/pages/visit.module.css';
-import Footer from '@/components/footer';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import Header from '@/components/header';
 
 const VisitorPage: React.FC = () => {
   const mapCenter = { lat: 47.91482657901934, lng: 106.9731089094383 };
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-  const [formError, setFormError] = useState('');
-
-  const handleSubmit = () => {
-    const { name, email, phone, message } = formData;
-    if (!name || !email || !phone || !message) {
-      setFormError('Please fill in all fields');
-      return;
-    } else {
-      setFormError('');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [id]: value
-    }));
-  };
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <Header />
-      </div>
+     
       <div className= {styles.plan}>
           <p>PLAN YOUR VISIT TO MIU</p>
           <a>See all the things MIU has to offer</a>
@@ -53,35 +23,6 @@ const VisitorPage: React.FC = () => {
           <p>SeeMoreDetail</p>
         </Link>
       </div>
-
-
-
-      <div className={styles.contactUs}>
-        <h2>Contact Us</h2>
-        {formError && <p className={`${styles.errorMessage} ${styles.errorPosition}`}>{formError}</p>}
-        <div className={styles.inputContainer}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={formData.name} onChange={handleChange} />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={formData.email} onChange={handleChange} />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="phone">Phone Number:</label>
-          <input type="tel" id="phone" value={formData.phone} onChange={handleChange} />
-        </div>
-
-        <div className={styles.inputContainer}>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" value={formData.message} onChange={handleChange}></textarea>
-        </div>
-
-        <button className={styles.customButton} onClick={handleSubmit}>Submit</button>
-      </div>
-
-
-
 
       <div className= {styles.location}>
       <div className={styles.google_map}>
@@ -132,11 +73,8 @@ const VisitorPage: React.FC = () => {
         </div>
       </div>
 
-
            {/* Google Map */}
   
-
-      <div className={styles.footer}> <Footer/> </div>
     </div>
   );
 };

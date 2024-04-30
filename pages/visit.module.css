@@ -9,9 +9,9 @@
   
   .visit_photo {
     position: absolute; /* Use absolute position to hold the photo in place */
-    top: 0; /* Position from the top of the viewport */
+    top: 45px; /* Position from the top of the viewport */
     width: 100%;
-    height: 70%; /* Set height to 70% of viewport height */
+    height: 75%; /* Set height to 70% of viewport height */
     opacity: 1; /* Adjust opacity if needed */
     background-image: url('../public/images/visit_photo.jpg'); /* Set the background image */
     background-size: cover; /* Cover the entire element with the background image */
@@ -104,78 +104,9 @@
     text-align: center;
     }
 
-
-
-
-
-  .contactUs {
-    position: relative;
-    width: 60%;
-    margin: 500px auto 0; /* 위쪽에만 여백을 두어 중앙 정렬 */
-    /* padding: 20px; 
-    border: 1px solid #ccc;  */
-    border-radius: 5px;
-    
-}
-
-  .contactUs h2 {
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-.inputContainer {
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-}
-
-.inputContainer label {
-  min-width: 150px;
-  margin-right: 10px;
-}
-
-.inputContainer input,
-.inputContainer textarea {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.customButton {
-  display: block;
-  margin-top: 50px;
-  padding: 20px 50px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-}
-
-.customButton:hover {
-  background-color: #0056b3;
-}
-
-.errorMessage {
-  color: red;
-  border: 2px solid red;
-  width: 180px;
-  padding: 7px;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.footer {
+/* .footer {
   position: absolute;
   width: 100%;
-  margin-top: 50%;
+  margin-top: 70%;
   top: 100%;
-}
+} */
