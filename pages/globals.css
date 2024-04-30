@@ -16,6 +16,37 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+.app-container {
+  position: relative;
+}
+.menu-container{
+  position: fixed;
+  right: 0;
+  z-index: 998;
+}
+header{
+  position: relative;
+  z-index: 1000;
+}
+.sidebar {
+  position: absolute;
+  z-index: 1000;
+}
+.flag{
+  position: absolute;
+  right: 10px;
+  z-index: 999;
+}
+.search-bar-container {
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-bar-container.visible {
+  opacity: 1;
+}
 
 h1 {
   font-family: "Helvetica";

@@ -1,12 +1,19 @@
 import { MenuIcon, SearchIcon, EventIcon } from "../assets/iconImports";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next"; // Import useTranslation from react-i18next
+import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Sidebar from "./sidebarmenu";
-import Button from "@mui/material/Button";
 
-const Menu = () => {
+import Button from "@mui/material/Button";
+interface MenuProps {
+  toggleSearchBar: () => void;
+  toggleSidebarMenuParent: () => void;
+}
+
+const Menu: React.FC<MenuProps> = ({
+  toggleSearchBar,
+  toggleSidebarMenuParent,
+}) => {
   const { t } = useTranslation(); // Ensure that useTranslation is called unconditionally
   const router = useRouter();
   const [hoverPrograms, setHoverPrograms] = useState(false);
@@ -22,13 +29,16 @@ const Menu = () => {
 
   const toggleSidebarMenu = () => {
     setSidebarMenuOpen(!sidebarMenuOpen);
+    toggleSidebarMenuParent();
   };
-
+  const handleSearchClick = () => {
+    toggleSearchBar(); // Call the toggle function passed from the parent
+  };
   return (
     <div>
       {/* Main Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-500 bg-opacity-0 z-3 transform mt-8
+        className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
           ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
           -translate-y-1/2 transition-transform duration-500 ease-in-out`}
       >
@@ -41,12 +51,12 @@ const Menu = () => {
             startIcon={<MenuIcon />}
           >
             {t("menu.button.menu")}
-            {/* Use t() to translate the button label */}
           </Button>
           <Button
             variant="contained"
             className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
             startIcon={<SearchIcon />}
+            onClick={handleSearchClick}
           >
             {t("menu.button.search")}
           </Button>
@@ -59,7 +69,7 @@ const Menu = () => {
           </Button>
 
           {/* Smaller Buttons */}
-          <Link href="/apply">
+          <Link href="Applied/appl">
             <Button
               variant="outlined"
               className="bg-white-500 hover:bg-blue-700 hover:text-white text-center text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
@@ -107,9 +117,6 @@ const Menu = () => {
           </div>
         </div>
       </div>
-
-      {/* Sidebar Menu */}
-      <Sidebar isOpen={sidebarMenuOpen} />
     </div>
   );
 };
