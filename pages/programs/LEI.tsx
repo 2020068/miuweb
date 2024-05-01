@@ -1,20 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import TeacherSwiper from "@/components/slideshow/slideshow";
-import { teachers } from "@/components/teachers";
-import styles from "./LEI.module.css";
+import React from 'react';
+import Image from 'next/image';
+import styles from './LEI.module.css';
 
 const LEIPage: React.FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logoContainer}>
-        <a href="/">
-          <Image src="/logos/MIU.png" alt="MIU logo" width={45} height={45} />
-        </a>
-      </div>
-      <div className={styles.box}>
-        <h1>Mongolian International University</h1>
-      </div>
+
+
       <div className={styles.box1}>Language Education Institute</div>
       <div className={styles.backgroundImg}></div>
       <div className={styles.rectangle}>
@@ -97,10 +89,7 @@ const LEIPage: React.FC = () => {
           requested and scheduled in advance. Classes require a minimum of 5
           students to open, and the time must be arranged with the teacher.
         </div>
-      </div>
-      <div className={styles.teachers}>
-        <TeacherSwiper teachers={teachers} />
-      </div>
+    </div>
     </div>
   );
 };
