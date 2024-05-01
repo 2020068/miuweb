@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Button } from "@mui/material";
+import { ArrowForward } from "@mui/icons-material";
 
 const imageUrls = [
   "/bannerPics/image1.jpg",
@@ -9,7 +10,7 @@ const imageUrls = [
 
 const Banner: NextPage = () => {
   return (
-    <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] items-center flex flex-col items-start justify-start pt-10 px-5vw pb-12 box-border max-w-full z-3 text-center md:pt-6 md:px-8 md:pb-8">
+    <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] items-center flex flex-col justify-start pt-10 px-5vw pb-12 box-border max-w-full z-3 text-center md:pt-6 md:px-8 md:pb-8">
       <div className="mb-4 xl:text-5xl md:text-2xl text-white ">
         Shaping Global Leaders for an Interconnected World
       </div>
@@ -49,7 +50,7 @@ const Banner: NextPage = () => {
           <div className="self-stretch flex flex-row items-start justify-center">
             <Button
               className="self-stretch w-48"
-              endIcon={<img width="10" height="9" src="/arrow.svg" />}
+              endIcon={<ArrowForward />}
               disableElevation={true}
               variant="outlined"
               sx={{

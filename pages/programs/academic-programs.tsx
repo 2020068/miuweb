@@ -13,6 +13,15 @@ const academicProgramPage: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.backgroundImg}></div>
+
+      <div className={styles.logoContainer}>
+        <a href="/">
+          <Image src="/logos/MIU.png" alt="MIU logo" width={45} height={45} />
+        </a>
+      </div>
+      <div className={styles.box}>
+        <h1>Mongolian International University</h1>
+      </div>
       <div className={styles.box1}>
         <h3>Academic Programs</h3>
         <h2>
@@ -22,6 +31,7 @@ const academicProgramPage: React.FC = () => {
           ecologically resilient.
         </h2>
       </div>
+      <div className={styles.programImg}></div>
       <div className={styles.Exboxes}>
         <div className={styles.Exbox1}>
           Exchange Student Program
