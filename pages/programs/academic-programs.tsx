@@ -22,6 +22,7 @@ const academicProgramPage: React.FC = () => {
           ecologically resilient.
         </h2>
       </div>
+      <div className={styles.programImg}></div>
       <div className={styles.Exboxes}>
         <div className={styles.Exbox1}>
           Exchange Student Program
