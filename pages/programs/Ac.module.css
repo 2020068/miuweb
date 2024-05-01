@@ -7,21 +7,6 @@
     gap: 20px;
 }
 
-.logoContainer {
-    grid-column: 1 / 4;
-    width: 80px;
-    height: 80px;
-    top: -20px;
-    position: relative;
-    background-color: #4070f4;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    z-index: 10;
-    opacity: 1;
-    
-}
-
 .backgroundImg {
     grid-column: 1 / 4;
     opacity: 0.5;
@@ -64,27 +49,13 @@
     position: absolute;
     top: 15%;
 } 
-.menu {
-    z-index: 999;
-    position: relative;
-}
 
-.programImg {
-    z-index: 55;
-    display: flex;
-    position: relative;
-    left: 5%;
-    opacity: 0.8;
-    z-index: 10;
-    width: 200%;
-
-}
 .Exboxes {
     grid-column: 1/4;
     width: 300px; /* Adjusted width to accommodate three boxes */
     height: 600px;
     background-color: white;
-    margin: 0% 65% 10%; /* Center the container horizontally */
+    margin: 0% 5% 10%; /* Center the container horizontally */
     opacity: 1;
     color: white;
     font-size: 20px;
@@ -153,7 +124,7 @@
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    margin-right: 400%;
+
   }
 .Eximg1 {
     z-index: 2;
@@ -181,12 +152,13 @@
     align-items: center;
     justify-content: center;
     font-size: 17px; 
-    top: calc(60% + 5px); 
-    left: -20%; 
-    transform: translateX(-100%); 
+    top: 59%; 
+    left: 150%; 
+
 }
+
 .Exbox1:hover .Eximg1 {
-    margin-right: 400%;
+    margin-left: 350%;
     margin-top: 132.8%;
     opacity: 0.6;
     position: absolute;
@@ -196,7 +168,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500%;
+    width: 450%;
     height: 100%;
 
 }
@@ -212,10 +184,8 @@
     justify-content: center;
     font-size: 30px; 
     top: calc(90% + 5px); 
-    left: 0%; 
-    transform: translateX(-100%);
+    left: 330%; 
     z-index: 30;
-
     opacity: 1; 
 }
 .viewProgram {
@@ -228,7 +198,7 @@
 }
 
 .Exbox2:hover .Eximg2 {
-    margin-right: 400%;
+    margin-left: 350%;
     margin-top: 0%;
     opacity: 0.6;
     position: absolute;
@@ -238,7 +208,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500%;
+    width: 450%;
     height: 100%;
 
 }
@@ -254,8 +224,7 @@
     justify-content: center;
     font-size: 30px; 
     top: calc(90% + 5px); 
-    left: -50%; 
-    transform: translateX(-100%);
+    left: 330%; 
     z-index: 30;
     opacity: 1; 
 }
@@ -268,32 +237,18 @@
     color: #4070f4;
 }
 .Exbox3:hover .Eximg3 {
-    margin-right: 400%;
+    margin-left: 350%;
     margin-top: -133.4%;
     opacity: 0.6;
     position: absolute;
-    background-image: url(../../public/images/programImg/visiontrip.jpg);
+    background-image: url(../../public/images/programImg/Vision-Trip.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500%;
+    width: 450%;
     height: 100%;
     border: rgba(64, 112, 244, 0.2) solid 0.1px;
-
-}
-
-
-
-.footer {
-    grid-column: 1/4;
-    position: relative;
-    top: 100%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0%;
 
 }

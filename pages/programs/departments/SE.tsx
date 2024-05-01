@@ -155,17 +155,18 @@ const CsPage: React.FC<PropType> = (props) => {
             </div>
             </div>
             <div ref={alumniRef} className={`${styles.alumni}`}>
-                Alumni
+               
                <h1 className={styles.alumniText}>
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br />
+               <span className={styles.textsize3}>Alumni</span> 
+                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
                 "I’m glad that I learned the basics of information technology in English.
                 It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
                 <div className={styles.alumImg}>
                 <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
-                <div className={styles.alumniBox}></div>
+                
 
            
         </div>
