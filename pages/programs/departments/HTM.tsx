@@ -59,25 +59,22 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jung-ho park",
+      name: "Choi Hui Park",
+      description: "Professor, Department Chair",
+    },
+    {
+      name: "Seung Hun Baek",
+      description: "Senior Lecturer",
+    },
+    {
+      name: "Victor Ngu",
       description: "Professor",
     },
+
     {
-      name: "Steven",
-      description: "Professor",
+      name: "Undrakh Munkhbaatar",
+      description: "Secretary",
     },
-    {
-      name: "James Jang",
-      description: "Lecturer",
-    },
-    {
-      name: "Dulguundusal T.",
-      description: "Lecturer",
-    },
-    {
-      name: "Dulamsuren Sharkhuu",
-      description: "Asistant Professor",
-    },    
 
   ];
 
@@ -88,51 +85,43 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                Hotel & Tourism Management
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
-                 Particular interest is placed on making computation fast and efficient. 
-                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
+                The Bachelor of Hotel and Tourism Management is designed to prepare you for professional 
+                and managerial roles in the global tourism and hotel industries. 
+                Emphasis is placed in major areas within tourism and hotel businesses.
                 </div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Skill Development</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                ● Being equipped to be competent in a global business environment. <br />
+                ● Being grounded in a wider range of knowledge and theories of a global business.<br />
+                ● Train to make a strategic decision-making.<br />
+                ● Being able to lead and work in a team.<br />
+                ● Being sensitized in an ethical and socially responsible issues.<br />
+                ● Being equipped with a strong communication and networking skills.<br />
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students develop skills in:
+                Career Opportunity
                 </a>
                 <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
+                ● Middle and senior management positions across all sectors<br />
+                ● Advertising and Marketing<br />
+                ● Accountancy<br />
+                ● Human Resources<br />
+                ● Banking including Investment Banking<br />
+                ● Sales and Retail<br />
+                ● Management Consultancy<br />
+                ● Business Journalism<br />
+                ● Transport and Logistics<br />
                 </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
-                </a>
-                <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
-                </div>
-                <a className={styles.a}>
-                Year 4 / Students move into:
-                </a>
-                <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
-                </div>
+                
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
             <div className={styles.title}>Faculties</div>
@@ -143,7 +132,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/HTM/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -155,16 +144,22 @@ const CsPage: React.FC<PropType> = (props) => {
             </div>
             </div>
             <div ref={alumniRef} className={`${styles.alumni}`}>
-               
                <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
+                <span className={styles.textsize3}>Alumni</span>
+                <span className={styles.textsize1}><br />Nomindari Enkhtur</span> <br /><br />
+                <span className={styles.textsize2}>M.S Candidate in Sustainability Management at Colombia University; Fulbright Awardee (2018-2020); Former CEO of the Mongolian Sustainable Finance Association; Dept. of International Business Management at MIU (2013)</span>  <br /><br /><br />
+                “MIU has changed my life in many ways. 
+                I truly believe that the values I learned at MIU, of responsibility, curiosity, creativity, and ethics among others, 
+                have guided me through my professional and personal journey and helped me become the person I am today. 
+                ​The diverse range of courses and university activities provided me with essential skills to become an effective manager in multicultural environments
+                . Moreover the relationships I developed with MIU professors played a big part in widening my perspective of opportunities and realizing my fullest potential. 
+                Even six years later, I always refer back to the lessons I learned and people I met at MIU. 
+                I also reflect warmly on the sense of community that MIU students shared. 
+                Last but not least, my English improved tremendously at MIU and that definitely gave me an edge in my career."</h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/IMalumni.jpg" alt="CSalumni" width={550} height={550} />
                 </div>
+                
                 </div>
                 
 

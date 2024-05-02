@@ -21,7 +21,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   }, [images, interval]);
 
   return (
-    <div className="">
+    <div>
       {images.map((imageUrl, index) => (
         <img
           key={index}
@@ -32,7 +32,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           }`}
         />
       ))}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      <div className="absolute inset-0 bg-black opacity-70"></div>
     </div>
   );
 };
