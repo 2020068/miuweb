@@ -1,12 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from './LEI.module.css';
+import React from "react";
+import Image from "next/image";
+import styles from "./LEI.module.css";
 
 const LEIPage: React.FC = () => {
   return (
     <div className={styles.container}>
-
-
       <div className={styles.box1}>Language Education Institute</div>
       <div className={styles.backgroundImg}></div>
       <div className={styles.rectangle}>
@@ -89,7 +87,7 @@ const LEIPage: React.FC = () => {
           requested and scheduled in advance. Classes require a minimum of 5
           students to open, and the time must be arranged with the teacher.
         </div>
-    </div>
+      </div>
     </div>
   );
 };

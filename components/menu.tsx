@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 import Button from "@mui/material/Button";
+import { ArrowDropDown } from "@mui/icons-material";
 interface MenuProps {
   toggleSearchBar: () => void;
   toggleSidebarMenuParent: () => void;
@@ -14,7 +15,7 @@ const Menu: React.FC<MenuProps> = ({
   toggleSearchBar,
   toggleSidebarMenuParent,
 }) => {
-  const { t } = useTranslation(); // Ensure that useTranslation is called unconditionally
+  const { t } = useTranslation();
   const router = useRouter();
   const [hoverPrograms, setHoverPrograms] = useState(false);
   const [sidebarMenuOpen, setSidebarMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ const Menu: React.FC<MenuProps> = ({
     toggleSidebarMenuParent();
   };
   const handleSearchClick = () => {
-    toggleSearchBar(); // Call the toggle function passed from the parent
+    toggleSearchBar();
   };
   return (
     <div
@@ -42,9 +43,11 @@ const Menu: React.FC<MenuProps> = ({
     >
       <div className="flex flex-col items-end justify-end h-full">
         {/* Larger Buttons */}
+
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
           onClick={toggleSidebarMenu}
           startIcon={<MenuIcon />}
         >
@@ -52,7 +55,8 @@ const Menu: React.FC<MenuProps> = ({
         </Button>
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
           startIcon={<SearchIcon />}
           onClick={handleSearchClick}
         >
@@ -60,24 +64,26 @@ const Menu: React.FC<MenuProps> = ({
         </Button>
         <Button
           variant="contained"
-          className="bg-blue-500 hover:bg-blue-700 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
+          className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
           startIcon={<EventIcon />}
         >
           {t("menu.button.newsEvents")}
         </Button>
 
         {/* Smaller Buttons */}
+
         <Link href="Applied/appl">
           <Button
-            variant="outlined"
-            className="bg-white-500 hover:bg-blue-700 hover:text-white text-center text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
+            className="bg-blue-900 hover:bg-blue-500 hover:text-white text-center text-white font-bold py-2 rounded-l-lg mb-4 w-[120px]"
+            style={{ borderRadius: "8px 0 0 8px" }}
           >
             {t("menu.button.apply")}
           </Button>
         </Link>
         <Button
-          variant="outlined"
-          className="bg-white-500 hover:bg-blue-700 hover:text-white text-blue-500 font-bold py-2 rounded-l mb-4 w-[120px]"
+          className="bg-blue-900 hover:bg-blue-500 hover:text-white text-white font-bold py-2 rounded-l-lg mb-4 w-[120px]"
+          style={{ borderRadius: "8px 0 0 8px" }}
           onClick={navigateToVisit}
         >
           {t("menu.button.visit")}
@@ -88,16 +94,18 @@ const Menu: React.FC<MenuProps> = ({
           onMouseLeave={() => setHoverPrograms(false)}
         >
           <Button
-            variant="outlined"
-            className="bg-white-500 hover:bg-blue-700 hover:text-white text-blue-500 font-bold py-2 rounded-l w-[120px]"
+            startIcon={<ArrowDropDown />}
+            className="bg-blue-900  hover:text-white text-white font-bold py-2 rounded-l-lg w-[120px]"
+            style={{ borderRadius: "8px 0 0 8px" }}
           >
             {t("menu.button.programs")}
           </Button>
           {hoverPrograms && (
-            <div className="absolute z-10 right-0 bg-white border border-gray-200 rounded">
+            <div className="absolute z-10 right-0 bg-white border border-gray-200 ">
               <Button
                 fullWidth
-                className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
+                className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100 "
+                style={{ borderRadius: "8px 0 0 8px" }}
                 onClick={() => navigateToPrograms("academic-programs")}
               >
                 {t("menu.programs.academicPrograms")}
@@ -105,11 +113,11 @@ const Menu: React.FC<MenuProps> = ({
               <Button
                 fullWidth
                 className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
+                style={{ borderRadius: "8px 0 0 8px" }}
                 onClick={() => navigateToPrograms("LEI")}
               >
                 {t("menu.programs.LEI")}
               </Button>
-              {/* Add more program buttons as needed */}
             </div>
           )}
         </div>

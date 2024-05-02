@@ -1,17 +1,42 @@
-import type { NextPage } from "next";
+import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
-
+import TypewriterAnimation from "../components/typewriteAnimation";
 const imageUrls = [
   "/bannerPics/image1.jpg",
   "/bannerPics/image2.png",
   "/bannerPics/image3.png",
 ];
 
-const Banner: NextPage = () => {
+const Banner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const banner = document.querySelector(".banner");
+      if (!banner) return;
+      const bannerPosition = banner.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+      if (bannerPosition < screenHeight * 0.9) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] items-center flex flex-col justify-start pt-10 px-5vw pb-12 box-border max-w-full z-3 text-center md:pt-6 md:px-8 md:pb-8">
-      <div className="mb-4 xl:text-5xl md:text-2xl text-white ">
+    <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] items-center flex flex-col justify-start pt-10 px-5vw pb-12 box-border max-w-full z-3 text-center md:pt-6 md:px-8 md:pb-8 banner">
+      <div
+        className={`mb-4 xl:text-5xl md:text-2xl text-white ${
+          isVisible ? "fade-in" : ""
+        }`}
+      >
         Shaping Global Leaders for an Interconnected World
       </div>
       <div className="flex flex-col md:flex-row items-start justify-between max-w-full gap-8 md:flex-wrap md:justify-center">
@@ -28,24 +53,13 @@ const Banner: NextPage = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-start justify-start gap-8 md:w-1/2 md:min-w-0">
-          <div className="self-stretch font-light text-white ">
-            Founded in 2002, MIU stands as a beacon of higher education in
-            Ulaanbaatar, Mongolia. Thanks to the generous support of former
-            president Natsagiin Bagabandi, the university was granted a
-            substantial land parcel of 17,100 ㎡ for its inaugural building.
-            Today, MIU is renowned for its English-language programs, making it
-            a leader in education across Central Asia. With 14 esteemed
-            bachelor’s programs, MIU is dedicated to nurturing the next
-            generation of global leaders from Mongolia, Russia, China, South
-            Korea, and beyond. Education at MIU is about grasping the
-            intricacies of our interconnected world, fostering critical
-            thinking, and empowering students to make a positive impact on
-            society. Anchored by a comprehensive core curriculum, MIU offers a
-            wealth of experiential learning opportunities across a diverse range
-            of disciplines. Encircled by a dynamic campus community, MIU equips
-            students with essential skills to navigate and succeed in an
-            ever-evolving global landscape.
+        <div
+          className={`flex flex-col items-start justify-start gap-8 md:w-1/2 md:min-w-0 ${
+            isVisible ? "fade-in-up" : ""
+          }`}
+        >
+          <div className="self-stretch font-light text-white">
+            <TypewriterAnimation children={undefined}></TypewriterAnimation>
           </div>
           <div className="self-stretch flex flex-row items-start justify-center">
             <Button

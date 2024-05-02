@@ -24,7 +24,7 @@ const Header = ({ isSearchVisible }: HeaderProps) => {
   };
 
   return (
-    <header className="h-fit bg-blue-900 text-white py-1 px-6 flex items-center justify-between">
+    <header className="text-white py-1 px-6 flex items-center justify-between">
       <div className="flex items-center justify-center flex-grow">
         <Image
           src="/logos/MIU.png"

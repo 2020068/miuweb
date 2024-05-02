@@ -11,10 +11,10 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="bg-blue-900 text-m rounded-lg border-white visible">
+    <div>
       <div className="flex items-center">
         <input
-          className="bg-blue-900 text-white text-10 border-none"
+          className="text-white text-10 border-none outline-none bg-transparent"
           type="search"
           placeholder="Search..."
           value={searchTerm}
@@ -23,7 +23,6 @@ const SearchBar = () => {
             fontSize: "1.5rem",
             padding: "0.5rem",
             color: "white",
-            fontStyle: "italic",
           }}
         />
         <Search className="text-white mr-2 ml-2 cursor-pointer" />
@@ -31,5 +30,4 @@ const SearchBar = () => {
     </div>
   );
 };
-
 export default SearchBar;
