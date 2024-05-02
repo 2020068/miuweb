@@ -1,31 +1,50 @@
 {
-    "menu.button.menu": "Menu",
-    "menu.button.search": "Search",
-    "menu.button.newsEvents": "News-Events",
-    "menu.button.apply": "Apply",
-    "menu.button.visit": "Visit",
-    "menu.button.programs": "Programs",
-    "menu.programs.academicPrograms": "Academic Programs",
-    "menu.programs.LEI": "LEI",
-    "header": {
-        "scrollText": [
-          "The only limit to our realization of tomorrow will be our doubts of today.",
-          "Believe you can and you're halfway there.",
-          "The future belongs to those who believe in the beauty of their dreams.",
-          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-          "You are never too old to set another goal or to dream a new dream.",
-          "In the middle of difficulty lies opportunity.",
-          "The only way to do great work is to love what you do.",
-          "You miss 100% of the shots you don't take.",
-          "It always seems impossible until it's done.",
-          "The only person you are destined to become is the person you decide to be.",
-          "The future depends on what you do today.",
-          "Success is not the key to happiness. Happiness is the key to success.",
-          "The best way to predict the future is to create it.",
-          "Don't watch the clock; do what it does. Keep going.",
-          "The only limit to our realization of tomorrow will be our doubts of today."
-        ]
-      }
+  "menu.button.menu": "Menu",
+  "menu.button.search": "Search",
+  "menu.button.newsEvents": "News-Events",
+  "menu.button.apply": "Apply",
+  "menu.button.visit": "Visit",
+  "menu.button.programs": "Programs",
+  "menu.programs.academicPrograms": "Academic Programs",
+  "menu.programs.LEI": "LEI",
+  "about": {
+    "button": {
+      "back": "back",
+      "campus": "Campus",
+      "employee": "Employee"
+    },
+    "text": {
+      "sight-word1": "The Most Global and Dynamic University in Mongolia",
+      "sight-word2": "MIU",
+      "title3": "Message from the President",
+      "Ceodescription": "It is my privilege to introduce you to Mongolia International University (MIU). The mission of our school is to equip our students with a quality education and character development, preparing them to be leaders of integrity in the 21st century. MIU is a vibrant community where students have the opportunity to complete studies in a variety of academic fields. Through the investment of our international faculty and staff and our close-knit environment of instructors, mentors, and advisors, students will feel they are part of a family. They will be equipped with the skills and knowledge necessary to achieve great scholarly work. MIU challenges students to explore innovative intellectual interests through scholarly and personal competency programs. Emphasizing professionalism, MIU students learn to make new connections in a synergistic environment that multiplies the use of resources such as time, energy, and creativity. Most importantly, MIU is preparing a generation of distinctive leaders with the qualities of heart and character to serve their own people, nation, and the world. MIU will accompany you and take you one step closer to the portal of your future. Welcome to MIU! Oh Moon KWON President, Mongolia International University",
+      "title2": "Message from the Chairman of the Board of Trustees",
 
+      "LeaderDescription": "Greetings to all of you! Established in 2002, Mongolia International University offers a variety of academic programs to make a difference in higher education in Mongolia by developing innovative and servant leaders. As one of the most diverse universities in Central Asia, MIU also provides students with international opportunities of student exchange programs all over the world. We would like to thank our faculty and staff for all of their continuous efforts to help make MIU a leader in academic quality and innovation. We will strive to keep cultivating a rich environment for our students. As MIU continues to grow, we will continue to offer our full support to our students. Our university aims to prepare new generations of global servant leaders in Mongolia and throughout Central Asia. And while firmly holding onto our core values, MIU will continue to remain faithful to our mission statements moving forward, to educate Global Servant Leaders of Tomorrow. Dwayne Wade, one of the renowned NBA stars, once wrote a touching comment to his colleague, 'Thanks for pushing me to be greater than I knew I was.' All of us here as MIU faculty members look forward to hearing this from you in your near future! Sincerely yours, Hyongtaek HWANG, Hon. Dr Chairman of the Board of Trustees, Mongolia International University",
+      "intro": "Sincerely yours,",
+      "signature": "Sincerely yours, Hyongtaek HWANG, Hon. ",
+      "director": "Dr. Chairman of the Board of Trustees, Mongolia International University",
+      "title1": "Our Mission",
+      "boxDescription": "To educate and develop leaders in Mongolia and throughout Central Asia who possess honesty, integrity and professionalism To be an innovative leader for higher education, providing relevant areas of study at the leading edge To cultivate an international community of current and future leaders through a multicultural campus and global partnerships To foster a culture of servant leadership in Mongolia and throughout Central Asia"
+    }
+  },
+  "header": {
+    "scrollText": [
+      "The only limit to our realization of tomorrow will be our doubts of today.",
+      "Believe you can and you're halfway there.",
+      "The future belongs to those who believe in the beauty of their dreams.",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      "You are never too old to set another goal or to dream a new dream.",
+      "In the middle of difficulty lies opportunity.",
+      "The only way to do great work is to love what you do.",
+      "You miss 100% of the shots you don't take.",
+      "It always seems impossible until it's done.",
+      "The only person you are destined to become is the person you decide to be.",
+      "The future depends on what you do today.",
+      "Success is not the key to happiness. Happiness is the key to success.",
+      "The best way to predict the future is to create it.",
+      "Don't watch the clock; do what it does. Keep going.",
+      "The only limit to our realization of tomorrow will be our doubts of today."
+    ]
   }
-  
+}

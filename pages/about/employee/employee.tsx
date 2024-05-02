@@ -10,6 +10,7 @@ import General from "./EmployeeDep/GE";
 import Admission from "./EmployeeDep/Admission";
 import FastRewindTwoToneIcon from "@mui/icons-material/FastRewindTwoTone";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import Button from "@mui/material/Button";
 
 interface EmployeeType {
   // Define properties for EmployeeType here if needed
@@ -40,14 +41,14 @@ const Employee: React.FC<PropType> = (props) => {
         <div className='button'>
           <div className='flex flex-col items-end justify-end h-full'>
             <Link href='..'>
-              <button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+              <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]'>
                 <FastRewindTwoToneIcon />
-              </button>
+              </Button>
             </Link>
             <Link href='../campus/campus'>
-              <button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+              <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]'>
                 <LocationOnOutlinedIcon />
-              </button>
+              </Button>
             </Link>
           </div>
         </div>

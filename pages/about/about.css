@@ -2,13 +2,13 @@
 
 .about-container {
   position: relative;
-  max-width: wrap fit-content;
+  max-width: 130rem;
   margin: 0 auto;
   background-image: url("../../public/aboutPage/aboutpage/graduation.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 300px;
+  padding: 18rem;
 }
 
 .about-image {
@@ -23,8 +23,9 @@
   opacity: 0.5;
   z-index: -1;
 }
+
 .button-group {
-  margin-top: 30px;
+  margin-top: 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -36,56 +37,45 @@
 
 .about-text {
   position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0px;
+  font-size: 0rem;
   color: rgb(72, 69, 69);
-  padding: 10px;
-  border: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 0.6rem;
+  border: 0.3rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
 }
 
 .sight-word {
   color: #173992;
   position: relative;
-  max-width: wrap fit-content; /* Adjust as needed */
   margin: 0 auto;
-  width: 1000px;
-  height: 200px;
+  width: 100rem;
+  height: 12rem;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: row;
-  margin-top: 50px;
+  margin-top: 3rem;
 }
+
 .sight-word1 {
   position: inherit;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: "Helvetica", sans-serif;
 }
 
 .sight-word2 {
   position: inherit;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: bold;
   font-family: "Helvetica", sans-serif;
 }
 
 .box1 {
-  position: relative;
-  max-width: wrap fit-content;
-  margin: 0 auto;
-  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  padding: 20px;
-  width: 90%;
-  margin-bottom: 30px;
   display: row;
-  animation: rainbow-bg 10s ease infinite;
+  animation: rainbow-bg 10s ease infinite; /* border: rgb(47, 112, 193) solid 0.1825rem; */
 }
-
 @keyframes rainbow-bg {
   0% {
     background-position: 0% 50%;
@@ -100,67 +90,69 @@
 
 .box2 {
   display: flex;
-  margin-bottom: 50px;
+  position: center;
 }
 
-.boxImg {
-  position: relative;
-  width: 800px;
-  height: 500px;
-  background-image: url("../../public/aboutPage/aboutpage/Dgraduation.jpg");
-  background-size: cover;
-  animation: rainbow-bg 10s ease infinite;
-}
-
-.boxDescription {
-  margin-right: 100px;
-  width: 800px;
-  height: 500px;
-  position: relative;
-  /* border: rgb(47, 112, 193) solid 1px; */
-  padding: 20px;
-}
 .CeoDescription {
-  margin-right: 100px;
-  width: 800px;
-  height: 600px;
+  margin-right: 6.25rem; /* 100px / 16px */
+  width: 60rem; /* 800px / 16px */
+  height: 55rem; /* 600px / 16px */
   position: relative;
   /* border: rgb(47, 112, 193) solid 1px; */
-  padding: 20px;
+  padding: 1.25rem; /* 20px / 16px */
 }
+
 .CeoImg {
   position: relative;
-  width: 800px;
-  height: 600px;
+  width: 60rem; /* 800px / 16px */
+  height: 55rem; /* 600px / 16px */
   background-image: url("../../public/aboutPage/aboutpage/ceo.jpg");
   background-size: cover;
 }
 
 .LeaderImg {
   position: relative;
-  width: 800px;
-  height: 600px;
+  width: 60rem; /* 800px / 16px */
+  height: 65rem; /* 600px / 16px */
   background-image: url("../../public/aboutPage/aboutpage/leader.jpg");
   background-size: cover;
 }
 
 .LeaderDescription {
-  margin-left: 100px;
-  width: 800px;
-  height: 600px;
+  margin-left: 6.25rem; /* 100px / 16px */
+  width: 60rem; /* 800px / 16px */
+  height: 65rem; /* 600px / 16px */
   position: relative;
-  /* border: rgb(47, 112, 193) solid 1px; */
-  padding: 20px;
+  padding: 1.25rem; /* 20px / 16px */
 }
+.boxImg {
+  position: relative;
+  width: 60rem;
+  height: 40rem;
+  background-image: url("../../public/aboutPage/aboutpage/Dgraduation.jpg");
+  background-size: cover;
+  animation: rainbow-bg 0.625s ease infinite; /* 10s / 16px */
+}
+
+.boxDescription {
+  margin-right: 6.25rem; /* 100px / 16px */
+  width: 60rem; /* 800px / 16px */
+  height: 40rem; /* 600px / 16px */
+  position: relative;
+  padding: 1.25rem; /* 20px / 16px */
+}
+
 .title1 {
   color: rgb(42, 89, 147);
-  font-size: xx-large;
+  font-size: 1.875rem; /* xx-large / 16px */
 }
+
 .title2 {
   color: rgb(42, 89, 147);
-  font-size: xx-large;
+  font-size: 1.875rem; /* xx-large / 16px */
 }
+
 .title3 {
   color: rgb(42, 89, 147);
-  font-size: xx-large;
+  font-size: 1.875rem; /* xx-large / 16px */
 }

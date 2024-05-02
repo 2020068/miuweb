@@ -10,6 +10,7 @@ import MIS from "./CCElements/MIS";
 import Dormitory from "./CCElements/Dorm";
 import SC from "./CCElements/SC";
 import { EmblaOptionsType } from "embla-carousel";
+import Button from "@mui/material/Button";
 
 const catType = [
   {
@@ -68,9 +69,9 @@ const Campus: React.FC = () => {
           }}>
           <Grid container justifyContent='flex-front'>
             <Link href='..'>
-              <button className='campus-button bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+              <Button className='campus-button bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]'>
                 <FastRewindTwoToneIcon />
-              </button>
+              </Button>
             </Link>
           </Grid>
         </Grid>
