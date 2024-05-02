@@ -5,7 +5,7 @@ const Sidebar = ({ isOpen = false }) => {
   return (
     <div
       className={`fixed top-0 right-0 h-screen w-64 bg-blue-700 z-50 transition-transform duration-500 ease-in-out ${
-        isOpen ? "-translate-x-0" : "translate-x-[100%]"
+        isOpen ? "-translate-x-[-96px]" : "translate-x-[100%]"
       }`}
     >
       <div>
