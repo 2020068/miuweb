@@ -32,12 +32,10 @@ const CsPage: React.FC<PropType> = (props) => {
     if (
       overviewRef.current &&
       curriculumRef.current &&
-      alumniRef.current &&
       facultyRef.current
     ) {
       intersectionObserver.observe(overviewRef.current);
       intersectionObserver.observe(curriculumRef.current);
-      intersectionObserver.observe(alumniRef.current);
       intersectionObserver.observe(facultyRef.current);
     }
 
@@ -45,12 +43,10 @@ const CsPage: React.FC<PropType> = (props) => {
       if (
         overviewRef.current &&
         curriculumRef.current &&
-        alumniRef.current &&
         facultyRef.current
       ) {
         intersectionObserver.unobserve(overviewRef.current);
         intersectionObserver.unobserve(curriculumRef.current);
-        intersectionObserver.unobserve(alumniRef.current);
         intersectionObserver.unobserve(facultyRef.current);
       }
     };
@@ -60,23 +56,27 @@ const CsPage: React.FC<PropType> = (props) => {
   const faculties = [
     {
       name: "Jung-ho park",
+      description: "Assistant Professor",
+    },
+    {
+      name: "Steven Eisenbarth",
       description: "Professor",
-    },
-    {
-      name: "Steven",
-      description: "Professor",
-    },
-    {
-      name: "James Jang",
-      description: "Lecturer",
-    },
-    {
-      name: "Dulguundusal T.",
-      description: "Lecturer",
     },
     {
       name: "Dulamsuren Sharkhuu",
       description: "Asistant Professor",
+    },
+    {
+      name: "Kevin Abbot",
+      description: "Associate Professor",
+    },
+    {
+      name: "Min Young Ra",
+      description: "Associate Professor",
+    },
+    {
+      name: "Dulguundusal T.",
+      description: "Lecturer",
     },    
 
   ];
@@ -88,51 +88,45 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                Software Engineering
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
-                 Particular interest is placed on making computation fast and efficient. 
-                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
+                Software Engineering (SE) graduates are highly marketable. They know business and programming. 
+                Students enrolled in the SE program take courses from both the Department of Computer Science and the Department of Business Administration,
+                two of MIU’s premier departments; both are accredited. SE degree is geared to students who: <br /><br />
+                -Want to learn the languages of business and technology.<br />
+                -Want to manage information systems and ensure that computers work well for people.<br />
+                -Want to go more deeply into computer programming and technology than the typical business student.<br />
                 </div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Curriculum</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                 ● Web Programming
+                 ● Operating Systems
+                 ● Database Design
+                 ● Mobile Programming
+                 ● Computer Networks and Security
+                 ● Human Computer Interaction
+                 ● Management of Information Systems
+                 ● Principles of Economics
+                 ● Organization Behavior Theory 
+                 ● Management Accounting
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students develop skills in:
+                  Department Activities
                 </a>
                 <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
+                Blend of SE and Business. MIU is acclaimed nationally for its accredited Business and SE programs. 
+                SE majors take courses in Departments.  <br />
+                Hands-on technical career. Apply what you learn as an SE professional. 
+                MIU is dedicated to help you find opportunities for meaningful technical work.<br />
                 </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
-                </a>
-                <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
-                </div>
-                <a className={styles.a}>
-                Year 4 / Students move into:
-                </a>
-                <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
-                </div>
+                
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
             <div className={styles.title}>Faculties</div>
@@ -143,7 +137,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/SE/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -154,18 +148,7 @@ const CsPage: React.FC<PropType> = (props) => {
                 ))}
             </div>
             </div>
-            <div ref={alumniRef} className={`${styles.alumni}`}>
-               
-               <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
-                <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
-                </div>
-                </div>
+         
                 
 
            

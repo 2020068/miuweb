@@ -88,7 +88,7 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                Master in Software Engineering
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
@@ -166,9 +166,6 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
-                
-
-           
         </div>
         
     );
