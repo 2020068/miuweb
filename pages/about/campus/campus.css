@@ -3,33 +3,8 @@
 .campus-container {
   position: relative;
   max-width: 100%;
-  margin: 0 auto;
   background-image: url("../../../public/aboutPage/campus/backCampus.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  padding: 250px;
-}
-/* .campus-header {
-  position: absolute;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  -webkit-text-stroke: 3px rgb(47, 112, 193);
-  color: white;
-  background-color: transparent;
-  z-index: 999;
-  margin-top: 80px;
-  margin-left: 480px;
-} */
-.campus-button {
-  margin-top: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #173992;
+  padding: 14rem;
 }

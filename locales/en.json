@@ -15,7 +15,6 @@
     },
     "text": {
       "sight-word1": "The Most Global and Dynamic University in Mongolia",
-      "sight-word2": "MIU",
       "title3": "Message from the President",
       "Ceodescription": "It is my privilege to introduce you to Mongolia International University (MIU). The mission of our school is to equip our students with a quality education and character development, preparing them to be leaders of integrity in the 21st century. MIU is a vibrant community where students have the opportunity to complete studies in a variety of academic fields. Through the investment of our international faculty and staff and our close-knit environment of instructors, mentors, and advisors, students will feel they are part of a family. They will be equipped with the skills and knowledge necessary to achieve great scholarly work. MIU challenges students to explore innovative intellectual interests through scholarly and personal competency programs. Emphasizing professionalism, MIU students learn to make new connections in a synergistic environment that multiplies the use of resources such as time, energy, and creativity. Most importantly, MIU is preparing a generation of distinctive leaders with the qualities of heart and character to serve their own people, nation, and the world. MIU will accompany you and take you one step closer to the portal of your future. Welcome to MIU! Oh Moon KWON President, Mongolia International University",
       "title2": "Message from the Chairman of the Board of Trustees",
@@ -26,6 +25,9 @@
       "director": "Dr. Chairman of the Board of Trustees, Mongolia International University",
       "title1": "Our Mission",
       "boxDescription": "To educate and develop leaders in Mongolia and throughout Central Asia who possess honesty, integrity and professionalism To be an innovative leader for higher education, providing relevant areas of study at the leading edge To cultivate an international community of current and future leaders through a multicultural campus and global partnerships To foster a culture of servant leadership in Mongolia and throughout Central Asia"
+    },
+    "employee": {
+      "headerTitle": "Faculty Information"
     }
   },
   "header": {

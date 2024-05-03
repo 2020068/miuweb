@@ -5,6 +5,7 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Employee from "./employee/employee";
 
 const AboutPage: React.FC = () => {
   const { t } = useTranslation(); // Ensure that useTranslation is called unconditionally
@@ -25,17 +26,16 @@ const AboutPage: React.FC = () => {
                 {t("about.button.campus")}
               </Button>
             </Link>
-            <Link href='./about/employee/employee'>
+            {/* <Link href='./about/employee/employee'>
               <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
                 {t("about.button.employee")}
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
       <div className='sight-word'>
         <div className='sight-word1'>{t("about.text.sight-word1")}</div>
-        <div className='sight-word2'> {t("about.text.sight-word2")}</div>
       </div>
       <div className='box1'>
         <div className='box2'>
@@ -66,6 +66,7 @@ const AboutPage: React.FC = () => {
           <div className='boxImg'></div>
         </div>
       </div>
+      <Employee />
     </div>
   );
 };
