@@ -4,7 +4,7 @@ interface ImageCarouselProps {
   interval?: number;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({
+const HomeImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   interval = 3000,
 }) => {
@@ -38,4 +38,4 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   );
 };
 
-export default ImageCarousel;
+export default HomeImageCarousel;

@@ -23,6 +23,9 @@ const Menu: React.FC<MenuProps> = ({
   const navigateToVisit = () => {
     router.push("/visit");
   };
+  const handleNewsClick = () => {
+    router.push("/news");
+  };
 
   const navigateToPrograms = (program: string) => {
     router.push(`/programs/${program}`);
@@ -39,7 +42,7 @@ const Menu: React.FC<MenuProps> = ({
     <div
       className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
           ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
-          -translate-y-1/2 transition-transform duration-500 ease-in-out`}
+          -translate-y-[50vh] transition-transform duration-500 ease-in-out`}
     >
       <div className="flex flex-col items-end justify-end h-full">
         {/* Larger Buttons */}
@@ -67,6 +70,7 @@ const Menu: React.FC<MenuProps> = ({
           className="bg-blue-500 hover:bg-blue-900 bg-opacity-80 text-white font-bold py-3 rounded-l-lg mb-4 w-[160px]"
           style={{ borderRadius: "8px 0 0 8px" }}
           startIcon={<EventIcon />}
+          onClick={handleNewsClick}
         >
           {t("menu.button.newsEvents")}
         </Button>

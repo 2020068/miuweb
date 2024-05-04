@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Spline from "@splinetool/react-spline";
-import ImageCarousel from "@/components/homeImageCarousel";
+import HomeImageCarousel from "@/components/homeImageCarousel";
 
 const HomePage = () => {
   const router = useRouter();
@@ -30,7 +30,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen relative">
       <div className="absolute inset-0">
-        <ImageCarousel images={imageUrls} interval={5000} />
+        <HomeImageCarousel images={imageUrls} interval={5000} />
       </div>
       <div className="absolute inset-0 top-[-35%] flex items-center text-center md:flex md:justify-center">
         <span
