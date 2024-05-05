@@ -79,14 +79,14 @@ const Menu: React.FC<MenuProps> = ({
 
         <Link href="Applied/appl">
           <Button
-            className="bg-blue-900 hover:bg-blue-500 hover:text-white text-center text-white font-bold py-2 rounded-l-lg mb-4 w-[120px]"
+            className="bg-blue-900 hover:bg-blue-500 hover:text-white text-center text-white font-bold py-2 rounded-l-lg mb-4 w-[140px]"
             style={{ borderRadius: "8px 0 0 8px" }}
           >
             {t("menu.button.apply")}
           </Button>
         </Link>
         <Button
-          className="bg-blue-900 hover:bg-blue-500 hover:text-white text-white font-bold py-2 rounded-l-lg mb-4 w-[120px]"
+          className="bg-blue-900 hover:bg-blue-500 hover:text-white text-white font-bold py-2 rounded-l-lg mb-4 w-[140px]"
           style={{ borderRadius: "8px 0 0 8px" }}
           onClick={navigateToVisit}
         >
@@ -99,7 +99,7 @@ const Menu: React.FC<MenuProps> = ({
         >
           <Button
             startIcon={<ArrowDropDown />}
-            className="bg-blue-900  hover:text-white text-white font-bold py-2 rounded-l-lg w-[120px]"
+            className="bg-blue-900  hover:text-white text-white font-bold py-2 rounded-l-lg w-[140px]"
             style={{ borderRadius: "8px 0 0 8px" }}
           >
             {t("menu.button.programs")}
