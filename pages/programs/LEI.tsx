@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import styles from './LEI.module.css';
+import React from "react";
+import Image from "next/image";
+import styles from "./LEI.module.css";
 
 const LEIPage: React.FC = () => {
   return (
