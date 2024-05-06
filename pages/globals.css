@@ -80,3 +80,19 @@ footer{
     opacity: 1;
   }
 }
+ .miutitle{
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+
+ }
+
+ .shape {
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+ }
+ .bg-blur{
+  filter: blur(190px);
+ }
+
