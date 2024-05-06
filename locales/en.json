@@ -1,4 +1,5 @@
 {
+    "homepage.miu": " Mongolia International University",
     "menu.button.menu": "Menu",
     "menu.button.search": "Search",
     "menu.button.newsEvents": "News-Events",
@@ -6,26 +7,15 @@
     "menu.button.visit": "Visit",
     "menu.button.programs": "Programs",
     "menu.programs.academicPrograms": "Academic Programs",
-    "menu.programs.LEI": "LEI",
-    "header": {
-        "scrollText": [
-          "The only limit to our realization of tomorrow will be our doubts of today.",
-          "Believe you can and you're halfway there.",
-          "The future belongs to those who believe in the beauty of their dreams.",
-          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-          "You are never too old to set another goal or to dream a new dream.",
-          "In the middle of difficulty lies opportunity.",
-          "The only way to do great work is to love what you do.",
-          "You miss 100% of the shots you don't take.",
-          "It always seems impossible until it's done.",
-          "The only person you are destined to become is the person you decide to be.",
-          "The future depends on what you do today.",
-          "Success is not the key to happiness. Happiness is the key to success.",
-          "The best way to predict the future is to create it.",
-          "Don't watch the clock; do what it does. Keep going.",
-          "The only limit to our realization of tomorrow will be our doubts of today."
-        ]
-      }
-
+    "menu.programs.LEI": "LEI", 
+    "morebanner.title.1": "Explore Life!",
+    "morebanner.title.2": "Build Community!",
+    "morebanner.title.3": "Get Involved!",
+    "morebanner.title.4": "Join Us!",
+    "morebanner.content.1": "There are many great activities and events organized for MIU students. From performing arts to sports competitions to social events, each activity offers opportunities for students and faculty to enjoy life and experience new things.",
+    "morebanner.content.2": "MIU students are encouraged to participate in activities and events organized by MIU faculty and staff. MIU students are also encouraged to participate in MIU activities and events.",
+    "morebanner.content.3": "Many students join one or more of the many student clubs and organizations on campus. Or if the club you want to join doesn't exist, you can create it.",
+    "morebanner.content.4": "Each semester MIU provides students with the opportunity to study abroad for one semester through the Student Exchange Program (SEP). It is a great opportunity to experience new cultures, study at top universities, learn foreign languages and make new friends."
   }
+    
   

@@ -22,7 +22,11 @@ interface NewsProps {
 export default function News({ articles }: NewsProps) {
   return (
     <div className="h-screen">
-      <ImageCarousel image={"/collage_photos/main.jpg"} />
+      <ImageCarousel
+        textContent="News & Events"
+        textdesc="Latest news"
+        image={"/collage_photos/main.jpg"}
+      />
 
       <div>
         <NewsComponent articles={articles} />
