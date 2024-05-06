@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
-<<<<<<< HEAD
 import TypewriterAnimation from "../components/typewriteAnimation";
-=======
-
->>>>>>> 05ea04556c99c873eec0587642cbb7c6e92c3c67
 const imageUrls = [
   "/bannerPics/image1.jpg",
   "/bannerPics/image2.png",
