@@ -15,7 +15,6 @@ interface FacultyType {
 const CsPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
-  const alumniRef = useRef<HTMLDivElement>(null);
   const facultyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,12 +31,10 @@ const CsPage: React.FC<PropType> = (props) => {
     if (
       overviewRef.current &&
       curriculumRef.current &&
-      alumniRef.current &&
       facultyRef.current
     ) {
       intersectionObserver.observe(overviewRef.current);
       intersectionObserver.observe(curriculumRef.current);
-      intersectionObserver.observe(alumniRef.current);
       intersectionObserver.observe(facultyRef.current);
     }
 
@@ -45,12 +42,10 @@ const CsPage: React.FC<PropType> = (props) => {
       if (
         overviewRef.current &&
         curriculumRef.current &&
-        alumniRef.current &&
         facultyRef.current
       ) {
         intersectionObserver.unobserve(overviewRef.current);
         intersectionObserver.unobserve(curriculumRef.current);
-        intersectionObserver.unobserve(alumniRef.current);
         intersectionObserver.unobserve(facultyRef.current);
       }
     };
@@ -59,25 +54,33 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jung-ho park",
+      name: "Ashley Kim",
+      description: "Department Chair",
+    },
+    {
+      name: "Joeun Lee",
+      description: "Senior Lecturer",
+    },
+    {
+      name: "Hyun Jung Kim",
+      description: "Senior Lecturer",
+    },
+    {
+      name: "Lida Borkhuu",
       description: "Professor",
     },
     {
-      name: "Steven",
+      name: "Battuul Tserenchimed",
       description: "Professor",
     },
     {
-      name: "James Jang",
-      description: "Lecturer",
-    },
+      name: "Tuultsetseg Chigsem",
+      description: "Professor",
+    },  
     {
-      name: "Dulguundusal T.",
-      description: "Lecturer",
-    },
-    {
-      name: "Dulamsuren Sharkhuu",
-      description: "Asistant Professor",
-    },    
+      name: "Anujin Enkhnold",
+      description: "Secretary",
+    },      
 
   ];
 
@@ -99,37 +102,31 @@ const CsPage: React.FC<PropType> = (props) => {
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Curriculum</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                FD curriculum is structured based on four main fields of study: apparel design, project presentation, collection development, and fashion business. The curriculum of the FD Department includes holistic but essential areas of fashion studies to equip FD students with the vision and innovation to be a global leader in the apparel industry. 
+                <br /><br />
+                ●   Apparel Design: Fashion Design, Surface Design for Fabric, Mongolian Cashmere Products, Sustainability, Applied <br /> &nbsp;&nbsp;&nbsp;Textile,Mongolian Costume, Credits Exchange, Design Competition, Internship, Senior Fashion Show.
+                  <br /><br />
+                ● Projects Presentation: Draping, Pattern-drafting, Fit Analysis, Construction Techniques.
+                <br /><br />
+                ●  Collection Development: Free Drawing, Digital Design, Adobe, Clo3d, Fashion Portfolio. 
+                <br /><br />
+                ●  Fashion Business: Fashion Marketing, Merchandising, Brand Management.
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students develop skills in:
+                Opportunities
                 </a>
                 <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
-                </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
-                </a>
-                <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
-                </div>
-                <a className={styles.a}>
-                Year 4 / Students move into:
-                </a>
-                <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
+                ● Students will have different opportunities to participate in different fashion events to gain exposure to the fashion industries such as 
+                <br />
+                ● Organizing their own fashion show and exhibition every semester 
+                <br />
+                ● Internships with different fashion companies 
+                <br />
+                ● Participation in social and career program 
+                <br />
+                ● Participation in an international fashion design competition
                 </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
@@ -141,7 +138,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/FD/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -152,18 +149,7 @@ const CsPage: React.FC<PropType> = (props) => {
                 ))}
             </div>
             </div>
-            <div ref={alumniRef} className={`${styles.alumni}`}>
-               
-               <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
-                <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
-                </div>
-                </div>
+
                 
 
            
