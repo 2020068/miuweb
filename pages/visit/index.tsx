@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './visit.module.css'; './Breadcrumb.module.css' ;
+import styles from './visit.module.css';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import Breadcrumb from './breadcrumb';
-
-
 
 const VisitorPage: React.FC = () => {
   const mapCenter = { lat: 47.91482657901934, lng: 106.9731089094383 };
 
   return (
     <div className={styles.container}>
-     <Breadcrumb />  
-
+     
       <div className= {styles.plan}>
           <p>PLAN YOUR VISIT TO MIU</p>
           <a>See all the things MIU has to offer</a>
         </div>
 
-      <div className= "h-screen">
-      
       <div className={styles.visit_photo}></div>
-      </div>
-
 
       <div className={styles.map}>
         <Link href="https://www.google.com/maps/place/Mongolia+International+University/@47.9146792,106.9711992,17z/data=!3m1!4b1!4m6!3m5!1s0x5d96919485d76a77:0xc3c65e3fb66fde11!8m2!3d47.9146756!4d106.9737741!16s%2Fm%2F02x0l38?entry=ttu" target="_blank">
@@ -78,6 +70,9 @@ const VisitorPage: React.FC = () => {
         <br />Street parking and parking lots are available in the area.</p>
         </div>
       </div>
+
+           {/* Google Map */}
+  
     </div>
   );
 };
