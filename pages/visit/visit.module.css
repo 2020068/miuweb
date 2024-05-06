@@ -2,6 +2,7 @@
     color: black;
     background-color: white;
     height: 100vh;
+    
   }
   .header {
     position: relative;
@@ -46,18 +47,18 @@
       font-weight: normal;
     }
 
-  /*.visit_comment {
+  .visit_comment {
     position: absolute;
     font-size: 75px; 
     color: black; 
-   /* margin-top: 41%;
-    margin-left: 33%; */
-   /* top: 70%;
+    margin-top: 41%;
+    margin-left: 33%;
+    top: 70%;
     left: 33%;
     border: 10px solid black; 
     padding: 20px 50px;
   }
-  */
+ 
 
   .google_map {
     position: relative;
@@ -103,10 +104,3 @@
     padding: 10px 100px;
     text-align: center;
     }
-
-/* .footer {
-  position: absolute;
-  width: 100%;
-  margin-top: 70%;
-  top: 100%;
-} */

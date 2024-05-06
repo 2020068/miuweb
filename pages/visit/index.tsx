@@ -19,7 +19,6 @@ const VisitorPage: React.FC = () => {
         </div>
 
       <div className= "h-screen">
-      
       <div className={styles.visit_photo}></div>
       </div>
 

@@ -24,7 +24,7 @@
 }
 
 .breadcrumbBox {
-  position: relative; /* Position the box relative to the breadcrumb container */
+  position: absolute; /* Position the box relative to the breadcrumb container */
   top: 0; /* Adjust top position as needed */
   right: -30px; /* Adjust right position as needed */
   background-color: red;
