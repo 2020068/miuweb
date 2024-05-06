@@ -59,25 +59,33 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jung-ho park",
-      description: "Professor",
+      name: "Jericho Burg",
+      description: "Dean of IR",
     },
     {
-      name: "Steven",
-      description: "Professor",
-    },
-    {
-      name: "James Jang",
+      name: "Alejandra Gonzalez Mejia",
       description: "Lecturer",
     },
     {
-      name: "Dulguundusal T.",
+      name: "Mostafa Ahmed",
       description: "Lecturer",
     },
     {
-      name: "Dulamsuren Sharkhuu",
-      description: "Asistant Professor",
-    },    
+      name: "Suyong Kim",
+      description: "Lecturer",
+    },
+    {
+      name: "Dong-Ryul Kang",
+      description: "Lecturer",
+    },
+    {
+      name: "Jiyoung Chang",
+      description: "Lecturer",
+    },
+    {
+      name: "Chogtoo khereid",
+      description: "Lecturer",
+    },       
 
   ];
 
@@ -88,50 +96,41 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                International Relations
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
-                 Particular interest is placed on making computation fast and efficient. 
-                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
-                </div>
+                International Relations (IR) program aims to prepare experts and professionals in the fields of Diplomacy,
+                Political Science, and International Development to work in international organizations, NGOs, and government institutions.
+                The program provides foundational knowledge of international relation, history, economics, international trade, development, diplomacy, foreign policy analysis and many others. The program empowers students to address global challenges and policy issues with ethical and critical reasoning as diplomats, field research experts, program officers, consultants, and journalists. Importantly,
+                the students of the IR program at MIU can choose their area of expertise in their third year of studies.</div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Year 1 & 2 / Students are introduced to:</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                ● Basic knowledge each of the SISC majors: International Relations, Media & Communication, and International Development,
+                &nbsp;&nbsp;&nbsp;Diplomacy, and International Law; 
+                <br /><br /> ● Foundamental academic writing and reading skills; 
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students develop skills in:
-                </a>
-                <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
-                </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
+                Year 3 / Students can choose their concentration :
                 </a>
                 <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
+                ● Diplomacy and Political Science: Students learn practical skills of diplomatic communication and deepen their knowledge of politics and international cooperation. 
+                <br /><br />
+                ● International Development: Students study various fields of development studies such economic, sustainable, environmental,
+                rural & urban development as well gain practical skills of development project evaluation and implementation.
                 </div>
                 <a className={styles.a}>
-                Year 4 / Students move into:
+                Year 4 / Students moveto:
                 </a>
                 <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
+                ● Practical usage of the skills learned in both concentrations through internships
+                <br /> <br />
+                ● Thesis and Research writing
                 </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
@@ -143,7 +142,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/IR/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -157,13 +156,19 @@ const CsPage: React.FC<PropType> = (props) => {
             <div ref={alumniRef} className={`${styles.alumni}`}>
                
                <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
+               <span className={styles.textsize3}>Welcome Message</span> 
+                <span className={styles.textsize1}><br />Anastasiia Zharuk /M.S/</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>
+                – B.A Degree in International Business Management from Mongolia International University, Mongolia
+                <br />
+                – M.S Degree in International and Sustainable Development Policy from KDI School of Public Policy and Management, Korea
+                </span>  <br /><br /><br /><br />
+                “The IR department of MIU is happy to welcome you all into our big family!
+                We provide students with opportunity to learn about the world from international experts that bring various background
+                and experiences into the learning environment of the students. We encourage students to challenge themselves and aim to educate professionals that will shape the world of Politics and Global Cooperation!”
+                </h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/IRwelcomeimg.jpg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
                 

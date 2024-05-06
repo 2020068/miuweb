@@ -59,24 +59,20 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jung-ho park",
-      description: "Professor",
+      name: "Jericho Burg",
+      description: "Dean of MC",
     },
     {
-      name: "Steven",
-      description: "Professor",
+      name: "Chong Su Kim",
+      description: "Assistant Professor",
     },
     {
-      name: "James Jang",
+      name: "Batsugar Z.",
       description: "Lecturer",
     },
     {
-      name: "Dulguundusal T.",
+      name: "Chogtoo Khereid",
       description: "Lecturer",
-    },
-    {
-      name: "Dulamsuren Sharkhuu",
-      description: "Asistant Professor",
     },    
 
   ];
@@ -88,50 +84,39 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                Media & Communication
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
-                 Particular interest is placed on making computation fast and efficient. 
-                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
+                The Media and Communication (MC) Department of MIU prepares skilled and innovative professionals in the fields of journalism, public relations, marketing, and media production. Our students develop a strong foundation in media and communication theory and practice, journalism, and media policy, with a sequence of courses that equip them to produce creative media content for national and international audiences. Public relations, advertising, and strategic communication round out the curriculum, enabling students to specialize in their area of professional interest.
                 </div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Year 1 & 2 / Students are introduced to:</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                ● Basic knowledge each of the SISC majors: International Relations, Media & Communication,
+                 and International Development, <br /> &nbsp;&nbsp; Diplomacy, and International Law;
+                <br /> <br />
+                ● Foundamental academic writing and reading skills;
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students develop skills in:
-                </a>
-                <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
-                </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
+                Year 3 / Students gain knowledge  and skills in:
                 </a>
                 <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
+                ● Media Writing, PR, Advertising, and Communication
+                <br /><br />
+                ● Practical media tools and photoshooting
                 </div>
                 <a className={styles.a}>
-                Year 4 / Students move into:
+                Year 4 / Students move to:
                 </a>
                 <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
+                ● Practical usage of the skills learned in classes through internships
+                <br /><br />
+                ● MC graduation project development and research work
                 </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
@@ -143,7 +128,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/MC/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -157,13 +142,19 @@ const CsPage: React.FC<PropType> = (props) => {
             <div ref={alumniRef} className={`${styles.alumni}`}>
                
                <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
+               <span className={styles.textsize3}>Welcome Message</span> 
+                <span className={styles.textsize1}><br />Anastasiia Zharuk /M.S/</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>
+                Associate Professor, Media and Communication Department, MIU (2018-now) 
+                <br /><br />  
+                Program Manager, Media and Communication Program, School of International Studies and Communication, MIU (2021-)
+                <br /><br />
+                Ph.D. in Communication, University of California, San Diego, 2008
+                </span>  <br /><br /><br /><br />
+                From the moment I first arrived at MIU in late August, 2018, I knew it was a very special place. The sense of community, the welcoming environment, and the relationships I have developed with our students make it unlike any American or international university I’ve experienced. The level of care for individual students is unparalleled, and the university environment provides unique opportunities for personal and professional development for faculty and students alike. MIU enables academic achievement with personal growth in a way that produces graduates well equipped for both international careers and advanced study. The Media and Communication program in particular combines relevant coursework with international exposure to prepare students for a variety of fields, from journalism to marketing to social media production. MC students study important aspects of their field in a curriculum based on international standards. They also have hands-on, experiential learning opportunities through a series of practical courses and internships with local and international news organizations. I’m proud to be part of the MIU faculty and help our students learn, thrive, and succeed.
+                </h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/MCwelcomeimg.jpg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
                 

@@ -32,7 +32,7 @@ const LEIPage: React.FC = () => {
         </div>
       </div>
       <div className={styles.coursebox2}>
-        English foundation Course
+        English Evening Course
         <div className={styles.coursebox22}>
           Our evening English courses are targeted at working adults who wish to
           continue learning or improve their English for business purposes. It

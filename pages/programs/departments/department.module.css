@@ -13,7 +13,7 @@
     position: absolute;
     display: inline-block;
     width: 100%;
-    height: 15%;
+    height: 450px;
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -27,7 +27,7 @@
     height: 250px;
     background-color: #4070f4;
     color: #ffffff;
-    margin: 15% 10% 5%;
+    margin: 325px 160px 100px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -56,6 +56,7 @@
 .faculty {
   transform: translateY(30px);
   opacity: 0;
+  margin-bottom: 3%;
 }
 .curriculum {
   top: -10px;
@@ -109,10 +110,9 @@
 .facultyDetails {
 
   border-radius: 10px;
-
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   height: 300px;
@@ -129,19 +129,18 @@
 }
 
 .facultyName {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #333333;
   margin-top: 1rem;
-  margin: 0;
+  width: 150px;
 }
 
 .facultyDescription {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   color: #666666;
   margin-top: 5px;
   line-height: 1.6;
-  margin: 0;
 }
 .facultyG {
   font-display: none;
@@ -228,9 +227,7 @@
   font-size: 50px;
   color: #4070f4;
 }
-.doublespace {
-    white-space: pre-wrap; 
-}
+
 .visible {
   opacity: 1;
     transform: translateY(0); 
