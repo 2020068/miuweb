@@ -47,15 +47,6 @@ const UsPrograms: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.backgroundImg}></div>
-      <div className={styles.logoContainer}>
-        <a href="/">
-          <Image src="/logos/MIU.png" alt="MIU logo" width={45} height={45} />
-        </a>
-      </div>
-      <div className={styles.menu}></div>
-      <div className={styles.box}>
-        <h1>Mongolian International Univirsity</h1>
-      </div>
       <div className={styles.box1}>Departments</div>
       <div className={styles.programBox1}>
         School of Management
@@ -114,7 +105,7 @@ const UsPrograms: React.FC = () => {
         </div>
       </div>
       <div className={styles.programBox5}>
-        other Programs
+        Other Programs
         <div className={styles.PgText5}>
           <button className={styles.FD} onClick={() => goToFD()}>
             Department of Fashion Design(FD)

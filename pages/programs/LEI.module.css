@@ -1,18 +1,20 @@
 
 .container {
-    color: black;
-    background-color: #ffffff;
-
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  overflow-x: hidden;
+  font-family: "Helvetica", sans-serif;
   }
 
 .backgroundImg {
     opacity: 0.3;
     display: inline-block;
     position: absolute;
-    top: 0%;
-    left: 0%;
     width: 100%;
-    height: 30%;
+    height: 25%;
     background-image: url(../../public/images/programImg/LEIbackground.png);
     background-size: cover;
     background-position: center;
@@ -26,13 +28,13 @@
   height: 250px;
   background-color: #4070f4;
   color: #ffffff;
-  margin: 20% 15% 5%;
+  margin: 325px 160px 100px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   z-index: 1;
   opacity: 0.7;
   font-weight: bold;
@@ -50,12 +52,12 @@
   height: 450px;
   background-color: #4070f4;
   overflow: hidden;
-  margin-top: 10%;
-  margin-left: 32%;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-size: 40px;
   color: white;
+  margin-top: 130%;
+  left: -350px;
 }
 
 
@@ -99,20 +101,40 @@
   right: 0;
 }
 
-.coursebox1 {
+.coursebox1,
+.coursebox2,
+.coursebox3,
+.coursebox4,
+.coursebox5 {
+  grid-column: 1/4;
   width: 250px;
   height: 50px;
-  margin: 10% 15% 0%;
-  border-top: rgba(64, 112, 244, 0.2) solid 1px;
   border-right: rgba(64, 112, 244, 0.2) solid 1px;
   border-bottom: rgba(64, 112, 244, 0.2) solid 1px;
+  top: 0px;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   position: relative;
   font-weight: bold;
-
+}
+.coursebox1 {
+  margin: 10% 15% 0%;
+  border-top: rgba(64, 112, 244, 0.2) solid 1px;
+}
+.coursebox2 {
+  margin: 0% 15% 0%;
+}
+.coursebox3 {
+  margin: 0% 15% 0%;
+}
+.coursebox4 {
+  margin: 0% 15% 0%;
+}
+.coursebox5 {
+  margin: 0% 15% 10%;
+  margin-bottom: 10%;
 }
 .coursebox1:hover {
   color: #4070f4;
@@ -130,8 +152,8 @@
   justify-content: center;
   margin-top: 80%;
   font-weight: normal;
-  
 }
+
 .coursebox11 {
   display: none;
   position: absolute;
@@ -145,19 +167,7 @@
   justify-content: center;
   font-size: 18px;
 }
-.coursebox2 {
-  width: 250px;
-  height: 50px;
-  margin: 0% 15% 0%;
-  border-right: rgba(64, 112, 244, 0.2) solid 1px;
-  border-bottom: rgba(64, 112, 244, 0.2) solid 1px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-weight: bold;
-}
+
 .coursebox2:hover {
   color: #4070f4;
   font-weight: bold;
@@ -191,19 +201,6 @@
   font-size: 18px;
 }
 
-.coursebox3 {
-  width: 250px;
-  height: 50px;
-  margin: 0% 15% 0%;
-  border-right: rgba(64, 112, 244, 0.2) solid 1px;
-  border-bottom: rgba(64, 112, 244, 0.2) solid 1px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: relative;
-}
 .coursebox3:hover {
   color: #4070f4;
   font-weight: bold;
@@ -235,19 +232,7 @@
   justify-content: center;
   font-size: 18px;
 }
-.coursebox4 {
-  width: 250px;
-  height: 50px;
-  margin: 0% 15% 0%;
-  border-right: rgba(64, 112, 244, 0.2) solid 1px;
-  border-bottom: rgba(64, 112, 244, 0.2) solid 1px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: relative;
-}
+
 .coursebox4:hover {
   color: #4070f4;
   font-weight: bold;
@@ -279,19 +264,7 @@
   justify-content: center;
   font-size: 18px;
 }
-.coursebox5 {
-  width: 250px;
-  height: 50px;
-  margin: 0% 15% 10%;
-  border-right: rgba(64, 112, 244, 0.2) solid 1px;
-  border-bottom: rgba(64, 112, 244, 0.2) solid 1px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: relative;
-}
+
 .coursebox5:hover {
   color: #4070f4;
   font-weight: bold;
@@ -322,19 +295,4 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-}
-.teachers {
-  margin-bottom: 5%;
-  display: flex;
-  text-align: left;
-  align-items: center;
-  justify-content: center;
-}
-.footer {
-  position: relative;
-  top: 80%;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
 }

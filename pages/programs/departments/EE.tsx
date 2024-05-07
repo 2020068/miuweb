@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
+import ImageCarousel from "@/components/imageCarousel";
 
 
 interface FacultyType {
@@ -85,11 +86,13 @@ const EEPage: React.FC<PropType> = (props) => {
     return(
         <div className={styles.container}>
             <div className={styles.backgroundImg}>
-                <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
-            </div>
-            <div className={styles.box1}>
-                English Education
-            </div>
+            <ImageCarousel
+                textContent="English Education"
+                textdesc=""
+                image={"/images/programImg/departmentImg/EEbackgroundImg.jpg"}
+                />
+                </div>
+
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>

@@ -27,7 +27,7 @@
     height: 250px;
     background-color: #4070f4;
     color: #ffffff;
-    margin: 275px 200px 50px;
+    margin: 325px 200px 50px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    background-color: #BFD1FF;
+    background-color: #86a7fd;
     color: #ffffff;
     opacity: 1;
     text-align: center;
