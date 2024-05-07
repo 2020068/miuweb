@@ -12,7 +12,7 @@ interface FacultyType {
     options?: FacultyType;
   };
 
-const CsPage: React.FC<PropType> = (props) => {
+const EEPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
   const alumniRef = useRef<HTMLDivElement>(null);
@@ -59,24 +59,24 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jung-ho park",
-      description: "Professor",
+      name: "Dulguunsaran Amartuvshin",
+      description: "Department Chair",
     },
     {
-      name: "Steven",
-      description: "Professor",
+      name: "Yang Liu(sunny)",
+      description: "Senior Lecturer",
     },
     {
-      name: "James Jang",
+      name: "Eva Lui",
+      description: "Senior Lecturer",
+    },
+    {
+      name: "Purevtsagaan Enkhjargal",
       description: "Lecturer",
     },
     {
-      name: "Dulguundusal T.",
+      name: "Jonathan Sande",
       description: "Lecturer",
-    },
-    {
-      name: "Dulamsuren Sharkhuu",
-      description: "Asistant Professor",
     },    
 
   ];
@@ -88,51 +88,31 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Computer Science
+                English Education
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
-                 Particular interest is placed on making computation fast and efficient. 
-                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
+                English Education Department seeks to train up effective and innovative English teachers across Mongolia and Central Asia with a high-quality education that guides students to service with honesty, integrity, humility and professionalism.
                 </div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}> Year 1 / Students are introduced to:</a>
+                <a className={styles.a}> Curriculum</a>
                 <div className={styles.h1}>
-                 ● Foundation of basic coding <br />
-                 ● Foundation in mathematics and physics<br /> 
-                 ● Teamwork skills <br />
+                 ● Language Lab <br />
+                 ● Extensive Reading<br />
+                 ● Seminar in Cultural Studies<br />
+                 ● Introduction to English Literature<br /> 
+                 ● Introduction to English<br />
+                 ● Linguistics<br />
+                 ● Teaching Methodology<br />
+                 ● Principle of Education<br />
+                 ● Educational Psychology<br />
+                 ● English Translation Practice<br /> 
                 </div>
-                <a className={styles.a}>
-                Year 2 / Students develop skills in:
-                </a>
-                <div className={styles.h2}>
-                ● Computer science theories, methods and practices <br />
-                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
-                ● Understanding of computer software, tools and design <br />
-                ● Problem-solving and analytical skills 
-                </div>
-                <a className={styles.a}>
-                Year 3 / Students gain knowledge in:
-                </a>
-                <div className={styles.h3}>
-                ● Mobile application programming <br />
-                ● Multimedia Programming <br />
-                ● Computer Security<br />
-                </div>
-                <a className={styles.a}>
-                Year 4 / Students move into:
-                </a>
-                <div className={styles.h4}>
-                ● Advanced programming skills <br />
-                ● Cloud Computing<br />
-                ● Robotics<br />
-                ● Artificial Intelligence<br />
-                </div>
+                
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
             <div className={styles.title}>Faculties</div>
@@ -143,7 +123,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/EE/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -158,12 +138,15 @@ const CsPage: React.FC<PropType> = (props) => {
                
                <h1 className={styles.alumniText}>
                <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
-                "I’m glad that I learned the basics of information technology in English.
-                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
+                <span className={styles.textsize1}><br /> Ichinkhorloo Sundui</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>
+                English teacher at New Era International School <br />
+                Dept. of English Education at MIU (2021)
+                </span>  <br /><br /><br /><br />
+                One of the most important choices in life is a choosing a university. I chose the best one by coming to MIU! To be honest, before studying at MIU I was not thinking of being an English teacher. But the more my professors inspired me the more my heart was filled with passion and dream to become a teacher. My four years at MIU was a time of growth both professionally and personally in which I discovered an unknown strength of mine. Furthermore, I am always thankful to MIU professors who are not only teachers, but truly counselors in my view. Through them, I learned that being a teacher is like an eagle with two powerful wings. One is about teaching skills with great knowledge, and the other one is about caring for students with a real heart, which I might never have learned if I had not studied at MIU. So, with both wings the eagle can fly higher than any other. This is how MIU greatly influenced me and changed my perspective from my past understanding of being a teacher. I still remember the lessons my teachers taught me; and now I use them in my teaching as well. Also, whoever is reading this, don’t feel worried about your current language level because I am sure you are much better than me compared to my freshman year. But, now I actually teach English to many students… in English! Welcome to my university.
+                </h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/EEalumni.jpg" alt="EEalumni" width={500} height={600} />
                 </div>
                 </div>
                 
@@ -173,4 +156,4 @@ const CsPage: React.FC<PropType> = (props) => {
         
     );
 };
-export default CsPage;
+export default EEPage;
