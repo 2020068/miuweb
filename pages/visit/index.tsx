@@ -1,5 +1,4 @@
 import React from "react";
-
 import ImageCarousel from "@/components/imageCarousel";
 import MapGoogle from "@/components/googleMap";
 

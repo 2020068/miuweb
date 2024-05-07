@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-end">
           <Image src="/logos/MIU.png" alt="Logo" width={40} height={30} />
-          <h1 className="text-2xl font-bold pl-5">
+          <h1 className="text-2xl font-bold pl-5 text-white">
             Mongolia International University
           </h1>
         </div>

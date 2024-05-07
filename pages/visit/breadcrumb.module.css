@@ -1,33 +1,48 @@
-.breadcrumb {
-  position: relative; /* Ensure positioning context for the box */
-  display: inline-block; /* Ensure proper positioning of the box */
-}
 
-.breadcrumbList {
+.container {
+  position: absolute;
+  inset: 0;
+  color: white;
+  background-color: #4b89dc;
+  width: fit-content;
+  z-index: 21;
+  height: 5%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45vh;
+  opacity: 0.9;
+}
+
+
+.horizontal {
+  flex-direction: row;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  padding-left: 40px;
+  padding-right: 40px;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.breadcrumbItem {
-  margin-right: 5px;
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
 }
 
-.breadcrumbItem:last-child {
+.listItem {
+  margin-right: 0.5rem;
+}
+
+.listItem:last-child {
+  margin-right: 0;
+}
+
+.active {
   font-weight: bold;
-}
-
-.breadcrumbLink {
-  color: green;
-  text-decoration: none;
-}
-
-.breadcrumbBox {
-  position: absolute; /* Position the box relative to the breadcrumb container */
-  top: 0; /* Adjust top position as needed */
-  right: -30px; /* Adjust right position as needed */
-  background-color: red;
-  padding: 15px 50px;
-  border-radius: 5px;
+  color: #337ab7;
 }

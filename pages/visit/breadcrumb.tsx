@@ -1,26 +1,55 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from './breadcrumb.module.css';
+import React, { ReactNode } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import styles from "./breadcrumb.module.css";
 
-const Breadcrumb: React.FC = () => {
-  const paths = [
-    { name: 'Home', path: '/' },
-    { name: 'Visit', path: '/visit' },
-    { name: 'Apply', path: '/apply' }
-  ];
+type TBreadCrumbProps = {
+  homeElement: ReactNode;
+  separator: ReactNode;
+  containerClasses?: string;
+  listClasses?: string;
+  activeClasses?: string;
+  capitalizeLinks?: boolean;
+};
+
+const Breadcrumb = ({
+  homeElement,
+  separator,
+  containerClasses,
+  listClasses,
+  activeClasses,
+  capitalizeLinks,
+}: TBreadCrumbProps) => {
+  const paths = usePathname();
+  const pathNames = paths.split("/").filter((path) => path);
 
   return (
-    <div aria-label="breadcrumb" className={styles.breadcrumb}>
-      <div className={styles.breadcrumbBox}>
-        <ol className={styles.breadcrumbList}>
-          {paths.map((item, index) => (
-            <li key={index} className={styles.breadcrumbItem}>
-              <Link href={item.path}>
-                <span className={styles.breadcrumbLink}>{item.name}</span>
-              </Link>
-            </li>
-          ))}
-        </ol>
+    <div className={`${styles.container} ${styles.horizontal}`}>
+      <div className={`${styles.breadcrumb} ${containerClasses}`}>
+        {pathNames.length > 0 && (
+          <>
+            <div className={styles.listClasses}>
+              <Link href={"/"}>{homeElement}</Link>
+            </div>
+            {separator}
+          </>
+        )}
+        {pathNames.map((link, index) => {
+          let href = `/${pathNames.slice(0, index + 1).join("/")}`;
+          let itemClasses =
+            paths === href ? `${listClasses} ${activeClasses}` : listClasses;
+          let itemLink = capitalizeLinks
+            ? link[0].toUpperCase() + link.slice(1, link.length)
+            : link;
+          return (
+            <React.Fragment key={index}>
+              <div className={itemClasses}>
+                <Link href={href}>{itemLink}</Link>
+              </div>
+              {pathNames.length !== index + 1 && separator}
+            </React.Fragment>
+          );
+        })}
       </div>
     </div>
   );
