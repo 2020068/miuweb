@@ -28,7 +28,7 @@
     height: 250px;
     background-color: #4070f4;
     color: #ffffff;
-    margin: 20% 15% 5%;
+    margin: 350px 200px 50px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -43,11 +43,13 @@
     font-size: 15px;
     position: absolute;
     top: 45%;
+    color: #ffffff;
 }  
 .box1 h3 {
-
+    font-size: 40px;
     position: absolute;
     top: 15%;
+    color: #ffffff;
 } 
 
 .Exboxes {

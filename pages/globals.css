@@ -2,7 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
+html,body{
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
 :root {
   --foreground-color: #000; /* Default foreground color */
   --background-color: #fff; /* Default background color */
