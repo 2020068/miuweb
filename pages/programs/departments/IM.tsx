@@ -12,7 +12,7 @@ interface FacultyType {
     options?: FacultyType;
   };
 
-const CsPage: React.FC<PropType> = (props) => {
+const IMPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
   const alumniRef = useRef<HTMLDivElement>(null);
@@ -137,7 +137,12 @@ const CsPage: React.FC<PropType> = (props) => {
                <h1 className={styles.alumniText}>
                 <span className={styles.textsize3}>Alumni</span>
                 <span className={styles.textsize1}><br />Nomindari Enkhtur</span> <br /><br />
-                <span className={styles.textsize2}>M.S Candidate in Sustainability Management at Colombia University; Fulbright Awardee (2018-2020); Former CEO of the Mongolian Sustainable Finance Association; Dept. of International Business Management at MIU (2013)</span>  <br /><br /><br />
+                <span className={styles.textsize2}>
+                  M.S Candidate in Sustainability Management at Colombia University;
+                  <br /> Fulbright Awardee (2018-2020);
+                   <br /> Former CEO of the Mongolian Sustainable Finance Association;
+                   <br />  Dept. of International Business Management at MIU (2013)
+                  </span>  <br /><br /><br />
                 “MIU has changed my life in many ways. 
                 I truly believe that the values I learned at MIU, of responsibility, curiosity, creativity, and ethics among others, 
                 have guided me through my professional and personal journey and helped me become the person I am today. 
@@ -147,7 +152,7 @@ const CsPage: React.FC<PropType> = (props) => {
                 I also reflect warmly on the sense of community that MIU students shared. 
                 Last but not least, my English improved tremendously at MIU and that definitely gave me an edge in my career."</h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/IMalumni.jpg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/IMalumni.jpg" alt="IMalumni" width={450} height={550} />
                 </div>
                 
                 </div>
@@ -158,4 +163,4 @@ const CsPage: React.FC<PropType> = (props) => {
         
     );
 };
-export default CsPage;
+export default IMPage;
