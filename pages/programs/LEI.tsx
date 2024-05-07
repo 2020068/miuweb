@@ -5,8 +5,6 @@ import styles from "./LEI.module.css";
 const LEIPage: React.FC = () => {
   return (
     <div className={styles.container}>
-
-
       <div className={styles.box1}>Language Education Institute</div>
       <div className={styles.backgroundImg}></div>
       <div className={styles.rectangle}>
@@ -32,7 +30,7 @@ const LEIPage: React.FC = () => {
         </div>
       </div>
       <div className={styles.coursebox2}>
-        English Evening Course
+        English foundation Course
         <div className={styles.coursebox22}>
           Our evening English courses are targeted at working adults who wish to
           continue learning or improve their English for business purposes. It
@@ -89,7 +87,7 @@ const LEIPage: React.FC = () => {
           requested and scheduled in advance. Classes require a minimum of 5
           students to open, and the time must be arranged with the teacher.
         </div>
-    </div>
+      </div>
     </div>
   );
 };

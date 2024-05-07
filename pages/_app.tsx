@@ -10,6 +10,7 @@ import "./about/employee/employee.css";
 import "./about/campus/campus.css";
 import "./about/campus/CCElements/CC.css";
 import "/components/carousel/embla.css";
+import "../components/marquee/marquee.css";
 import Sidebar from "@/components/sidebarmenu";
 
 function MyApp({ Component, pageProps }: AppProps) {

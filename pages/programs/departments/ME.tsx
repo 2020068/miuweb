@@ -59,10 +59,25 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Soim Kim",
-      description: "Department Chair",
+      name: "Jung-ho park",
+      description: "Professor",
     },
-  
+    {
+      name: "Steven",
+      description: "Professor",
+    },
+    {
+      name: "James Jang",
+      description: "Lecturer",
+    },
+    {
+      name: "Dulguundusal T.",
+      description: "Lecturer",
+    },
+    {
+      name: "Dulamsuren Sharkhuu",
+      description: "Asistant Professor",
+    },    
 
   ];
 
@@ -73,12 +88,14 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Music Education
+                Computer Science
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                “The ME Department of New Media Music teaches techniques for producing music of various genres, including classical music, pop, jazz, and ballads. We are reorganizing the music education environment by providing a digital audio workstation (DAW) program. Computer music and practical training Through ensemble classes using musical instruments, you can create more human and emotional music in the AI era. Within this cutting-edge curriculum, participants utilize the capabilities of sophisticated digital audio systems to multi-track recording, overdubbing, and editing music of various genres. and explores the process of mastering.
+                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
+                 Particular interest is placed on making computation fast and efficient. 
+                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
                 </div>
             </div>
             
@@ -86,31 +103,35 @@ const CsPage: React.FC<PropType> = (props) => {
                 What you'll learn <br />
                 <a className={styles.a}> Year 1 / Students are introduced to:</a>
                 <div className={styles.h1}>
-                 ● Music Performance Study (Piano, Voice, Applied) <br />
-                 ● Secondary Performance Study (Piano, Voice, Applied) <br />
+                 ● Foundation of basic coding <br />
+                 ● Foundation in mathematics and physics<br /> 
+                 ● Teamwork skills <br />
                 </div>
                 <a className={styles.a}>
                 Year 2 / Students develop skills in:
                 </a>
                 <div className={styles.h2}>
-                ● Chorale Ensemble <br />
-                ● Music Theory and Literature <br />
-                ● Music History and Literature <br />
-                                </div>
+                ● Computer science theories, methods and practices <br />
+                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
+                ● Understanding of computer software, tools and design <br />
+                ● Problem-solving and analytical skills 
+                </div>
                 <a className={styles.a}>
                 Year 3 / Students gain knowledge in:
                 </a>
                 <div className={styles.h3}>
-                ● Performance Repertoire and Pedagogy <br />
-                ● Keyboard Musicianship <br />
-                ● Music Technology in Education <br />
+                ● Mobile application programming <br />
+                ● Multimedia Programming <br />
+                ● Computer Security<br />
                 </div>
                 <a className={styles.a}>
                 Year 4 / Students move into:
                 </a>
                 <div className={styles.h4}>
-                ● General Music Method <br />
-                ● Music Education Rehearsal Practicum
+                ● Advanced programming skills <br />
+                ● Cloud Computing<br />
+                ● Robotics<br />
+                ● Artificial Intelligence<br />
                 </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
@@ -122,7 +143,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/ME/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -137,12 +158,12 @@ const CsPage: React.FC<PropType> = (props) => {
                
                <h1 className={styles.alumniText}>
                <span className={styles.textsize3}>Alumni</span> 
-                <span className={styles.textsize1}><br /> Tsatsral Saikhanbayar</span> <br /><br /><br /><br />
-                <span className={styles.textsize2}>Music teacher at Orchlon International School</span>  <br /><br /><br /><br />
-                I’ve loved music since I was a child. I started to study musical instruments when I was young. MIU has given me opportunity to get world-class music education. Besides the music knowledge and skills, ME department has taught me crucial life lessons. With my Music Education background, I have been able to pursue my career as a music teacher. I believe ME will keep making an impact on the young people who want to become great musicians and teachers.
-                </h1> 
+                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
+                "I’m glad that I learned the basics of information technology in English.
+                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/MEalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
                 

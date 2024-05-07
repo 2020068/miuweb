@@ -15,6 +15,7 @@ interface FacultyType {
 const CsPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
+  const alumniRef = useRef<HTMLDivElement>(null);
   const facultyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,10 +32,12 @@ const CsPage: React.FC<PropType> = (props) => {
     if (
       overviewRef.current &&
       curriculumRef.current &&
+      alumniRef.current &&
       facultyRef.current
     ) {
       intersectionObserver.observe(overviewRef.current);
       intersectionObserver.observe(curriculumRef.current);
+      intersectionObserver.observe(alumniRef.current);
       intersectionObserver.observe(facultyRef.current);
     }
 
@@ -42,10 +45,12 @@ const CsPage: React.FC<PropType> = (props) => {
       if (
         overviewRef.current &&
         curriculumRef.current &&
+        alumniRef.current &&
         facultyRef.current
       ) {
         intersectionObserver.unobserve(overviewRef.current);
         intersectionObserver.unobserve(curriculumRef.current);
+        intersectionObserver.unobserve(alumniRef.current);
         intersectionObserver.unobserve(facultyRef.current);
       }
     };
@@ -55,23 +60,23 @@ const CsPage: React.FC<PropType> = (props) => {
   const faculties = [
     {
       name: "Jung-ho park",
-      description: "Department chair",
+      description: "Professor",
     },
     {
-      name: "Steven Eisenbarth",
-      description: "Lecturer",
+      name: "Steven",
+      description: "Professor",
     },
     {
-      name: "Manhoon Lee",
-      description: "Lecturer",
-    },
-    {
-      name: "Changsin Lee",
+      name: "James Jang",
       description: "Lecturer",
     },
     {
       name: "Dulguundusal T.",
       description: "Lecturer",
+    },
+    {
+      name: "Dulamsuren Sharkhuu",
+      description: "Asistant Professor",
     },    
 
   ];
@@ -88,34 +93,46 @@ const CsPage: React.FC<PropType> = (props) => {
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Master in Software Engineering department at MIU provides the students who are able to fit in the technology era,
-                with basic science and software engineering knowledge as well as field experiences</div>
+                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
+                 Particular interest is placed on making computation fast and efficient. 
+                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
+                </div>
             </div>
             
             <div ref={curriculumRef} className={`${styles.curriculum}`}>
                 What you'll learn <br />
-                <a className={styles.a}>Curriculum</a>
+                <a className={styles.a}> Year 1 / Students are introduced to:</a>
                 <div className={styles.h1}>
-                ● Analysis of Software Artifacts
-                <br />
-                ● Security-sensitive software
-                <br />
-                ● Real-time software system
-                <br />
-                ● Agile Software Development Frameworks
-                <br />
-                ● “Research in future system software (OS and programming language)”
-                <br />
-                ● System Architectures for Managers
+                 ● Foundation of basic coding <br />
+                 ● Foundation in mathematics and physics<br /> 
+                 ● Teamwork skills <br />
                 </div>
                 <a className={styles.a}>
-                Career Opertunities
+                Year 2 / Students develop skills in:
                 </a>
                 <div className={styles.h2}>
-                Our graduates work and intern in a range of jobs in a broad range of fields — public relations, marketing, advertising, social media, television, radio, magazines, human resources, event planning, education, nonprofits, and technology.
-                We’ve also had graduates start their own businesses and others go on to graduate school in communication, law, public health, strategic communications, and education.
+                ● Computer science theories, methods and practices <br />
+                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
+                ● Understanding of computer software, tools and design <br />
+                ● Problem-solving and analytical skills 
                 </div>
-                
+                <a className={styles.a}>
+                Year 3 / Students gain knowledge in:
+                </a>
+                <div className={styles.h3}>
+                ● Mobile application programming <br />
+                ● Multimedia Programming <br />
+                ● Computer Security<br />
+                </div>
+                <a className={styles.a}>
+                Year 4 / Students move into:
+                </a>
+                <div className={styles.h4}>
+                ● Advanced programming skills <br />
+                ● Cloud Computing<br />
+                ● Robotics<br />
+                ● Artificial Intelligence<br />
+                </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
             <div className={styles.title}>Faculties</div>
@@ -126,7 +143,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/MSE/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -137,6 +154,18 @@ const CsPage: React.FC<PropType> = (props) => {
                 ))}
             </div>
             </div>
+            <div ref={alumniRef} className={`${styles.alumni}`}>
+               
+               <h1 className={styles.alumniText}>
+               <span className={styles.textsize3}>Alumni</span> 
+                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
+                "I’m glad that I learned the basics of information technology in English.
+                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
+                <div className={styles.alumImg}>
+                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
+                </div>
+                </div>
         </div>
         
     );

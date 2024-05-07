@@ -59,21 +59,25 @@ const CsPage: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const faculties = [
     {
-      name: "Jericho Burg",
-      description: "Dean of MPA",
+      name: "Jung-ho park",
+      description: "Professor",
     },
     {
-      name: "Mohammad Ishfaq",
+      name: "Steven",
+      description: "Professor",
+    },
+    {
+      name: "James Jang",
       description: "Lecturer",
     },
     {
-      name: "Hriday Chandra Sarma",
+      name: "Dulguundusal T.",
       description: "Lecturer",
     },
     {
-      name: "Awele Oguejiofor",
-      description: "Lecturer",
-    },
+      name: "Dulamsuren Sharkhuu",
+      description: "Asistant Professor",
+    },    
 
   ];
 
@@ -84,12 +88,14 @@ const CsPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Public Administration
+                Computer Science
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                Mater of Public Administration (MPA) program is designed to prepare professionally-trained and ethical government officials and public service officers. MPA Students are to gain fundamental knowledge of public policy, its analysis and implementation that will impower them to make a positive change in their communities as well as internationally.
+                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
+                 Particular interest is placed on making computation fast and efficient. 
+                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
                 </div>
             </div>
             
@@ -97,33 +103,35 @@ const CsPage: React.FC<PropType> = (props) => {
                 What you'll learn <br />
                 <a className={styles.a}> Year 1 / Students are introduced to:</a>
                 <div className={styles.h1}>
-                ● Theoretical knowledge in Public Affairs 
-                <br /><br />
-                ● Research Methodology and Design 
-                <br /><br />
-                ● Economic Theories and Public Policy 
+                 ● Foundation of basic coding <br />
+                 ● Foundation in mathematics and physics<br /> 
+                 ● Teamwork skills <br />
                 </div>
                 <a className={styles.a}>
-                Year 2 / Students move to:
+                Year 2 / Students develop skills in:
                 </a>
                 <div className={styles.h2}>
-                ● In depth studies of the Public Affairs and practices 
-                <br /><br />
-                ● Practical application of the theoretical knowledge through supervised independent research and thesis;   
-
-  
+                ● Computer science theories, methods and practices <br />
+                ● Understanding a range of programming languages such as Java, C, C++, Javascript and SQL <br />
+                ● Understanding of computer software, tools and design <br />
+                ● Problem-solving and analytical skills 
                 </div>
                 <a className={styles.a}>
-                Major Curriculum
+                Year 3 / Students gain knowledge in:
                 </a>
                 <div className={styles.h3}>
-                ● Communication for Public Affairs, <br />
-                ● Research Methods, <br />
-                ● Public Policy and Strategy,<br /> 
-                ● Economic Theory in Public Affairs,<br /> 
-                ● Local Autonomy and Public Management, <br />
-                ● Organizational Dynamics and Leadership, <br />
-                ● Thesis<br />
+                ● Mobile application programming <br />
+                ● Multimedia Programming <br />
+                ● Computer Security<br />
+                </div>
+                <a className={styles.a}>
+                Year 4 / Students move into:
+                </a>
+                <div className={styles.h4}>
+                ● Advanced programming skills <br />
+                ● Cloud Computing<br />
+                ● Robotics<br />
+                ● Artificial Intelligence<br />
                 </div>
             </div>
             <div ref={facultyRef} className={`${styles.faculty}`}>
@@ -135,7 +143,7 @@ const CsPage: React.FC<PropType> = (props) => {
                     <div className={styles.facultyDetail}>
                     <img
                         className={styles.facultyImg}
-                        src={`/images/faculties/MPA/Faculty${index + 1}.jpg`}
+                        src={`/images/faculties/CS/Faculty${index + 1}.jpg`}
                         alt={`Profile of ${faculty.name}`}
                     />
 
@@ -149,13 +157,13 @@ const CsPage: React.FC<PropType> = (props) => {
             <div ref={alumniRef} className={`${styles.alumni}`}>
                
                <h1 className={styles.alumniText}>
-               <span className={styles.textsize3}>Welcome Remarks</span> 
-                <span className={styles.textsize1}></span>
-                <span className={styles.textsize2}></span>  <br /><br /><br /><br />
-                “The Public Administration program provides a great opportunity for students to learn about public policy making from international experts! The faculty of the department are happy to assist the students in their research work and studies. The students are given a chance to study their 2nd year of master’s in a foreign country on 1+1 basis and develop a network with international peers and professors.”
-                </h1> 
+               <span className={styles.textsize3}>Alumni</span> 
+                <span className={styles.textsize1}><br /> Bilegt Gantulga</span> <br /><br /><br /><br />
+                <span className={styles.textsize2}>Works at Khaan bank</span>  <br /><br /><br /><br />
+                "I’m glad that I learned the basics of information technology in English.
+                It has given me the opportunity to grow more than I could have imagined in the field in just a short period of time."</h1> 
                 <div className={styles.alumImg}>
-                <Image src="/images/programImg/departmentImg/MPAwelcomeimg.jpeg" alt="CSalumni" width={550} height={550} />
+                <Image src="/images/programImg/departmentImg/CSalumni.jpeg" alt="CSalumni" width={550} height={550} />
                 </div>
                 </div>
                 

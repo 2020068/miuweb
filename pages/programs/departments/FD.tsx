@@ -91,12 +91,14 @@ const FDPage: React.FC<PropType> = (props) => {
                 <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
             </div>
             <div className={styles.box1}>
-                Fashion Design
+                Computer Science
             </div>
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
-                The Fashion Design (FD) department of MIU equips students with skills needed in the global fashion industry: fashion design, fashion business, social responsibility, communication, and leadership.
+                Computer Science (CS) major at MIU offers opportunities to explore the science of information processing. 
+                 Particular interest is placed on making computation fast and efficient. 
+                CS focuses on the core theories of computing as well as hands-on learning and practical work experiences.
                 </div>
             </div>
             
