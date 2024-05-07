@@ -1,7 +1,54 @@
-import React, { useState } from "react";
+import { InputField, SelectField } from "@/components/inputselect";
+import axios from "axios";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-const ApplyPage = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  registrationnumber: string;
+  country: string;
+  programFirstChoice: string;
+  programSecondChoice: string;
+  graddate: Date | null;
+  Schoolcertificate: string;
+  nohschool: string;
+  hschoolname: string;
+  areaofstudy: string;
+  degreelevel: string;
+}
+
+const ApplyPage: React.FC = () => {
+  const programOptions = [
+    { value: "CS", label: "Computer Science" },
+    { value: "SE", label: "Software Engineering" },
+    { value: "IM", label: "International Business Management" },
+    { value: "HTM", label: "Hotel & Tourism Management" },
+    { value: "IR", label: "International Relations" },
+    { value: "FD", label: "Fashion Design" },
+    { value: "EE", label: "English Education" },
+    { value: "MC", label: "Media & Communication" },
+    // Add more options as needed
+  ];
+  const areaOfStudyOptions = [
+    { value: "BA", label: "Business & Administration" },
+    { value: "CSAI", label: "Computer Science & AI" },
+    { value: "ACF", label: "Accounting & Finance" },
+    { value: "AD", label: "Art & Design" },
+    { value: "MM", label: "Media Management" },
+    { value: "MAC", label: "Media and Communication" },
+    // Add more options as needed
+  ];
+  const degreeLevelOptions = [
+    { value: "N", label: "None" },
+    { value: "bd", label: "Bachelor's degree" },
+    { value: "md", label: "Master's degree" },
+    { value: "ud", label: "Undergraduate degree" },
+    // Add more options as needed
+  ];
+
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -10,29 +57,53 @@ const ApplyPage = () => {
     country: "",
     programFirstChoice: "",
     programSecondChoice: "",
-    graddate: null ,
+    graddate: new Date(),
     Schoolcertificate: "",
     nohschool: "",
     hschoolname: "",
     areaofstudy: "",
     degreelevel: "",
-
-
   });
 
-  const handleInputChange = (e) => {
+  const token =
+    "3636a7528d3bc250df940378a4d5d837c9d5a48de167a6428402b09a199f3b6fdceb82c9d9371ed554bb29c64badd877d972dc0e3fc35ec9dbc55c28ba2740961d9cee48761ffdfd06ad0d27560ace978b4e6aa02b35fb71e45f9b3bb6a9eaaadfecfb642ffb6fef8c00014ffb6a4d31960f6a7fa215d0b0a29ea1b0f237bdea";
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form data:", formData);
+
+    try {
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json", // Specify JSON content type
+        },
+      };
+
+      const requestBody = {
+        data: formData, // Wrap formData in a 'data' key
+      };
+
+      const response = await axios.post(
+        "http://127.0.0.1:1337/api/forms",
+        requestBody, // Send the modified request body
+        config
+      );
+      console.log("Response:", response.data);
+      console.log("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-  };
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form data:", formData);
-    // Here you can add further logic for form submission
   };
 
   return (
@@ -41,242 +112,126 @@ const ApplyPage = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <div className="input-row">
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="firstName">First Name:</label>
-              </div>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                placeholder="Enter your first name"
-              />
-            </div>
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="lastName">Last Name:</label>
-              </div>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                placeholder="Enter your last name"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
-          <div className="input-row">
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="email">Email:</label>
-              </div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter your email address"
-              />
-            </div>
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="phone">Phone Number:</label>
-              </div>
-              <input
-                type="phone"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                placeholder="Enter your phone number"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
-          <div className="input-row">
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="registrationnumber">Registration №:</label>
-              </div>
-              <input
-                type="text"
-                id="registrationnumber"
-                name="registrationnumber"
-                value={formData.registrationnumber}
-                onChange={handleInputChange}
-                placeholder="Enter your registration number"
-              />
-            </div>
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="country">Country:</label>
-              </div>
-              <input
-                type="text"
-                id="country"
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                placeholder="Enter your country"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
-          <div className="input-row">
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="programFirstChoice">Program of Study (1st choice):</label> {/* Added programFirstChoice label */}
-              </div>
-              <select
-                id="programFirstChoice"
-                name="programFirstChoice"
-                value={formData.programFirstChoice}
-                onChange={handleInputChange}
-              >
-                <option value="CS">Computer Science</option>
-                <option value="SE">Software Engineering</option>
-                <option value="IM">International Business Management</option>
-                <option value="HTM">Hotel & Tourism Management</option>  
-                <option value="IR">International Relations</option>
-                <option value="FD">Fashion Design</option>
-                <option value="EE">English Education</option>
-                <option value="MC">Media & Communication</option>
-                {/* Add more options as needed */}
-              </select>
-            </div>
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="programSecondChoice">Program of Study (2nd choice):</label> {/* Added programSecondChoice label */}
-              </div>
-              <select
-                id="programSecondChoice"
-                name="programSecondChoice"
-                value={formData.programSecondChoice}
-                onChange={handleInputChange}
-              >
-                <option value="CS">Computer Science</option>
-                <option value="SE">Software Engineering</option>
-                <option value="IM">International Business Management</option>
-                <option value="HTM">Hotel & Tourism Management</option>  
-                <option value="IR">International Relations</option>
-                <option value="FD">Fashion Design</option>
-                <option value="EE">English Education</option>
-                <option value="MC">Media & Communication</option>
-                {/* Add more options as needed */}
-              </select>
-            </div>
-          </div>
-        </div>
-        <h2 className="form-group">Academic Information</h2>
-        <div className="form-group">
-          <div className="input-row">
-            <div className="input-group">
-              <div className="input-label">
-                <label htmlFor="satScore">Name of the High School or Equivalent:</label>
-              </div>
-              <input
-                type="text"
-                id="hschoolname"
-                name="hschoolname"
-                placeholder="Enter here"
-                // Add necessary event handlers and state management
-              />
-            </div>
-            <div className="input-group">
-              <div className="input-label label">
-              <label htmlFor="graddate">High School or Equivalent Graduation Date:</label>
-              </div>
-              <input
-                id="graddate"
-                name="graddate"
-                type="date"
-                placeholder="Enter date"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <div className="input-row">
-          <div className="input-group">
-            <div className="input-label">
-              <label>Complete secondary education certificate number:</label>
-            </div>
-            <input
-              type="text"
-              id="Schoolcertificate"
-              name="Schpoolcertificate"
-              placeholder="Enter certificate number"
-              // Add necessary event handlers and state management
+            <InputField
+              label="First Name"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              placeholder="Enter your first name"
             />
-          </div>
-          <div className="input-group">
-            <div className="input-label">
-              <label>No. of High School Certificate or Equivalent:</label>
-            </div>
-            <input
-              type="text"
-              id="nohschool"
-              name="nohschool"
-              placeholder="Enter here"
-              // Add necessary event handlers and state management
+            <InputField
+              label="Last Name"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              placeholder="Enter your last name"
             />
           </div>
         </div>
-        <h3>Education Details</h3>
         <div className="input-row">
-  <div className="input-group">
-    <div className="input-label">
-      <label htmlFor="areaofstudy">Select Area of Study:</label>
-    </div>
-    <select
-      id="areaofstudy"
-      name="areaofstudy"
-      value={formData.areaofstudy}
-      onChange={handleInputChange}
-    >
-      <option value="BA">Business & Administration</option>
-      <option value="CSAI">Computer Science & AI</option>
-      <option value="ACF">Accounting & Finance</option>
-      <option value="AD">Art & Design</option>  
-      <option value="MM">Media Management</option>
-      <option value="MAC">Media and Communication</option>
-      {/* Add more options as needed */}
-    </select>
-  </div>
-  <div className="input-group">
-    <div className="input-label">
-      <label htmlFor="degreelevel">Degree Level:</label>
-    </div>
-    <select
-      id="degreelevel"
-      name="degreelevel"
-      value={formData.degreelevel}
-      onChange={handleInputChange}
-    >
-      <option value="N">None</option>
-      <option value="bd">Bachelor's degree</option>
-      <option value="md">Master's degree</option>
-      <option value="ud">UnderGraduate degree</option>  
-      {/* Add more options as needed */}
-    </select>
-  </div>
-</div>
-
-
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" > 
-            Submit
-          </button>
+          {/* More input fields and select fields */}
+          <SelectField
+            label="Program of Study (1st choice)"
+            name="programFirstChoice"
+            value={formData.programFirstChoice}
+            onChange={handleInputChange}
+            options={programOptions}
+          />
+          <InputField
+            label="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Enter your email"
+          />
+        </div>
+        <div className="input-row">
+          <InputField
+            label="Phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            placeholder="Enter your phone number"
+          />
+          <InputField
+            label="Registration Number"
+            name="registrationnumber"
+            value={formData.registrationnumber}
+            onChange={handleInputChange}
+            placeholder="Enter your registration number"
+          />
+        </div>
+        <div className="input-row">
+          <InputField
+            label="Country"
+            name="country"
+            value={formData.country}
+            onChange={handleInputChange}
+            placeholder="Enter your country"
+          />
+          <InputField
+            label="Graduation Date"
+            name="graddate"
+            value={
+              formData.graddate ? formData.graddate.toLocaleDateString() : ""
+            }
+            onChange={handleInputChange}
+            placeholder="Enter your graduation date"
+          />
+        </div>
+        <div className="input-row">
+          <InputField
+            label="School Certificate"
+            name="Schoolcertificate"
+            value={formData.Schoolcertificate}
+            onChange={handleInputChange}
+            placeholder="Enter your school certificate"
+          />
+          <InputField
+            label="No High School"
+            name="nohschool"
+            value={formData.nohschool}
+            onChange={handleInputChange}
+            placeholder="Enter your no high school"
+          />
+        </div>{" "}
+        <div className="input-row">
+          <InputField
+            label="High School Name"
+            name="hschoolname"
+            value={formData.hschoolname}
+            onChange={handleInputChange}
+            placeholder="Enter your high school name"
+          />
+          <SelectField
+            label="Area of Study"
+            name="areaofstudy"
+            value={formData.areaofstudy}
+            onChange={handleInputChange}
+            options={areaOfStudyOptions}
+          />
+        </div>
+        <div className="input-row">
+          <SelectField
+            label="Degree Level"
+            name="degreelevel"
+            value={formData.degreelevel}
+            onChange={handleInputChange}
+            options={degreeLevelOptions}
+          />
+          <SelectField
+            label="Program of Study (2nd choice)"
+            name="programSecondChoice"
+            value={formData.programSecondChoice}
+            onChange={handleInputChange}
+            options={programOptions}
+          />
+        </div>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Submit
+        </button>
       </form>
     </div>
   );
 };
-
 export default ApplyPage;
