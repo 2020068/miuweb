@@ -21,7 +21,7 @@ interface NewsProps {
 
 export default function News({ articles }: NewsProps) {
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <ImageCarousel
         textContent="News & Events"
         textdesc="Latest news"

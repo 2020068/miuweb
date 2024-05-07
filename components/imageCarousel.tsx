@@ -14,7 +14,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   textdesc,
 }) => {
   return (
-    <div className="h-1/2 relative">
+    <div className="h-1/2 absolute inset-0">
       <div className="absolute inset-0">
         <img
           src={image}

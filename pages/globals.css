@@ -5,6 +5,8 @@
 html,body{
   max-width: 100% !important;
   overflow-x: hidden !important;
+  margin:0;
+  padding:0;
 }
 :root {
   --foreground-color: #000; /* Default foreground color */
@@ -19,8 +21,13 @@ html,body{
   }
 }
 .app-container {
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Helvetica";
+}
+main {
+  flex: 1;
 }
 .menu-container{
   position: fixed;
@@ -66,7 +73,8 @@ body {
 
 
 footer{
-  position: relative;
+  bottom:0;
+  width:100%;
   z-index: 1000;
 }
 
