@@ -12,7 +12,7 @@ interface FacultyType {
     options?: FacultyType;
   };
 
-const CsPage: React.FC<PropType> = (props) => {
+const FDPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
   const facultyRef = useRef<HTMLDivElement>(null);
@@ -157,4 +157,4 @@ const CsPage: React.FC<PropType> = (props) => {
         
     );
 };
-export default CsPage;
+export default FDPage;
