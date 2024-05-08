@@ -82,13 +82,11 @@ const HTMPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="Hotel & Tourism Management"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MIMbackgroundImg.jpg"}
                 />
-            </div>
 
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview

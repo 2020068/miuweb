@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Ac.module.css";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
+import ImageCarousel from "@/components/imageCarousel";
 const academicProgramPage: React.FC = () => {
   const { t } = useTranslation();
   const router = useRouter();
@@ -14,11 +14,11 @@ const academicProgramPage: React.FC = () => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.backgroundImg}></div>
-      <div className={styles.box1}>
-        <h3>{t("academic.box1.programs")}</h3>
-
-      </div>
+      <ImageCarousel
+        textContent="Academic Programs"
+        textdesc=""
+        image={"/images/programImg/graduation.jpg"}
+      />
       <div className={styles.programImg}></div>
       <div className={styles.Exboxes}>
         <div className={styles.Exbox1}>

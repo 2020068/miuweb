@@ -93,12 +93,11 @@ const IRPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="International Relations"
                 textdesc=""
                 image={"/images/programImg/departmentImg/IRbackgroundImg.jpg"}
-                /></div>
+                />
             <div className={styles.box1}>
                 International Relations
             </div>
