@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
+import ImageCarousel from "@/components/imageCarousel";
 
 
 interface FacultyType {
@@ -81,8 +82,11 @@ const MCPage: React.FC<PropType> = (props) => {
     return(
         <div className={styles.container}>
             <div className={styles.backgroundImg}>
-                <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
-            </div>
+            <ImageCarousel
+                textContent="Media & Communication"
+                textdesc=""
+                image={"/images/programImg/departmentImg/MCbackgroundImg.jpg"}
+                /></div>
             <div className={styles.box1}>
                 Media & Communication
             </div>

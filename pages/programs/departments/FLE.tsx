@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
+import ImageCarousel from "@/components/imageCarousel";
 
 
 interface FacultyType {
@@ -59,12 +60,13 @@ const FLEPage: React.FC<PropType> = (props) => {
     return(
         <div className={styles.container}>
             <div className={styles.backgroundImg}>
-                <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
-            </div>
-            <div className={styles.box1}>
-                Foreign Language Education
-            </div>
+            <ImageCarousel
+                textContent="Foreigner Language Education"
+                textdesc=""
+                image={"/images/programImg/departmentImg/MIMbackgroundImg.jpg"}
+                /></div>
             <div ref={overviewRef} className={`${styles.overview}`}>
+                <br /><br /><br /><br />
                 Overview
                 <div className={styles.h1}>
                 FLE at MIU is founded for training international English education specialists who have a thorough understanding of Language Acquisition and various training and teaching methods. FLE teaches the basic principles and fundamentals of languages, which are crucial for effective foreign language education. 
