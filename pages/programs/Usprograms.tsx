@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Us.module.css";
-import Image from "next/image";
 import { useRouter } from "next/router";
+import ImageCarousel from "@/components/imageCarousel";
 const UsPrograms: React.FC = () => {
   const router = useRouter();
   const goToIM = () => {
@@ -46,8 +46,11 @@ const UsPrograms: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backgroundImg}></div>
-      <div className={styles.box1}>Departments</div>
+      <ImageCarousel
+        textContent="Academic Programs"
+        textdesc=""
+        image={"/images/programImg/school.jpg"}
+      />
       <div className={styles.programBox1}>
         School of Management
         <div className={styles.PgText1}>

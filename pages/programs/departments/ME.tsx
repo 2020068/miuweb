@@ -70,12 +70,11 @@ const MEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="Music Education"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MEbackgroundImg.jpg"}
-                /></div>
+                />
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>

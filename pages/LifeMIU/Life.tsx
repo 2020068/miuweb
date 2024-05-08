@@ -44,13 +44,13 @@ const LifePage: React.FC = () => {
   }, []);
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
+
             <ImageCarousel
                 textContent="Life at MIU"
                 textdesc="Build lifelong friendships with fellow students who share your interests, passions, and perspectives."
                 image={"/LifePage/Lifebg.jpg"}
                 />
-            </div>
+
 
             <div ref={SURef} className={`${styles.SU}`}>
             <div className={styles.SUtxt}>
