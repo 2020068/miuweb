@@ -15,8 +15,7 @@
   "morebanner.content.1": "There are many great activities and events organized for MIU students. From performing arts to sports competitions to social events, each activity offers opportunities for students and faculty to enjoy life and experience new things.",
   "morebanner.content.2": "MIU students are encouraged to participate in activities and events organized by MIU faculty and staff. MIU students are also encouraged to participate in MIU activities and events.",
   "morebanner.content.3": "Many students join one or more of the many student clubs and organizations on campus. Or if the club you want to join doesn't exist, you can create it.",
-  "morebanner.content.4": "Each semester MIU provides students with the opportunity to study abroad for one semester through the Student Exchange Program (SEP). It is a great opportunity to experience new cultures, study at top universities, learn foreign languages and make new friends."
-,
+  "morebanner.content.4": "Each semester MIU provides students with the opportunity to study abroad for one semester through the Student Exchange Program (SEP). It is a great opportunity to experience new cultures, study at top universities, learn foreign languages and make new friends.",
   "about": {
     "button": {
       "back": "back",
@@ -37,6 +36,14 @@
       "boxDescription": "To educate and develop leaders in Mongolia and throughout Central Asia who possess honesty, integrity and professionalism To be an innovative leader for higher education, providing relevant areas of study at the leading edge To cultivate an international community of current and future leaders through a multicultural campus and global partnerships To foster a culture of servant leadership in Mongolia and throughout Central Asia"
     },
     "employee": {
-      "headerTitle": "Faculty Information"
+      "headerTitle": "Faculty Information",
+      "title1": "LEADERSHIP",
+      "title2": "PRESIDENT OFFICE",
+      "title3": "PLANNING AFFAIRS",
+      "title4": "ACADEMIC & STUDENT AFFAIRS",
+      "title5": " EXTERNAL & ADMISSION AFFAIRS",
+      "title6": "MARKETING",
+      "title7": "GENERAL AFFAIRS"
     }
   }
+}

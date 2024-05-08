@@ -11,6 +11,7 @@ import Dormitory from "./CCElements/Dorm";
 import SC from "./CCElements/SC";
 import { EmblaOptionsType } from "embla-carousel";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 interface Category {
   Id: string;
@@ -45,6 +46,7 @@ const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const Campus: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Grid container>
       <Grid

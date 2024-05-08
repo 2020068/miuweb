@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface EmployeeType {
   // Define properties for EmployeeType here if needed
@@ -12,6 +13,7 @@ type PropType = {
 };
 
 const Marketing: React.FC<PropType> = (props) => {
+  const { t } = useTranslation();
   const { slides, options } = props;
   const employees = [
     {
@@ -26,7 +28,7 @@ const Marketing: React.FC<PropType> = (props) => {
 
   return (
     <div>
-      <div className='title'> MARKETING</div>
+      <div className='title'> {t("about.employee.title6")}</div>
 
       <div className='employee-list'>
         {employees.map((employee, index) => (

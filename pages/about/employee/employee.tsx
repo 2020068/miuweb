@@ -23,7 +23,7 @@ type PropType = {
 };
 
 const Employee: React.FC<PropType> = (props) => {
-  const { t } = useTranslation("employee");
+  const { t } = useTranslation();
   const { slides, options } = props;
   const employees = [
     {
@@ -37,7 +37,7 @@ const Employee: React.FC<PropType> = (props) => {
   ];
   return (
     <div>
-      <div className='title'>...</div>
+      <div className='dotTitle'>...</div>
       <div className='headerTitle'>{t("about.employee.headerTitle")}</div>
       <div className='boxemployee'>
         <div className='container'>
@@ -56,7 +56,7 @@ const Employee: React.FC<PropType> = (props) => {
           </div>
         </div> */}
         </div>
-        <div className='title'> LEADERSHIP</div>
+        <div className='title'> {t("about.employee.title1")}</div>
 
         <div className='employee-list'>
           {employees.map((employee, index) => (

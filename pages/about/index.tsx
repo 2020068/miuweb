@@ -8,7 +8,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import Employee from "./employee/employee";
 
 const AboutPage: React.FC = () => {
-  const { t } = useTranslation(); // Ensure that useTranslation is called unconditionally
+  const { t } = useTranslation();
   return (
     <div>
       <div className='about-container'>

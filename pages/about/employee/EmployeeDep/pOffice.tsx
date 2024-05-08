@@ -2,6 +2,7 @@
 
 import React from "react";
 import Header from "@/components/header";
+import { useTranslation } from "react-i18next";
 
 interface EmployeeType {
   // Define properties for EmployeeType here if needed
@@ -13,6 +14,7 @@ type PropType = {
 };
 
 const POFFICE: React.FC<PropType> = (props) => {
+  const { t } = useTranslation();
   const { slides, options } = props;
   const employees = [
     {
@@ -31,7 +33,7 @@ const POFFICE: React.FC<PropType> = (props) => {
 
   return (
     <div>
-      <div className='title'> PRESIDENT OFFICE </div>
+      <div className='title'> {t("about.employee.title2")}</div>
       <div className='employee-list'>
         {employees.map((employee, index) => (
           <div className='employee-item' key={index}>
