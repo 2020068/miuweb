@@ -25,14 +25,12 @@ export default function MapGoogle() {
         </p>
         <br />
 
-        <a> Student Transportation Options </a>
+        <a> Airport Pick-up Service </a>
         <br />
         <p>
-          New families receive information in the spring and summer about
-          <br />
-          transportation options,which include student Metrocards or
-          <br />
-          free yellow bus service for those who meet eligibility requirements.
+          We can offer international students and exchange program students
+          <br /> a paid transportation service for their move from Genghis
+          <br /> Khan International Airport to the MIU Campus.
         </p>
 
         <br />
