@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     font-family: "Helvetica", sans-serif;
+    overflow: hidden;
 }
 .backgroundImg {
     grid-column: 1/4;
@@ -30,7 +31,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    top: -400px;
+    top: 400px;
     left: 300px;
     font-size: 50px;
     color: black;
@@ -44,7 +45,7 @@
 }
 .SA {
     margin-top: 5%;
-    margin-bottom:-5% ;
+    margin-bottom: 40% ;
     margin-left: -1%;
 }
 .SUimg,

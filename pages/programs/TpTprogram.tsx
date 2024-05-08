@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./TpTprogram.module.css";
-
+import ImageCarousel from "@/components/imageCarousel";
 const TpTPage: React.FC = () => {
   const introductionRef = useRef<HTMLDivElement>(null);
   const qualificationRef = useRef<HTMLDivElement>(null);
@@ -42,9 +42,11 @@ const TpTPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backgroundImg}></div>
-
-      <div className={`${styles.box1} ${styles.visible}`}>2+2 Program</div>
+        <ImageCarousel
+        textContent="2+2 Program"
+        textdesc=""
+        image={"/images/programImg/22program.jpeg"}
+         />
       <div ref={introductionRef} className={`${styles.introduction}`}>
         What is 2+2?
         <div className={styles.introductionBox}>

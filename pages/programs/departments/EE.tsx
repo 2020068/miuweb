@@ -85,13 +85,11 @@ const EEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="English Education"
                 textdesc=""
                 image={"/images/programImg/departmentImg/EEbackgroundImg.jpg"}
                 />
-                </div>
 
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview

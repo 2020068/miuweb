@@ -81,12 +81,11 @@ const MCPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="Media & Communication"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MCbackgroundImg.jpg"}
-                /></div>
+                />
             <div className={styles.box1}>
                 Media & Communication
             </div>

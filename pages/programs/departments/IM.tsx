@@ -3,7 +3,6 @@ import styles from "./department.module.css"
 import Image from "next/image";
 import ImageCarousel from "@/components/imageCarousel";
 
-
 interface FacultyType {
     // Define properties for EmployeeType here if needed
   }
@@ -87,13 +86,11 @@ const IMPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
                 <ImageCarousel
                 textContent="Buisiness Administration"
                 textdesc=""
                 image={"/images/programImg/departmentImg/IMbackgroundImg.jpg"}
                 />
-            </div>
             {/* <div className={styles.box1}>
                 Business Administration
             </div> */}

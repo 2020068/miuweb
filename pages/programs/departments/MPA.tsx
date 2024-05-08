@@ -81,12 +81,11 @@ const MPAPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="Master in Public Administration"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MPAbackgroundImg.jpg"}
-                /></div>
+                />
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
