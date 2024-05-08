@@ -37,11 +37,9 @@ const Employee: React.FC<PropType> = (props) => {
   ];
   return (
     <div>
-      <div className='dotTitle'>...</div>
       <div className='headerTitle'>{t("about.employee.headerTitle")}</div>
-      <div className='boxemployee'>
-        <div className='container'>
-          {/* <div className='button'>
+      <div className='container'>
+        <div className='button'>
           <div className='flex flex-col items-end justify-end h-full'>
             <Link href='..'>
               <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]'>
@@ -54,40 +52,37 @@ const Employee: React.FC<PropType> = (props) => {
               </Button>
             </Link>
           </div>
-        </div> */}
         </div>
-        <div className='title'> {t("about.employee.title1")}</div>
+      </div>
+      <div className='title'> {t("about.employee.title1")}</div>
 
-        <div className='employee-list'>
-          {employees.map((employee, index) => (
-            <div className='employee-item' key={index}>
-              <div className='employee-details'>
-                <img
-                  className='employee-img'
-                  src={`/aboutPage/employee/Leadership/employee${
-                    index + 1
-                  }.jpg`}
-                  alt={`Profile of ${employee.name}`}
-                />
-                <p className='employee-name'>{employee.name}</p>
-                <p className='employee-description'>{employee.description}</p>
-              </div>
+      <div className='employee-list'>
+        {employees.map((employee, index) => (
+          <div className='employee-item' key={index}>
+            <div className='employee-details'>
+              <img
+                className='employee-img'
+                src={`/aboutPage/employee/Leadership/employee${index + 1}.jpg`}
+                alt={`Profile of ${employee.name}`}
+              />
+              <p className='employee-name'>{employee.name}</p>
+              <p className='employee-description'>{employee.description}</p>
             </div>
-          ))}
-        </div>
-        <POFFICE />
-        <Planning />
-        <Academic />
-        <Admission />
-        <Marketing />
-        <General />
-        <div className='employeeG'>
-          <img
-            className='employeeG-img'
-            src={`/aboutPage/employee/employeeG.jpg`}
-            alt={``}
-          />
-        </div>
+          </div>
+        ))}
+      </div>
+      <POFFICE />
+      <Planning />
+      <Academic />
+      <Admission />
+      <Marketing />
+      <General />
+      <div className='employeeG'>
+        <img
+          className='employeeG-img'
+          src={`/aboutPage/employee/employeeG.jpg`}
+          alt={``}
+        />
       </div>
     </div>
   );

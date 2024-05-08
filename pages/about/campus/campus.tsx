@@ -21,23 +21,23 @@ interface Category {
 const catType: Category[] = [
   {
     Id: "1",
-    Name: "D Building",
+    Name: "about.category.dbuilding",
   },
   {
     Id: "2",
-    Name: "Sport complex",
+    Name: "about.category.sportcomplex",
   },
   {
     Id: "3",
-    Name: "M Building",
+    Name: "about.category.mbuilding",
   },
   {
     Id: "4",
-    Name: "MIS",
+    Name: "about.category.mis",
   },
   {
     Id: "5",
-    Name: "Dormitory",
+    Name: "about.category.dormitory",
   },
 ];
 
@@ -72,7 +72,7 @@ const Campus: React.FC = () => {
           {/* Left Column */}
           <Grid item xs={12} lg={6}>
             <Typography variant='h2' sx={{ color: "#173992" }}>
-              About Campus
+              {t("about.campus.about")}
             </Typography>
           </Grid>
 
@@ -84,7 +84,7 @@ const Campus: React.FC = () => {
                   <Box sx={{ width: "100%" }}>
                     <Box sx={{ borderLeft: "solid 2px #173992", mt: 2, ml: 2 }}>
                       <Typography variant='h3' sx={{ color: "#173992" }}>
-                        {category.Name}
+                        {t(category.Name)}
                       </Typography>
                     </Box>
                     <Box sx={{ maxWidth: "100%" }}>

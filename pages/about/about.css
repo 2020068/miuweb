@@ -102,12 +102,8 @@
   height: auto;
   margin: 1rem auto;
   padding: 1.5rem;
-  /* background: linear-gradient(
-    to right,
-    #8ab7ea,
-    #aabdda
-  );  */
-  animation: rainbow-bg 10s ease infinite;
+  /* background: linear-gradient(to right, #8ab7ea, #aabdda); */
+  /* animation: rainbow-bg 10s ease infinite; */
 }
 
 @keyframes rainbow-bg {
@@ -127,83 +123,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 1rem auto;
+  width: 1100px;
+  max-width: 1100px;
   padding: 1rem;
-  /* background: linear-gradient(to right, #8ab7ea, #aabdda); */
-}
-
-.box2 .boxImg .CeoImg .LeaderImg {
-  max-width: 50%;
-  height: auto;
-}
-.box2 .boxDescription .CeoImg .LeaderImg {
-  max-width: 50%;
-  height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  /* Adjust layout for medium screens (tablets) */
   .box2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
   }
-
-  .box2 .boxDescription .CeoDescription .LeaderDescription {
-    width: 50%;
-    margin-right: 3.25rem;
-    margin-left: 3.25rem;
-  }
-
-  .box2 .boxImg .CeoImg .LeaderImg {
-    width: 50%;
-    max-width: none;
-    height: auto;
-  }
 }
 
 @media screen and (min-width: 1024px) {
   .box2 .boxImg .CeoImg .LeaderImg {
-    width: 40rem;
-    height: 30rem;
+    width: 500px;
+    height: 450px;
   }
 }
 .CeoDescription,
 .LeaderDescription,
 .boxDescription {
-  max-width: 100%;
-  padding: 1rem;
-}
-.boxDescription {
-  margin-top: 5rem;
+  max-width: 500px;
+  padding-right: 2rem;
 }
 .CeoImg,
 .LeaderImg,
 .boxImg {
-  width: 100%;
-  max-width: 100%;
+  width: 500px;
+  max-width: 500px;
+  height: 500px;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.CeoImg {
-  background-image: url("../../public/aboutPage/aboutpage/ceo.jpg");
-  margin-right: 3rem;
-}
-
-.LeaderImg {
-  background-image: url("../../public/aboutPage/aboutpage/leader.jpg");
-  margin-left: 3rem;
-  margin-top: 5rem;
-}
-
-.boxImg {
-  background-image: url("../../public/aboutPage/aboutpage/Dgraduation.jpg");
-  margin-right: 3rem;
-  /* animation: rainbow-bg 0.625s ease infinite; 10s / 16px */
+  margin-top: 10px;
 }
 
 .title1 {

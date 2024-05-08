@@ -3,8 +3,9 @@
 .campus-container {
   position: relative;
   max-width: 100%;
+  margin: 0 auto;
   background-image: url("../../../public/aboutPage/campus/backCampus.jpg");
   background-size: cover;
   background-position: center;
-  padding: 14rem;
+  padding: 300px;
 }

@@ -74,6 +74,16 @@
       "title5": " EXTERNAL & ADMISSION AFFAIRS",
       "title6": "MARKETING",
       "title7": "GENERAL AFFAIRS"
+    },
+    "campus": {
+      "about": "About Campus"
+    },
+    "category": {
+      "dbuilding": "D Building",
+      "sportcomplex": "Sport Complex",
+      "mbuilding": "M Building",
+      "mis": "MIS",
+      "dormitory": "Dormitory"
     }
   }
 }
