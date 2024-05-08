@@ -57,7 +57,7 @@ export default function MapGoogle() {
         </p>
       </div>
       <div className={styles.location}>
-        <div className="w-[100%] h-[80%] flex items-center p-4 ">
+        <div className="w-[60%] h-[90%] flex items-center p-10 relative left-30 top-5">
           <LoadScript
             googleMapsApiKey="AIzaSyDpxO3C-vyVGkFjK8Bvc8PfenC09dvzYIE"
             language="en"
@@ -78,14 +78,16 @@ export default function MapGoogle() {
           </LoadScript>
         </div>
 
-        <Button
-          endIcon={<ArrowForward />}
-          variant="contained"
-          href="https://www.google.com/maps/place/Mongolia+International+University/@47.9146792,106.9711992,17z/data=!3m1!4b1!4m6!3m5!1s0x5d96919485d76a77:0xc3c65e3fb66fde11!8m2!3d47.9146756!4d106.9737741!16s%2Fm%2F02x0l38?entry=ttu"
-          target="_blank"
-        >
-          See More Detail
-        </Button>
+        <div className="relative top-[-0.5%] flex items-center">
+          <Button
+            endIcon={<ArrowForward />}
+            variant="contained"
+            href="https://www.google.com/maps/place/Mongolia+International+University/@47.9146792,106.9711992,17z/data=!3m1!4b1!4m6!3m5!1s0x5d96919485d76a77:0xc3c65e3fb66fde11!8m2!3d47.9146756!4d106.9737741!16s%2Fm%2F02x0l38?entry=ttu"
+            target="_blank"
+          >
+            See More Detail
+          </Button>
+        </div>
       </div>
     </div>
   );

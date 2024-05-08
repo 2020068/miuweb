@@ -33,10 +33,21 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <div className="absolute inset-0 h-full bg-black opacity-70"></div>
         </div>
       </div>
-      <div className=" ">
+      <div className="">
         <Breadcrumb
           homeElement={"Home"}
-          separator={">"}
+          separator={
+            <span
+              style={{
+                fontSize: "0.8rem",
+                fontFamily: "Arial, sans-serif",
+                margin: "0 0.4rem",
+                lineHeight: "1.6rem",
+              }}
+            >
+              {"\u27A4\u200B"}
+            </span>
+          }
           containerClasses={" "}
           listClasses={" "}
           activeClasses={" "}
