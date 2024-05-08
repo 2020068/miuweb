@@ -17,16 +17,16 @@ const Sidebar = ({ isOpen = false }) => {
             <Link href="/about">About MIU</Link>
           </li>
           <li className="text-white ml-4 mt-2 cursor-pointer">
-            <Link href="/academics">Academics</Link>
+            <Link href="/programs/academic-programs">Academics</Link>
           </li>
           <li className="text-white ml-4 mt-2 cursor-pointer">
             <Link href="/apply">Admission</Link>
           </li>
           <li className="text-white ml-4 mt-2 cursor-pointer">
-            <Link href="/miu-life">MIU Life</Link>
+            <Link href="/LifeMIU/Life">MIU Life</Link>
           </li>
           <li className="text-white ml-4 mt-2 cursor-pointer">
-            <Link href="/LEI">LEI</Link>
+            <Link href="/programs/LEI">LEI</Link>
           </li>
         </ul>
       </div>
