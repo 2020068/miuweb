@@ -13,7 +13,7 @@
     display: inline-block;
     position: absolute;
     width: 100%;
-    height: 15%;
+    height: 500px;
     background-image: url(../../public/images/programImg/school.jpg);
     background-size: cover;
     background-position: center;
@@ -27,7 +27,7 @@
     height: 250px;
     background-color: #4070f4;
     color: #ffffff;
-    margin: 70% 25% 10%;
+    margin: 325px 200px 50px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    background-color: #BFD1FF;
+    background-color: #86a7fd;
     color: #ffffff;
     opacity: 1;
     text-align: center;
@@ -61,7 +61,7 @@
 .programBox3,
 .programBox5 {
     grid-column: 1/4;
-    margin-left: 10%;
+    margin-left: 5%;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 .programBox5 {

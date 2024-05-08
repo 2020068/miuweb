@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
-import Image from "next/image";
+import ImageCarousel from "@/components/imageCarousel";
 
 
 interface FacultyType {
@@ -12,10 +12,10 @@ interface FacultyType {
     options?: FacultyType;
   };
 
-const CsPage: React.FC<PropType> = (props) => {
+const MIMPage: React.FC<PropType> = (props) => {
   const overviewRef = useRef<HTMLDivElement>(null);
   const curriculumRef = useRef<HTMLDivElement>(null);
-  const alumniRef = useRef<HTMLDivElement>(null);
+
 
 
   useEffect(() => {
@@ -59,12 +59,15 @@ const CsPage: React.FC<PropType> = (props) => {
     return(
         <div className={styles.container}>
             <div className={styles.backgroundImg}>
-                <Image src="/images/programImg/departmentImg/Department-of-CS-scaled.jpeg" alt="CSpage background" layout="fill" objectFit="cover"/>
+            <ImageCarousel
+                textContent="Master in Business Administration"
+                textdesc=""
+                image={"/images/programImg/departmentImg/MIMbackgroundImg.jpg"}
+                />
             </div>
-            <div className={styles.box1}>
-                Master in Business Administration
-            </div>
+
             <div ref={overviewRef} className={`${styles.overview}`}>
+              <br /><br /><br />
                 Overview
                 <div className={styles.h1}>
                 MBA (International Marketing) at MIU is founded to train students to become international professionals who can lead the global era. 
@@ -116,4 +119,4 @@ const CsPage: React.FC<PropType> = (props) => {
         
     );
 };
-export default CsPage;
+export default MIMPage;

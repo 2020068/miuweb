@@ -4,6 +4,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
 }
 .backgroundImg {
     grid-column: 1 / 4;

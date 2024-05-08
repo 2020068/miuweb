@@ -1,85 +1,76 @@
-.apply-container {
-  max-width: wrap fit-content; /* Adjust as needed */
-  margin: 0 auto;
-  background-image: url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?cs=srgb&dl=pexels-pixabay-159490.jpg&fm=jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 20px;
-}
-
-.apply-form {
-  background-color: rgba(70, 114, 245, 0.664); /* Add transparency to the background color */
-  padding: 20px;
-  border-radius: 15px;
-  width: 35%;
-}
-
 .form-group {
-  margin-bottom: wrap content;
-  margin-left: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  color: #214ddf; /* Adjust text color */
+  margin-left: 20px;  
+  margin-top: 10px;
+}
+h2 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  color: #214ddf; /* Adjust text color */
+  margin-left: 20px;  
+  margin-top: 10px;
+}
+h3 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  color: #214ddf; /* Adjust text color */
+  margin-left: 20px;  
+  margin-top: 10px;
 }
 
-label {
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  width: 48%; /* Adjust width as needed */
+  position: relative;
+  margin-left: 30px;
+}
+
+.input-label label {
   display: block;
   margin-bottom: 5px;
-  color: #ffffff;
-  
+  color: #555; /* Adjust label color */
 }
 
-input[type='text'],
-input[type='email'],
-input[type='phone'],
-select {
-  width: calc(50% - 10px); /* Adjust width of inputs/selects to fit in one line */
-  padding: 10px;
-  border: 1px solid #ccc; /* Added border for clarity */
+.input-label label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #007bff; /* Adjust dot color */
+  border-radius: 50%;
+}
+.input-group select {
+  width: calc(91% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
   border-radius: 3px;
-  display: inline-block;
-  vertical-align: top; /* Align inputs/selects to top */
-  box-sizing: border-box; /* Include padding and border in width calculation */
-  margin-bottom: 10px; /* Add margin-bottom for spacing between inputs */
+  box-sizing: border-box;
 }
 
-select {
-  width: wrap fit-content; /* Set width of select to 100% */
+
+.input-group input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.submit-btn {
-  display: inline-block; /* Display submit button inline */
-  padding: 10px 20px; /* Add padding for button */
-  background-color: #007bff;
-  margin-left : 40px;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3;
-}
-/* Add this CSS to the existing styles */
-.button-group {
-  display: flex;
-}
-
-.button-group .degree-btn {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-group .degree-btn:last-child {
-  margin-right: 0;
-}
-
-.button-group .degree-btn:hover {
-  background-color: #0056b3;
+/* Optional: Hover effect for input fields */
+.input-group input:hover {
+  border-color: #007bff; /* Adjust hover color */
 }

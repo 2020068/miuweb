@@ -6,37 +6,17 @@
     grid-template-columns: repeat(3,1fr);
     overflow-x: hidden;
     font-family: "Helvetica", sans-serif;
-
 }
 .backgroundImg {
     opacity: 1;
     position: absolute;
     display: inline-block;
     width: 100%;
-    height: 15%;
+    height: 1000px;
     background-size: cover;
     background-position: center;
     z-index: 1;
     filter: contrast(80%);
-
-}
-.box1 {
-    grid-column: 1/4;
-    position: relative;
-    width: 500px;
-    height: 250px;
-    background-color: #4070f4;
-    color: #ffffff;
-    margin: 15% 10% 5%;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 40px;
-    z-index: 1;
-    opacity: 0.7;
-    font-weight: bold;
 }
 .overview,
 .curriculum,
@@ -53,13 +33,20 @@
     transform: translateY(30px);
     opacity: 0;
 }
+.overview {
+  margin-top: 25%;
+}
 .faculty {
+  margin-top: -2%;
   transform: translateY(30px);
   opacity: 0;
+  margin-bottom: 3%;
 }
 .curriculum {
   top: -10px;
-
+}
+.alumni {
+  top: -60px;
 }
 .title {
   padding-left: 20px;
@@ -98,7 +85,6 @@
   border-radius: 50%;
   border: 4px solid #173992;
   background-color: #efefef;
-  
 }
 
 .facultyItem .facultyDetails {
@@ -107,12 +93,10 @@
   padding: 10px;
 }
 .facultyDetails {
-
   border-radius: 10px;
-
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   height: 300px;
@@ -127,21 +111,18 @@
   padding: 3px;
   margin-bottom: 30px;
 }
-
 .facultyName {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #333333;
   margin-top: 1rem;
-  margin: 0;
+  width: 150px;
 }
-
 .facultyDescription {
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   color: #666666;
   margin-top: 5px;
   line-height: 1.6;
-  margin: 0;
 }
 .facultyG {
   font-display: none;
@@ -160,8 +141,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
-    
 }
 .alumImg {
     z-index: 1;
@@ -173,7 +152,6 @@
     height: 500px;
 }
 .alumniText {
-
     margin-top: 60px;
     width: 550px;
     font-size: 17px;
@@ -181,7 +159,6 @@
     color: black;
     display: flex;
     flex-direction: column;
-
 }
 .alumniBox {
   position: relative;
@@ -194,15 +171,12 @@
   top: -175px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-
 .a {
     position: relative;
-
     width: 400px;
     color: black;
     font-size: 22px;
     font-weight: bold;
-
 }
 .h1,
 .h2,
@@ -228,9 +202,7 @@
   font-size: 50px;
   color: #4070f4;
 }
-.doublespace {
-    white-space: pre-wrap; 
-}
+
 .visible {
   opacity: 1;
     transform: translateY(0); 
