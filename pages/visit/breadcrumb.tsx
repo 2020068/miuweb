@@ -29,7 +29,9 @@ const Breadcrumb = ({
         {pathNames.length > 0 && (
           <>
             <div className={styles.listClasses}>
-              <Link href={"/"}>{homeElement}</Link>
+              <div className={styles.bread_text}>
+                <Link href={"/"}>{homeElement}</Link>
+              </div>
             </div>
             {separator}
           </>
@@ -44,7 +46,9 @@ const Breadcrumb = ({
           return (
             <React.Fragment key={index}>
               <div className={itemClasses}>
-                <Link href={href}>{itemLink}</Link>
+                <div className={styles.bread_text}>
+                  <Link href={href}>{itemLink}</Link>
+                </div>
               </div>
               {pathNames.length !== index + 1 && separator}
             </React.Fragment>

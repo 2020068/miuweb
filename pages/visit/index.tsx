@@ -15,6 +15,10 @@ const VisitorPage: React.FC = () => {
       <div className="mt-[50vh]  w-full">
         <MapGoogle />
       </div>
+
+      <div className="w-full">
+        <img src={"/images/Campus.jpg"} />
+      </div>
     </div>
   );
 };

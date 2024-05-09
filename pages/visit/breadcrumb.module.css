@@ -1,9 +1,10 @@
-
 .container {
   position: absolute;
   inset: 0;
   color: white;
-  background-color: #4b89dc;
+  /* background-color: #4b89dc; */
+  font-size: 17px;
+  font-weight: bold;
   width: fit-content;
   z-index: 21;
   height: 5%;
@@ -12,6 +13,11 @@
   justify-content: center;
   margin-top: 45vh;
   opacity: 0.9;
+}
+
+.bread_text:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 
