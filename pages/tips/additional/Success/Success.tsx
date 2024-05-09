@@ -13,7 +13,6 @@ import Paper from "@mui/material/Paper";
 import ButtonBase from "@mui/material/ButtonBase";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Link from "next/link";
 
 const theme = createTheme();
 
@@ -34,24 +33,7 @@ const Img = styled("img")({
   maxHeight: "100%",
 });
 
-const buttons = [
-  <Link href='./tips/Fresh' key='one'>
-    <Button key='one'>ADVICE FOR NEW COLLEGE STUDENTS</Button>
-  </Link>,
-  <Link href='/Fresh' key='two'>
-    <Button key='two'>COLLEGE TIPS FOR SUCCESS IN CLASS</Button>
-  </Link>,
-  <Link href='/Fresh/index' key='three'>
-    <Button key='three'>
-      HOW TO SURVIVE FRESHMAN YEAR OF COLLEGE IN THE DORMS
-    </Button>
-  </Link>,
-  <Link href='/Fresh/index' key='four'>
-    <Button key='four'>HOW TO MAKE FRIENDS IN COLLEGE</Button>
-  </Link>,
-];
-
-const Tips: React.FC = () => {
+const Success: React.FC = () => {
   return (
     // <meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
     <Grid container direction='column' spacing={2}>
@@ -129,42 +111,6 @@ const Tips: React.FC = () => {
             </Grid>
           </Grid>
         </Paper>
-        <Paper
-          elevation={0}
-          sx={{
-            p: 2,
-            margin: "auto",
-            maxWidth: "30%",
-          }}>
-          <Typography
-            sx={{
-              marginBottom: "10rem",
-              fontStyle: "italic",
-              textAlign: "center",
-            }}>
-            This post is all about college advice for freshman.
-          </Typography>
-          <Typography
-            sx={{
-              marginBottom: "2rem",
-              marginLeft: "5rem",
-            }}>
-            TABLE OF CONTENTS:
-          </Typography>
-          <ButtonGroup
-            sx={{
-              transition: "background-color 0.3s",
-              "&:hover": {
-                backgroundColor: (theme) =>
-                  theme.palette.mode === "dark" ? "#0D1116" : "#f5f5f5",
-              },
-            }}
-            orientation='vertical'
-            aria-label='Vertical button group'
-            variant='text'>
-            {buttons}
-          </ButtonGroup>
-        </Paper>
       </Grid>
       <Grid item xs={12} sm container>
         <Grid item xs container direction='column' spacing={2}>
@@ -197,4 +143,4 @@ const Tips: React.FC = () => {
   );
 };
 
-export default Tips;
+export default Success;

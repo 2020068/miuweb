@@ -1,8 +1,6 @@
 /** @format */
 
 import React from "react";
-import Link from "next/link";
-import FastRewindTwoToneIcon from "@mui/icons-material/FastRewindTwoTone";
 import { Grid, Box, Typography, CardMedia } from "@mui/material";
 import DBuiling from "./CCElements/DBuilding";
 import MBuilding from "./CCElements/MBuilding";
@@ -10,9 +8,11 @@ import MIS from "./CCElements/MIS";
 import Dormitory from "./CCElements/Dorm";
 import SC from "./CCElements/SC";
 import { EmblaOptionsType } from "embla-carousel";
-import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
-
+import { Button } from "@mui/material";
+import Link from "next/link";
+import FastRewindTwoToneIcon from "@mui/icons-material/FastRewindTwoTone";
+import GroupTwoToneIcon from "@mui/icons-material/GroupTwoTone";
 interface Category {
   Id: string;
   Name: string;
@@ -56,15 +56,18 @@ const Campus: React.FC = () => {
         sx={{
           borderBottom: "solid 2px #173992",
         }}>
-        {/* <Grid item xs={12}>
-          <Grid container alignItems='center' justifyContent='flex-start'>
-            <Link href='..'>
-              <Button sx={{ backgroundColor: "#173992", color: "white" }}>
-                <FastRewindTwoToneIcon />
-              </Button>
-            </Link>
-          </Grid>
-        </Grid> */}
+        <Box className='button flex flex-col items-start justify-start h-full'>
+          <Link href='..'>
+            <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
+              <FastRewindTwoToneIcon />
+            </Button>
+          </Link>
+          <Link href='../employee/employee'>
+            <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
+              <GroupTwoToneIcon />
+            </Button>
+          </Link>
+        </Box>
       </Grid>
       <Grid item xs={12}>
         {/* Main Content */}

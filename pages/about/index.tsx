@@ -5,7 +5,6 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Employee from "./employee/employee";
 
 const AboutPage: React.FC = () => {
   const { t } = useTranslation();

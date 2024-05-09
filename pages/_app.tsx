@@ -11,7 +11,6 @@ import "./about/about.css";
 import "./about/employee/employee.css";
 import "./about/campus/campus.css";
 import "./about/campus/CCElements/CC.css";
-import "./tips/tips.css";
 import "/components/carousel/embla.css";
 import "../components/marquee/marquee.css";
 import Sidebar from "@/components/sidebarmenu";
