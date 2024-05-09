@@ -78,7 +78,7 @@ const Campus: React.FC = () => {
 
           {/* Right Column */}
           <Grid item xs={12} lg={6}>
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
               {catType.map((category: Category) => (
                 <Grid key={category.Id} item xs={12}>
                   <Box sx={{ width: "100%" }}>

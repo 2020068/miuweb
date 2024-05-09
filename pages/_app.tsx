@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -9,6 +11,7 @@ import "./about/about.css";
 import "./about/employee/employee.css";
 import "./about/campus/campus.css";
 import "./about/campus/CCElements/CC.css";
+import "./tips/tips.css";
 import "/components/carousel/embla.css";
 import "../components/marquee/marquee.css";
 import Sidebar from "@/components/sidebarmenu";
@@ -23,19 +26,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     setSidebarMenuOpen(!sidebarMenuOpen);
   };
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <Header isSearchVisible={isSearchVisible} />
-      <div className="menu-container">
+      <div className='menu-container'>
         <Menu
           toggleSearchBar={toggleSearchBar}
           toggleSidebarMenuParent={toggleSidebarMenu}
         />
       </div>
-      <div className="sidebar">
+      <div className='sidebar'>
         <Sidebar isOpen={sidebarMenuOpen}></Sidebar>
       </div>
 
-      <main className="main-content">
+      <main className='main-content'>
         <Component {...pageProps} />
       </main>
       <Footer />

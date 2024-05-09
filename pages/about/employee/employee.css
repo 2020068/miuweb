@@ -23,10 +23,10 @@
   font-weight: bold;
   text-align: center;
   color: white;
-  -webkit-text-stroke: 3px #173992;
+  /* -webkit-text-stroke: 3px white; */
   z-index: 999;
   font-size: 3.125rem; /* 50px */
-  margin-top: 10rem; /* 60px */
+  margin-top: 13rem; /* 60px */
   left: 0;
   right: 0;
   margin-left: auto;
