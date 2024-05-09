@@ -1,21 +1,22 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./LEI.module.css";
 import { useTranslation } from "react-i18next";
-
+import ImageCarousel from "@/components/imageCarousel";
 const LEIPage: React.FC = () => {
   const {t} = useTranslation();
   return (
     <div className={styles.container}>
-      <div className={styles.box1}>{t("LEI.box")}</div>
-      <div className={styles.backgroundImg}></div>
+      <ImageCarousel
+        textContent="Language Education Institute"
+        textdesc=""
+        image={"/images/programImg/LEIbackground.png"}
+      />
       <div className={styles.rectangle}>
         <div className={styles.quarter}>{t("LEI.quarter1")}</div>
         <div className={styles.quarter}>{t("LEI.quarter2")}</div>
         <div className={styles.quarter}>{t("LEI.quarter3")}</div>
         <div className={styles.quarter}>{t("LEI.quarter4")}</div>
       </div>
-      <div className={styles.Introduction}></div>
       <div className={styles.coursebox1}>
         {t("LEI.coursebox1")}
         <div className={styles.coursebox11}>

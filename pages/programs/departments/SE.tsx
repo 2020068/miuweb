@@ -85,12 +85,11 @@ const SEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-            <div className={styles.backgroundImg}>
             <ImageCarousel
                 textContent="Software Engineering"
                 textdesc=""
                 image={"/images/programImg/departmentImg/CSbackgroundImg.jpg"}
-                /></div>
+                />
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>

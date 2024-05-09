@@ -15,9 +15,13 @@ const Footer = () => {
     router.push("/about");
   };
 
-  const handleTelephoneClick = (event) => {
+  const handleTelephoneClick = (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
       window.location.href = "tel:+97670007447"; // Initiates a phone call
     } else {
       setShowPhoneNumber(!showPhoneNumber); // Toggle the visibility of the phone number
@@ -29,7 +33,7 @@ const Footer = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-end">
           <Image src="/logos/MIU.png" alt="Logo" width={40} height={30} />
-          <h1 className="text-2xl font-bold pl-5">
+          <h1 className="text-2xl font-bold pl-5 text-white">
             Mongolia International University
           </h1>
         </div>
@@ -66,11 +70,7 @@ const Footer = () => {
             >
               <FacebookIcon />
             </a>
-            <a
-              href="#"
-              onClick={handleTelephoneClick}
-              className="mr-2"
-            >
+            <a href="#" onClick={handleTelephoneClick} className="mr-2">
               <PhoneIcon />
             </a>
             {showPhoneNumber && <span className="mr-2">+976 7000-7447</span>}
