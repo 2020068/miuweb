@@ -12,20 +12,20 @@ const Sidebar = ({ isOpen = false }) => {
         <p className="text-white text-lg font-semibold mt-4 ml-4">
           Sidebar Menu
         </p>
-        <ul className="mt-2">
-          <li className="text-white ml-4 mt-2 cursor-pointer">
+        <ul className="mt-2 hover:text-black">
+          <li className="text-white ml-4 mt-2 cursor-pointer hover:scale-105">
             <Link href="/about">About MIU</Link>
           </li>
-          <li className="text-white ml-4 mt-2 cursor-pointer">
+          <li className="text-white ml-4 mt-2 cursor-pointer hover:scale-105">
             <Link href="/programs/academic-programs">Academics</Link>
           </li>
-          <li className="text-white ml-4 mt-2 cursor-pointer">
+          <li className="text-white ml-4 mt-2 cursor-pointer hover:scale-105">
             <Link href="/apply">Admission</Link>
           </li>
-          <li className="text-white ml-4 mt-2 cursor-pointer">
+          <li className="text-white ml-4 mt-2 cursor-pointer hover:scale-105">
             <Link href="/LifeMIU/Life">MIU Life</Link>
           </li>
-          <li className="text-white ml-4 mt-2 cursor-pointer">
+          <li className="text-white ml-4 mt-2 cursor-pointer hover:scale-105">
             <Link href="/programs/LEI">LEI</Link>
           </li>
         </ul>

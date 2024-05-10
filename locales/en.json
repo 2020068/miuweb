@@ -1,5 +1,6 @@
 {
-    "homepage.miu": " Mongolia International University",
+    "homepage.miu": "Mongolia International University",
+    "homepage.miu.desc": "Embrace Your Future with MIU!",
     "menu.button.menu": "Menu",
     "menu.button.search": "Search",
     "menu.button.newsEvents": "News-Events",
@@ -16,8 +17,6 @@
     "morebanner.content.2": "MIU students are encouraged to participate in activities and events organized by MIU faculty and staff. MIU students are also encouraged to participate in MIU activities and events.",
     "morebanner.content.3": "Many students join one or more of the many student clubs and organizations on campus. Or if the club you want to join doesn't exist, you can create it.",
     "morebanner.content.4": "Each semester MIU provides students with the opportunity to study abroad for one semester through the Student Exchange Program (SEP). It is a great opportunity to experience new cultures, study at top universities, learn foreign languages and make new friends.",
-    
-    
     "academic.box1.programs": "Academic Programs",
     "academic.exchange.program": "Exchange Student Program",
     "academic.exchange.programText1": "Undergraduate students have the chance to study abroad as an exchange student at several prestigious universities in the Republic of Korea. Our partnering universities range from public and private universities and depending on the partnering universities, students enjoy various scholarships and additional benefits. Students are eligible to study abroad during the Spring and Fall semesters of their Sophomore and Junior year, or the Fall semester of their Senior year.",
@@ -51,7 +50,23 @@
   
 
     "visit.pageTitle": "PLAN YOUR VISIT TO MIU",
-    "visit.pageDescription": "See all the things MIU has to offer"
+    "visit.pageDescription": "See all the things MIU has to offer",
+
+    
+    "banner.title": "Shaping Global Leaders for an Interconnected World",
+    "banner.typewriter": "Founded in 2002, MIU stands as a beacon of higher education in Ulaanbaatar, Mongolia. Thanks to the generous support of former president Natsagiin Bagabandi, the university was granted a substantial land parcel of 17,100 ㎡ for its inaugural building. Today, MIU is renowned for its English-language programs, making it a leader in education across Central Asia. With 14 esteemed bachelor’s programs, MIU is dedicated to nurturing the next generation of global leaders from Mongolia, Russia, China, South Korea, and beyond. Education at MIU is about grasping the intricacies of our interconnected world, fostering critical thinking, and empowering students to make a positive impact on society. Anchored by a comprehensive core curriculum, MIU offers a wealth of experiential learning opportunities across a diverse range of disciplines. Encircled by a dynamic campus community, MIU equips students with essential skills to navigate and succeed in an ever-evolving global landscape",
+    "banner.button": "Life At MIU",
+    "bubbles.international": "International Students",
+    "bubbles.ratio": "Faculty To Student Ratio",
+    "bubbles.nations": "Student Nationalities & Countries",
+    "marqueeText1":"Discover your potential, ignite your passion, and soar to new heights - at MIU - where education meets inspiration, and dreams become reality. ",
+    "marqueeText2":"At MIU, we believe greatness lies within every student. Together, - let's unlock your potential and inspire the world with humble hearts -and boundless possibilities. ",
+    "marqueeText3":"Empowering minds, shaping futures - Welcome to MIU, where every - student is a beacon of change in our interconnected world",
+    "footer.allright": "© All rights reserved.",
+    "footer.home": "Home",
+    "footer.about": "About",
+    "masters": "Masters",
+    "bachelor": "Bachelor"
   }
     
   

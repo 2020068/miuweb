@@ -8,10 +8,23 @@ const SAPage: React.FC = () => {
         <div className={styles.container}>
             <div className={styles.backgroundImg}>
             <ImageCarousel
-                textContent="Life at MIU"
+                textContent="Student Activity"
                 textdesc=""
                 image={"/LifePage/Lifebg.jpg"}
                 />
+            </div>
+            <div className={styles.basketball}>
+                <div>
+                    basketball team
+                </div>
+                <Image src="/LifePage/SA/basketball.jpg" alt="" width={500} height={100}/>
+                
+            </div>
+            <div className={styles.club}>
+            <Image src="/LifePage/SA/club.jpg" alt="" width={500} height={100}/>
+            </div>
+            <div className={styles.sdp}>
+            <Image src="/LifePage/SA/CDP.jpg" alt="" width={500} height={100}/>
             </div>
         </div>
         

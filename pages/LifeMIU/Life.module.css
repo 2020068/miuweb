@@ -4,19 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     font-family: "Helvetica", sans-serif;
-    overflow: hidden;
-}
-.backgroundImg {
-    grid-column: 1/4;
-    opacity: 1;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 1000px;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    filter: contrast(80%);
+    overflow-x: hidden;
 }
 .SU,
 .SS,
@@ -105,17 +93,49 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 10%;
     width: fit-content;
     left: 300px;
+    top: 600px;
+}
+.SUrule {
+    margin-bottom:50%;
 }
 .VisMis {
     border: rgba(0, 0, 0, 1) solid 1px;
-    margin-top: -20%;
     padding: 20px;
     text-decoration: underline;
     font-size: 35px;
     color: #668efd;
     flex-direction: column;
+    margin-top: -100px;
+    margin-bottom: 10%;
+}
+.contact {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px;
+}
+.icons {
+    color: #6b93ff;
+    display: flex;
+    flex-direction: row;
+}
+.basketball {
+    position: relative;
+    display: flex;
+    grid-column: 2/4;
+    flex-direction: row;
+    margin-bottom: 50%;
+    top: 500px;
+}
+.club {
+
+}
+
+.sdp {
+
 }
 
