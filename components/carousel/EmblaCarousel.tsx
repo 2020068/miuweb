@@ -28,13 +28,15 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
-  const names = ["John", "Steven", "Kevin", "Emily", "Haewook"];
-  const descriptions = [
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
+  const names = [
+    "Idea1",
+    "Idea2",
+    "Idea3",
+    "Idea4",
+    "Idea5",
+    "Idea6",
+    "Idea7",
+    "Idea8",
   ];
   return (
     <div className='embla'>
@@ -42,18 +44,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className='embla__container'>
           {slides.map((index) => (
             <div className='embla__slide embla__class-names' key={index}>
-              <div className='embla__card'>
-                <img
-                  className='embla__slide__img'
-                  src={`/images/slideimg/profile${index + 1}.jpg`}
-                  alt={`Slide ${index + 1}`}
-                />
-                <div className='embla__card__content'>
-                  <p className='embla__slide__index'> {names[index]}</p>
-                  <p className='embla__slide__description'>
-                    {descriptions[index]}
-                  </p>
-                </div>
+              <img
+                className='embla__slide__img'
+                src={`/tips/idea/idea${index + 1}.jpg`}
+                alt={`Slide ${index + 1}`}
+              />
+              <div className='embla__card__content'>
+                <p className='embla__slide__index'> {names[index]}</p>
               </div>
             </div>
           ))}
