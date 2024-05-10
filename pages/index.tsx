@@ -7,11 +7,17 @@ import FeaturedPrograms from "@/components/featuredPrograms";
 //import programs from "../constants/programs.ts"
 import { Bachelorprograms, Masterprograms } from "../constants/programs";
 import MoreBanners from "@/components/moreBanners";
-const App = () => {
+import FeaturedNews from "@/components/featuredNews";
+import { getArticleProps } from "@/utils/articleApi";
+import { ArticleProps } from "./news/types";
+const App = ({ articles }: ArticleProps) => {
   return (
     <div className="bg-white">
       <HomePage />
-      <Banner />
+      <div id="banner">
+        <Banner />
+      </div>
+
       <Bubbles />
       <Marquee />
 
@@ -19,10 +25,13 @@ const App = () => {
         <FeaturedPrograms masters={false} programs={Bachelorprograms} />
         <FeaturedPrograms masters={true} programs={Masterprograms} />
       </div>
-
       <MoreBanners />
+      <FeaturedNews articles={articles} />
     </div>
   );
 };
+export async function getStaticProps() {
+  return await getArticleProps();
+}
 
 export default App;
