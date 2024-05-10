@@ -6,11 +6,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
   const router = useRouter();
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
-
+  const { t } = useTranslation();
   const navigateToAbout = () => {
     router.push("/about");
   };
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="flex items-center justify-end">
           <Image src="/logos/MIU.png" alt="Logo" width={40} height={30} />
           <h1 className="text-2xl font-bold pl-5 text-white">
-            Mongolia International University
+            {t("homepage.miu")}
           </h1>
         </div>
         <div className="flex items-center">
@@ -44,14 +44,14 @@ const Footer = () => {
             className="mr-4"
             onClick={navigateToAbout}
           >
-            About Us
+            {t("footer.about")}
           </Button>
           <Button
             variant="contained"
             color="primary"
             onClick={() => router.push("/")}
           >
-            Home
+            {t("footer.home")}
           </Button>
           <div className="ml-4">
             <a
@@ -82,8 +82,7 @@ const Footer = () => {
       </div>
       <div className="text-center mt-8">
         <p>
-          &copy; {new Date().getFullYear()} Mongolia International University.
-          All rights reserved.
+          {new Date().getFullYear()} {t("homepage.miu")}. {t("footer.allright")}
         </p>
       </div>
     </footer>
