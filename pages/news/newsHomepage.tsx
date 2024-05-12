@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Article } from "@/types/types";
-
 import { Pagination, TextField } from "@mui/material";
 import NewsCard from "./newsCard";
 
@@ -23,33 +22,27 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
     return false;
   };
 
-  let filteredArticles = [...articles];
+  const filteredArticles = articles.filter((article) => {
+    return (
+      article.attributes.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()) ||
+      article.attributes.summary
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()) ||
+      containsText(article.attributes.content, searchTerm.toLowerCase())
+    );
+  });
 
-  if (searchTerm) {
-    filteredArticles = articles.filter((article) => {
-      return (
-        article.attributes.title
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
-        article.attributes.summary
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
-        containsText(article.attributes.content, searchTerm.toLowerCase())
-      );
-    });
-  }
-
-  if (!searching) {
-    filteredArticles.sort((a, b) => {
-      const dateA = new Date(a.attributes.publishedAt).getTime();
-      const dateB = new Date(b.attributes.publishedAt).getTime();
-      return dateB - dateA;
-    });
-  }
+  const sortedArticles = [...filteredArticles].sort((a, b) => {
+    const dateA = new Date(a.attributes.publishedAt).getTime();
+    const dateB = new Date(b.attributes.publishedAt).getTime();
+    return dateB - dateA;
+  });
 
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = filteredArticles.slice(
+  const currentArticles = sortedArticles.slice(
     indexOfFirstArticle,
     indexOfLastArticle
   );
@@ -64,41 +57,13 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
         fullWidth
         sx={{ mb: 2 }}
       />
-      {searching ? (
-        <div className="grid gap-8 md:grid-cols-1 mb-8">
-          {currentArticles.map((article, index) => (
-            <div key={article.id}>
-              <NewsCard article={article} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div>
-          <div className="grid gap-8 md:grid-cols-1 mb-8">
-            {currentArticles.slice(0, 1).map((article) => (
-              <div key={article.id}>
-                <NewsCard article={article} />
-              </div>
-            ))}
+      <div className="grid gap-8 md:grid-cols-1 mb-8">
+        {currentArticles.map((article, index) => (
+          <div key={article.id}>
+            <NewsCard article={article} />
           </div>
-
-          <div className="grid gap-8 md:grid-cols-3 mb-8">
-            {currentArticles.slice(1, 4).map((article) => (
-              <div key={article.id}>
-                <NewsCard article={article} />
-              </div>
-            ))}
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 mb-8">
-            {currentArticles.slice(4, 10).map((article) => (
-              <div key={article.id}>
-                <NewsCard article={article} />
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+        ))}
+      </div>
 
       <Pagination
         count={Math.ceil(filteredArticles.length / articlesPerPage)}
