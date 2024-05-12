@@ -57,7 +57,6 @@ const buttons = [
 
 const Tips: React.FC = () => {
   return (
-    // <meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
     <Grid container direction='column' spacing={2}>
       <Grid
         container

@@ -60,37 +60,44 @@
   margin-top: 1.8rem;
 }
 .embla__buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  display: flex;
   gap: 0.6rem;
   align-items: center;
-  margin-left: 10px;
-  top: 10px;
+  justify-content: space-between;
+  margin-top: 1.8rem;
 }
+
 .embla__button {
-  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
-  -webkit-appearance: none;
-  appearance: none;
+  position: relative;
   background-color: transparent;
-  touch-action: manipulation;
-  display: inline-flex;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  color: #173980;
   width: 3.6rem;
   height: 3.6rem;
-  z-index: 1;
   border-radius: 50%;
-  color: var(--text-body);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.embla__button__left .embla__button__left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.embla__button--prev {
+  margin-left: -900px;
+  position: absolute;
+  left: 0;
+}
+.embla__button--next {
+  margin-right: -100px;
+  position: absolute;
+  right: 0;
+}
+
 .embla__button:disabled {
-  color: var(--detail-high-contrast);
+  color: #3b65c0;
 }
 .embla__button__svg {
   width: 35%;
@@ -100,7 +107,7 @@
   color: var(--brand-primary);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
   margin-right: 10px;
@@ -140,7 +147,7 @@
 
 .embla__dot--selected:after,
 .embla__dot:hover:after {
-  background-color: var(--brand-primary);
+  background-color: #173980;
 }
 
 .embla__slide {
