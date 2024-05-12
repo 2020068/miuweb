@@ -66,12 +66,14 @@ const ApplyPage: React.FC = () => {
   });
 
   const token =
-    "3636a7528d3bc250df940378a4d5d837c9d5a48de167a6428402b09a199f3b6fdceb82c9d9371ed554bb29c64badd877d972dc0e3fc35ec9dbc55c28ba2740961d9cee48761ffdfd06ad0d27560ace978b4e6aa02b35fb71e45f9b3bb6a9eaaadfecfb642ffb6fef8c00014ffb6a4d31960f6a7fa215d0b0a29ea1b0f237bdea";
+    "6f607b9e76504722575ab7d83f273eaec5d4248295881a77ca360cec315b3db5da213f01b0b59d4398afe1cd2c8d4734186bfcf20d3f8d49e00cd3ce7696780ed5906d02444b5d5edbbe8479b4ebc3c72473354984597144689338cbe3c8c3bf6c16abdc5bbb9efdf26540bafea4bc234b61b49d207568e648b55786eb1a7e5f";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form data:", formData);
-
+    const formattedDate = formData.graddate
+      ? formData.graddate.toISOString().split("T")[0]
+      : null;
     try {
       const config = {
         headers: {
@@ -81,11 +83,13 @@ const ApplyPage: React.FC = () => {
       };
 
       const requestBody = {
-        data: formData, // Wrap formData in a 'data' key
+        data: {
+          ...formData,
+          graddate: formattedDate,
+        },
       };
-
       const response = await axios.post(
-        "http://127.0.0.1:1337/api/forms",
+        "http://localhost:1337/api/forms",
         requestBody, // Send the modified request body
         config
       );

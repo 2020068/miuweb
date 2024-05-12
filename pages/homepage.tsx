@@ -76,7 +76,7 @@ const HomePage = () => {
 
       <div className="absolute flex flex-col h-full justify-center inset-0 z-30 text-center text-italic">
         <span
-          className={`pt-[149%] md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[40%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
+          className={`pt-[149%] 2xl:pt-[50%] md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[40%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
             showSpan
               ? "opacity-100 transition-opacity duration-1000"
               : "opacity-0"
@@ -87,7 +87,7 @@ const HomePage = () => {
       </div>
 
       <div
-        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[50%] top-[30%] ${
+        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[50%] xl:top-[30%] top-[30%] ${
           showSpan
             ? "opacity-100 transition-opacity duration-1000"
             : "opacity-0"
