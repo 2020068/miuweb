@@ -66,7 +66,8 @@ const ApplyPage: React.FC = () => {
   });
 
   const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
-
+  const postapi =
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337/api/forms";
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formattedDate = formData.graddate
@@ -76,7 +77,7 @@ const ApplyPage: React.FC = () => {
       const config = {
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json", // Specify JSON content type
+          "Content-Type": "application/json",
         },
       };
 
@@ -86,11 +87,8 @@ const ApplyPage: React.FC = () => {
           graddate: formattedDate,
         },
       };
-      const response = await axios.post(
-        "http://localhost:1337/api/forms",
-        requestBody, // Send the modified request body
-        config
-      );
+      const response = await axios.post(postapi, requestBody, config);
+      console.log("Form submitted successfully:", response.data);
     } catch (error) {
       console.error("Error submitting form:", error);
     }
