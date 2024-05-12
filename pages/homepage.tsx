@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import HomeImageCarousel from "@/components/homeImageCarousel";
-import HomePageLighting from "@/components/homePageLighting/HomePageLighting";
+
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import HomePageLighting from "@/components/homepageLighting";
 const HomePage = () => {
   const { t } = useTranslation();
   const splineSceneUrl =
