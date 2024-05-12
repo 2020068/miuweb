@@ -27,7 +27,7 @@ interface FormModalProps {
   handleClose: () => void;
 }
 
-export default function TutorModal({ open, handleClose }: FormModalProps) {
+export default function CouncelorModal({ open, handleClose }: FormModalProps) {
   const [value, setValue] = React.useState<Dayjs | null>(
     dayjs("2022-04-17T15:30")
   );
@@ -49,7 +49,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
               backgroundColor: "white",
               borderRadius: "8px",
               boxShadow: 24,
-              maxWidth: "60%", // Adjust the width as needed
+              maxWidth: "60%",
               width: "80rem",
               height: "60rem",
               padding: "1rem",
@@ -64,7 +64,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                 marginBottom: "1rem",
                 marginTop: "1rem",
               }}>
-              Take a tutor
+              Find a Councelor
             </Typography>
             <FormGrid item md={6}>
               <FormLabel htmlFor='first-name' required>
@@ -85,42 +85,15 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                 }}
               />
             </FormGrid>
-
-            <FormGrid
-              item
-              md={6}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-              }}>
-              <FormLabel htmlFor='last-name' required>
-                Last name
-              </FormLabel>
-              <OutlinedInput
-                id='last-name'
-                name='last-name'
-                type='last-name'
-                placeholder='Steve'
-                autoComplete='last name'
-                required
-                style={{
-                  borderRadius: "10px",
-                  border: "1px solid #ccc",
-                  fontSize: "16px",
-                  marginBottom: "1rem",
-                }}
-              />
-            </FormGrid>
-
             <FormGrid item xs={6}>
               <FormLabel htmlFor='address1' required>
-                Email address
+                Contact Information
               </FormLabel>
               <OutlinedInput
                 id='address1'
                 name='address1'
                 type='address1'
-                placeholder='Enter email address here'
+                placeholder='Enter your contact information'
                 autoComplete='shipping address-line1'
                 required
                 style={{
@@ -131,46 +104,6 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                 }}
               />
             </FormGrid>
-
-            <FormGrid item xs={6}>
-              <FormLabel htmlFor='city' required>
-                ID code
-              </FormLabel>
-              <OutlinedInput
-                id='city'
-                name='city'
-                type='city'
-                placeholder='Enter ID code here'
-                autoComplete='City'
-                required
-                style={{
-                  borderRadius: "10px",
-                  border: "1px solid #ccc",
-                  fontSize: "16px",
-                  marginBottom: "1rem",
-                }}
-              />
-            </FormGrid>
-            <FormGrid item xs={6}>
-              <FormLabel htmlFor='state' required>
-                Phone number
-              </FormLabel>
-              <OutlinedInput
-                id='state'
-                name='state'
-                type='state'
-                placeholder='Enter phone number here'
-                autoComplete='State'
-                required
-                style={{
-                  borderRadius: "10px",
-                  border: "1px solid #ccc",
-                  fontSize: "16px",
-                  marginBottom: "1rem",
-                }}
-              />
-            </FormGrid>
-
             <Grid
               item
               xs={12}
@@ -224,27 +157,6 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                 </LocalizationProvider>
               </FormGrid>
             </Grid>
-            <FormGrid item xs={6} style={{ height: "10rem" }}>
-              <FormLabel htmlFor='country' required>
-                Additional information
-              </FormLabel>
-              <OutlinedInput
-                id='country'
-                name='country'
-                type='country'
-                placeholder='Question? anything you would like to know or ask'
-                autoComplete='shipping country'
-                required
-                multiline
-                rows={4}
-                style={{
-                  borderRadius: "10px",
-                  border: "1px solid #ccc",
-                  fontSize: "16px",
-                  marginBottom: "1rem",
-                }}
-              />
-            </FormGrid>
             <FormGrid item xs={12}>
               <FormControlLabel
                 control={<Checkbox name='saveAddress' value='yes' />}
