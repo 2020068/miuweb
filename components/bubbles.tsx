@@ -30,7 +30,7 @@ export default function Bubbles() {
   return (
     <div className="flex justify-around bg-gradient-to-r from-sky-500 to-indigo-500 p-1 xl:p-10">
       <div
-        className={`flex flex-col items-center justify-center w-[100px] h-[100px] md:w-[200px] xl:w-[20em] xl:h-[20em] bg-radient-ellipse from-white to-black rounded-full text-white text-center bubble ${
+        className={`flex flex-col items-center justify-center w-[100px] h-[100px] md:w-[200px] xl:w-[20em] xl:h-[20em] bg-blue-700 rounded-full text-white text-center bubble ${
           isVisible ? "fade-in" : ""
         }`}
       >
