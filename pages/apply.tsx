@@ -65,8 +65,7 @@ const ApplyPage: React.FC = () => {
     degreelevel: "",
   });
 
-  const token =
-    "6f607b9e76504722575ab7d83f273eaec5d4248295881a77ca360cec315b3db5da213f01b0b59d4398afe1cd2c8d4734186bfcf20d3f8d49e00cd3ce7696780ed5906d02444b5d5edbbe8479b4ebc3c72473354984597144689338cbe3c8c3bf6c16abdc5bbb9efdf26540bafea4bc234b61b49d207568e648b55786eb1a7e5f";
+  const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
