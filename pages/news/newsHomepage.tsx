@@ -14,13 +14,11 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 10;
 
-  const containsText = (content: any[], term: string): boolean => {
-    for (const item of content) {
-      if (item.type === "text" && item.text.toLowerCase().includes(term)) {
-        return true;
-      } else if (item.children && containsText(item.children, term)) {
-        return true;
-      }
+  const containsText = (content: any, term: string): boolean => {
+    if (content.type === "text" && content.text.toLowerCase().includes(term)) {
+      return true;
+    } else if (content.children) {
+      return content.children.some((item: any) => containsText(item, term));
     }
     return false;
   };
@@ -61,14 +59,11 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
       <TextField
         label="Search by Title, Summary, or Content"
         value={searchTerm}
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-          setSearching(e.target.value !== "");
-        }}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        onBlur={(e) => setSearching(e.target.value !== "")}
         fullWidth
         sx={{ mb: 2 }}
       />
-
       {searching ? (
         <div className="grid gap-8 md:grid-cols-1 mb-8">
           {currentArticles.map((article, index) => (
