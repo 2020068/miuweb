@@ -35,36 +35,36 @@ const Employee: React.FC<PropType> = (props) => {
 
   return (
     <div>
-      <div className='headerTitle'>FACULTY IMFORMATION</div>
-      <div className='container'>
-        <div className='button'>
-          <div className='flex flex-col items-end justify-end h-full'>
-            <Link href='..'>
-              <button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+      <div className="headerTitle">FACULTY IMFORMATION</div>
+      <div className="container">
+        <div className="button">
+          <div className="flex flex-col items-end justify-end h-full">
+            <Link href="..">
+              <button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]">
                 <FastRewindTwoToneIcon />
               </button>
             </Link>
-            <Link href='../campus/campus'>
-              <button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+            <Link href="../campus/campus">
+              <button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]">
                 <LocationOnOutlinedIcon />
               </button>
             </Link>
           </div>
         </div>
       </div>
-      <div className='title'> LEADERSHIP</div>
+      <div className="title"> LEADERSHIP</div>
 
-      <div className='employee-list'>
+      <div className="employee-list">
         {employees.map((employee, index) => (
-          <div className='employee-item' key={index}>
-            <div className='employee-details'>
+          <div className="employee-item" key={index}>
+            <div className="employee-details">
               <img
-                className='employee-img'
+                className="employee-img"
                 src={`/aboutPage/employee/Leadership/employee${index + 1}.jpg`}
                 alt={`Profile of ${employee.name}`}
               />
-              <p className='employee-name'>{employee.name}</p>
-              <p className='employee-description'>{employee.description}</p>
+              <p className="employee-name">{employee.name}</p>
+              <p className="employee-description">{employee.description}</p>
             </div>
           </div>
         ))}
@@ -75,9 +75,9 @@ const Employee: React.FC<PropType> = (props) => {
       <Admission />
       <Marketing />
       <General />
-      <div className='employeeG'>
+      <div className="employeeG">
         <img
-          className='employeeG-img'
+          className="employeeG-img"
           src={`/aboutPage/employee/employeeG.jpg`}
           alt={``}
         />
