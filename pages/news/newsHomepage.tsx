@@ -1,51 +1,42 @@
 import React, { useState } from "react";
 import { Article } from "@/types/types";
+
 import { Pagination, TextField } from "@mui/material";
 import NewsCard from "./newsCard";
 
-const includesSearchTerm = (text: string, term: string): boolean => {
-  return text.toLowerCase().includes(term.toLowerCase());
-};
-
-const containsText = (item: any, term: string): boolean => {
-  if (item && typeof item === "object") {
-    if (item.type === "text" && includesSearchTerm(item.text, term)) {
-      return true;
-    }
-
-    for (const key in item) {
-      if (item.hasOwnProperty(key) && containsText(item[key], term)) {
-        return true;
-      }
-    }
-  } else if (typeof item === "string" && includesSearchTerm(item, term)) {
-    return true;
-  }
-
-  return false;
-};
-
 interface Props {
-  articles: Article[];
+  articles?: Article[];
 }
 
-const NewsHomepage: React.FC<Props> = ({ articles }) => {
+const NewsHomepage: React.FC<Props> = ({ articles = [] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searching, setSearching] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 10;
 
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const containsText = (content: any[], term: string): boolean => {
+    for (const item of content) {
+      if (item.type === "text" && item.text.toLowerCase().includes(term)) {
+        return true;
+      } else if (item.children && containsText(item.children, term)) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   let filteredArticles = [...articles];
 
   if (searchTerm) {
     filteredArticles = articles.filter((article) => {
       return (
-        includesSearchTerm(article.attributes.title, searchTerm) ||
-        includesSearchTerm(article.attributes.summary, searchTerm) ||
-        containsText(article.attributes.content, searchTerm)
+        article.attributes.title
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        article.attributes.summary
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
+        containsText(article.attributes.content, searchTerm.toLowerCase())
       );
     });
   }
@@ -58,11 +49,16 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
     });
   }
 
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
   const currentArticles = filteredArticles.slice(
     indexOfFirstArticle,
     indexOfLastArticle
   );
 
+  if (!currentArticles) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="p-[100px] max-w-full mx-auto">
       <TextField
