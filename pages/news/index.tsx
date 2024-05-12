@@ -1,6 +1,6 @@
 import ImageCarousel from "@/components/imageCarousel";
 import { getArticleProps } from "@/utils/articleApi";
-import { Article } from "./types";
+import { Article } from "../../types/types";
 import NewsHomepage from "@/pages/news/newsHomepage";
 
 interface NewsProps {

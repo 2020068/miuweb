@@ -9,7 +9,7 @@ import { Bachelorprograms, Masterprograms } from "../constants/programs";
 import MoreBanners from "@/components/moreBanners";
 import FeaturedNews from "@/components/featuredNews";
 import { getArticleProps } from "@/utils/articleApi";
-import { ArticleProps } from "./news/types";
+import { ArticleProps } from "../types/types";
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
 const App = ({ articles }: ArticleProps) => {

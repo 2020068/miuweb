@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Article } from "@/pages/news/types";
+import { Article } from "@/types/types";
 import { getStrapiURL } from "@/utils/api";
 
 interface ArticleCardProps {

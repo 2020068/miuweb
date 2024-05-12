@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Article } from "@/pages/news/types";
+import { Article } from "@/types/types";
 
 import { Pagination, TextField } from "@mui/material";
 import NewsCard from "./newsCard";

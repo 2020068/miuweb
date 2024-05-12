@@ -1,5 +1,5 @@
 import React from "react";
-import { Article } from "@/pages/news/types";
+import { Article } from "@/types/types";
 import { getStrapiURL } from "@/utils/api";
 
 interface Props {
