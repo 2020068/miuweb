@@ -10,9 +10,16 @@ import MoreBanners from "@/components/moreBanners";
 import FeaturedNews from "@/components/featuredNews";
 import { getArticleProps } from "@/utils/articleApi";
 import { ArticleProps } from "./news/types";
+import Head from "next/head";
+import { useTranslation } from "react-i18next";
 const App = ({ articles }: ArticleProps) => {
+  const { t } = useTranslation();
   return (
     <div className="bg-white">
+      <Head>
+        <title>{t("homepage.miu")}</title>
+        <link rel="icon" href="/logos/MinMIU.png" />
+      </Head>
       <HomePage />
       <div id="banner">
         <Banner />

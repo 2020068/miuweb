@@ -69,7 +69,6 @@ const ApplyPage: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form data:", formData);
     const formattedDate = formData.graddate
       ? formData.graddate.toISOString().split("T")[0]
       : null;
@@ -92,8 +91,6 @@ const ApplyPage: React.FC = () => {
         requestBody, // Send the modified request body
         config
       );
-      console.log("Response:", response.data);
-      console.log("Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);
     }
