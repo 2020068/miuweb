@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import FastRewindTwoToneIcon from "@mui/icons-material/FastRewindTwoTone";
-import { Grid, Box, Typography, CardMedia } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import DBuiling from "./CCElements/DBuilding";
 import MBuilding from "./CCElements/MBuilding";
 import MIS from "./CCElements/MIS";
@@ -58,17 +58,19 @@ const Campus: React.FC = () => {
           //   rgb(47, 132, 203, 0.8) 80%,
           //   #4cb8d8)`,
           borderBottom: "solid 2px #173992",
-        }}>
+        }}
+      >
         <Grid
           item
-          className='campus-container'
+          className="campus-container"
           xs={12}
           sx={{
             borderBottom: "solid 2px #173992",
-          }}>
-          <Grid container justifyContent='flex-front'>
-            <Link href='..'>
-              <button className='campus-button bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]'>
+          }}
+        >
+          <Grid container justifyContent="flex-front">
+            <Link href="..">
+              <button className="campus-button bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]">
                 <FastRewindTwoToneIcon />
               </button>
             </Link>
@@ -81,15 +83,17 @@ const Campus: React.FC = () => {
             width: { lg: "100%", xs: "100vh" },
 
             marginTop: "50px",
-          }}>
+          }}
+        >
           <Grid container spacing={3} sx={{ marginBottom: "100px" }}>
             <Grid
               item
               xs={12}
               lg={6}
-              sx={{ marginTop: "20px", marginBottom: "100px" }}>
+              sx={{ marginTop: "20px", marginBottom: "100px" }}
+            >
               <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                   marginLeft: { lg: "100px", xs: "0px" },
                   fontSize: "60px",
@@ -98,7 +102,8 @@ const Campus: React.FC = () => {
                   top: "200px",
                   marginBottom: { lg: "0", xs: "50px" },
                   WebkitTextStroke: "2px #173992",
-                }}>
+                }}
+              >
                 About Campus
               </Typography>
             </Grid>
@@ -106,21 +111,24 @@ const Campus: React.FC = () => {
               <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}>
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box
                       sx={{
                         width: "600px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "50px",
-                      }}>
+                      }}
+                    >
                       <Box
                         sx={{
                           borderLeft: "solid 2px #173992",
                           marginTop: "30px",
-                        }}>
+                        }}
+                      >
                         <Box sx={{ marginLeft: "30px" }}>
-                          <Typography variant='h3'>
+                          <Typography variant="h3">
                             {catType[0].Name}
                           </Typography>
                         </Box>
@@ -133,21 +141,24 @@ const Campus: React.FC = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}>
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box
                       sx={{
                         width: "600px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "50px",
-                      }}>
+                      }}
+                    >
                       <Box
                         sx={{
                           borderLeft: "solid 2px #173992",
                           marginTop: "30px",
-                        }}>
+                        }}
+                      >
                         <Box sx={{ marginLeft: "30px" }}>
-                          <Typography variant='h3'>
+                          <Typography variant="h3">
                             {catType[1].Name}
                           </Typography>
                         </Box>
@@ -160,21 +171,24 @@ const Campus: React.FC = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}>
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box
                       sx={{
                         width: "600px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "50px",
-                      }}>
+                      }}
+                    >
                       <Box
                         sx={{
                           borderLeft: "solid 2px #173992",
                           marginTop: "30px",
-                        }}>
+                        }}
+                      >
                         <Box sx={{ marginLeft: "30px" }}>
-                          <Typography variant='h3'>
+                          <Typography variant="h3">
                             {catType[2].Name}
                           </Typography>
                         </Box>
@@ -187,21 +201,24 @@ const Campus: React.FC = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}>
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box
                       sx={{
                         width: "600px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "50px",
-                      }}>
+                      }}
+                    >
                       <Box
                         sx={{
                           borderLeft: "solid 2px #173992",
                           marginTop: "30px",
-                        }}>
+                        }}
+                      >
                         <Box sx={{ marginLeft: "30px" }}>
-                          <Typography variant='h3'>
+                          <Typography variant="h3">
                             {catType[3].Name}
                           </Typography>
                         </Box>
@@ -214,21 +231,24 @@ const Campus: React.FC = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <Box
-                    sx={{ display: "flex", justifyContent: "space-between" }}>
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <Box
                       sx={{
                         width: "600px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "50px",
-                      }}>
+                      }}
+                    >
                       <Box
                         sx={{
                           borderLeft: "solid 2px #173992",
                           marginTop: "30px",
-                        }}>
+                        }}
+                      >
                         <Box sx={{ marginLeft: "30px" }}>
-                          <Typography variant='h3'>
+                          <Typography variant="h3">
                             {catType[4].Name}
                           </Typography>
                         </Box>
