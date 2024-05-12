@@ -87,7 +87,7 @@ const HomePage = () => {
       </div>
 
       <div
-        className={`absolute inset-0 z-40 flex justify-center items-center top-[30%] ${
+        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[50%] top-[30%] ${
           showSpan
             ? "opacity-100 transition-opacity duration-1000"
             : "opacity-0"
