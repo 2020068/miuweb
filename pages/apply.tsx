@@ -67,13 +67,14 @@ const ApplyPage: React.FC = () => {
     degreelevel: "",
   });
 
-  const token =
-    "3636a7528d3bc250df940378a4d5d837c9d5a48de167a6428402b09a199f3b6fdceb82c9d9371ed554bb29c64badd877d972dc0e3fc35ec9dbc55c28ba2740961d9cee48761ffdfd06ad0d27560ace978b4e6aa02b35fb71e45f9b3bb6a9eaaadfecfb642ffb6fef8c00014ffb6a4d31960f6a7fa215d0b0a29ea1b0f237bdea";
+  const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form data:", formData);
-
+    const formattedDate = formData.graddate
+      ? formData.graddate.toISOString().split("T")[0]
+      : null;
     try {
       const config = {
         headers: {
@@ -83,11 +84,13 @@ const ApplyPage: React.FC = () => {
       };
 
       const requestBody = {
-        data: formData, // Wrap formData in a 'data' key
+        data: {
+          ...formData,
+          graddate: formattedDate,
+        },
       };
-
       const response = await axios.post(
-        "http://127.0.0.1:1337/api/forms",
+        "http://localhost:1337/api/forms",
         requestBody, // Send the modified request body
         config
       );

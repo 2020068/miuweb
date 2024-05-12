@@ -44,7 +44,7 @@ const Menu: React.FC<MenuProps> = ({
     <div
       className={` h-screen bg-gray-500 bg-opacity-0  transform mt-8
           ${sidebarMenuOpen ? "-translate-x-full" : "translate-x-0"}
-          -translate-y-[50vh] transition-transform duration-500 ease-in-out`}>
+          -translate-y-[50vh] 2xl:-translate-y-[50vh] md:-translate-y-[30vh] transition-transform duration-500 ease-in-out`}>
       <div className='flex flex-col items-end justify-end h-full'>
         {/* Larger Buttons */}
 

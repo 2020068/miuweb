@@ -29,6 +29,9 @@ const App = ({ articles }: ArticleProps) => {
       </div>
       <MoreBanners />
       <FeaturedNews articles={articles} />
+      <div className="bg-gradient-to-b from-indigo-300 to-blue-500 w-full h-[600px]">
+        <img src="/miu-campus.png" className="w-full h-full" alt="campus" />
+      </div>
     </div>
   );
 };
