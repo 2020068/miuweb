@@ -207,11 +207,6 @@ const Social: React.FC = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Link href='..'>
-        <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
-          back
-        </Button>
-      </Link>
     </Grid>
   );
 };

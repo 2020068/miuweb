@@ -16,6 +16,10 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Link from "next/link";
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@/components/carousel/EmblaCarousel";
+import Fresh from "./Fresh/Fresh";
+import Social from "./Social/Social";
+import Survive from "./Survive/Survive";
+import Success from "./Success/Success";
 
 const OPTIONS: EmblaOptionsType = {};
 const SLIDE_COUNT = 5;
@@ -41,21 +45,22 @@ const Img = styled("img")({
 });
 
 const buttons = [
-  <Link href='./tips/Fresh/Fresh' key='one'>
-    <Button key='one'>ADVICE FOR NEW COLLEGE STUDENTS</Button>
-  </Link>,
-  <Link href='./tips/Success/Success' key='two'>
-    <Button key='two'>COLLEGE TIPS FOR SUCCESS IN CLASS</Button>
-  </Link>,
-  <Link href='./tips/Survive/Survive' key='three'>
-    <Button key='three'>HOW TO SURVIVE FRESHMAN IN DORM</Button>
-  </Link>,
-  <Link href='./tips/Solve/Solve' key='four'>
-    <Button key='four'>HOW TO MAKE FRIENDS IN COLLEGE</Button>
-  </Link>,
+  <Button key='one'>ADVICE FOR NEW COLLEGE STUDENTS</Button>,
+
+  <Button key='two'>COLLEGE TIPS FOR SUCCESS IN CLASS</Button>,
+
+  <Button key='three'>HOW TO SURVIVE FRESHMAN IN DORM</Button>,
+
+  <Button key='four'>HOW TO MAKE FRIENDS IN COLLEGE</Button>,
 ];
 
 const Tips: React.FC = () => {
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Grid container direction='column' spacing={2}>
       <Grid
@@ -170,7 +175,13 @@ const Tips: React.FC = () => {
               orientation='vertical'
               aria-label='Vertical button group'
               variant='text'>
-              {buttons}
+              {buttons.map((button, index) => (
+                <Button
+                  key={index}
+                  onClick={() => handleScrollToSection(`section-${index}`)}>
+                  {button}
+                </Button>
+              ))}
             </ButtonGroup>
           </Paper>
         </Grid>
@@ -224,6 +235,18 @@ const Tips: React.FC = () => {
           </ThemeProvider>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </Grid>
+        <div id='section-0'>
+          <Fresh />
+        </div>
+        <div id='section-1'>
+          <Success />
+        </div>
+        <div id='section-2'>
+          <Survive />
+        </div>
+        <div id='section-3'>
+          <Social />
+        </div>
       </Grid>
     </Grid>
   );
