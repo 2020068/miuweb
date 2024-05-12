@@ -7,50 +7,40 @@
 .container {
   position: relative;
   max-width: 100%;
-  height: 40rem;
+  height: 40%;
   margin: 0 auto;
+  background-image: url("../../../public/aboutPage/aboutpage/graduation.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  padding: 6.25rem; /* 100px */
-  background-image: url("../../../public/aboutPage/employee/flowerschool.jpg");
-  padding: 300px;
+  padding: 10rem;
 }
 
 .headerTitle {
-  position: absolute;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  /* -webkit-text-stroke: 3px white; */
-  z-index: 999;
-  font-size: 3.125rem; /* 50px */
-  margin-top: 13rem; /* 60px */
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  color: #173992;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
   max-width: 100%;
   height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;
 }
 
 .title {
   font-weight: bold;
-  text-align: center;
+  width: 80%;
   font-size: 1.5rem; /* 24px */
+  margin-left: 3rem;
   margin-bottom: 1.25rem; /* 20px */
   color: #333;
-  background-color: #f0f0f0;
-}
-
-.dotTitle {
-  font-weight: bold;
-  text-align: center;
-  font-size: 1.5rem; /* 24px */
-  margin-bottom: 1.25rem; /* 20px */
-  color: #f0f0f0; /* Added color property with specified value */
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
 }
 
 .employee-list {

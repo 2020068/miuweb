@@ -22,6 +22,7 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+  scroll-snap-align: center;
 }
 .cc__slide__img {
   display: block;
@@ -32,7 +33,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 .cc__slide:not(.is-snapped) {
-  opacity: 0.1;
+  opacity: 0;
 }
 .cc__content {
   padding: 10px;

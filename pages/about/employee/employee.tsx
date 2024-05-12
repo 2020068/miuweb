@@ -37,7 +37,6 @@ const Employee: React.FC<PropType> = (props) => {
   ];
   return (
     <div>
-      <div className='headerTitle'>{t("about.employee.headerTitle")}</div>
       <div className='container'>
         <div className='button'>
           <div className='flex flex-col items-end justify-end h-full'>
@@ -53,6 +52,9 @@ const Employee: React.FC<PropType> = (props) => {
             </Link>
           </div>
         </div>
+      </div>
+      <div className='sight-word'>
+        <div className='headerTitle'>{t("about.employee.headerTitle")}</div>
       </div>
       <div className='title'> {t("about.employee.title1")}</div>
 
@@ -71,12 +73,12 @@ const Employee: React.FC<PropType> = (props) => {
           </div>
         ))}
       </div>
-      <POFFICE />
-      <Planning />
-      <Academic />
-      <Admission />
-      <Marketing />
-      <General />
+      <POFFICE slides={[1, 2, 3, 4, 5]} />
+      <Planning slides={[1, 2, 3, 4, 5]} />
+      <Academic slides={[1, 2, 3, 4, 5]} />
+      <Admission slides={[1, 2, 3, 4, 5]} />
+      <Marketing slides={[1, 2, 3, 4, 5]} />
+      <General slides={[1, 2, 3, 4, 5]} />
       <div className='employeeG'>
         <img
           className='employeeG-img'

@@ -46,11 +46,8 @@ const Img = styled("img")({
 
 const buttons = [
   <Button key='one'>ADVICE FOR NEW COLLEGE STUDENTS</Button>,
-
   <Button key='two'>COLLEGE TIPS FOR SUCCESS IN CLASS</Button>,
-
   <Button key='three'>HOW TO SURVIVE FRESHMAN IN DORM</Button>,
-
   <Button key='four'>HOW TO MAKE FRIENDS IN COLLEGE</Button>,
 ];
 
@@ -73,7 +70,7 @@ const Tips: React.FC = () => {
           xs={12}
           sx={{
             borderBottom: "solid 2px #173992",
-            backgroundImage: "url('tips/back.jpg')",
+            backgroundImage: "url('aboutPage/aboutpage/graduation.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             padding: "2rem",

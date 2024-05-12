@@ -74,7 +74,9 @@ const Campus: React.FC = () => {
         <Grid container spacing={3}>
           {/* Left Column */}
           <Grid item xs={12} lg={6}>
-            <Typography variant='h2' sx={{ color: "#173992" }}>
+            <Typography
+              variant='h2'
+              sx={{ color: "#173992", marginTop: "1rem" }}>
               {t("about.campus.about")}
             </Typography>
           </Grid>
