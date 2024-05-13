@@ -5,6 +5,7 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Breadcrumb from "../visit/breadcrumb";
 
 const AboutPage: React.FC = () => {
   const { t } = useTranslation();
@@ -31,6 +32,24 @@ const AboutPage: React.FC = () => {
               </Button>
             </Link>
           </div>
+          <Breadcrumb
+            homeElement={"Home"}
+            separator={
+              <span
+                style={{
+                  fontSize: "0.8rem",
+                  fontFamily: "Arial, sans-serif",
+                  margin: "0 0.4rem",
+                  lineHeight: "1.6rem",
+                }}>
+                {"\u27A4\u200B"}
+              </span>
+            }
+            containerClasses={" "}
+            listClasses={" "}
+            activeClasses={" "}
+            capitalizeLinks={false}
+          />
         </div>
       </div>
       <div className='sight-word'>

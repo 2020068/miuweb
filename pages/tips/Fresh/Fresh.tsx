@@ -6,6 +6,7 @@ import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import ButtonBase from "@mui/material/ButtonBase";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 const theme = createTheme();
 
@@ -27,6 +28,7 @@ const Img = styled("img")({
 });
 
 const Fresh: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Grid container direction='column' spacing={2}>
       <Grid
@@ -58,7 +60,7 @@ const Fresh: React.FC = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}>
-              ADVICE FOR NEW COLLEGE STUDENTS:
+              {t("tips.Tips.fresh")}
             </Typography>
           </ThemeProvider>
         </Grid>

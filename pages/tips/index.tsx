@@ -21,6 +21,7 @@ import Social from "./Social/Social";
 import Survive from "./Survive/Survive";
 import Success from "./Success/Success";
 import Breadcrumb from "../../pages/visit/breadcrumb";
+import { useTranslation } from "react-i18next";
 
 const OPTIONS: EmblaOptionsType = {};
 const SLIDE_COUNT = 5;
@@ -53,6 +54,7 @@ const buttons = [
 ];
 
 const Tips: React.FC = () => {
+  const { t } = useTranslation();
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -93,8 +95,7 @@ const Tips: React.FC = () => {
                   width: "100%",
                   fontSize: "2rem",
                 }}>
-                College Advice For Freshman That Will Completely Change Your
-                College Experience
+                {t("tips.Tips.title")}
               </Typography>
             </ThemeProvider>
           </Grid>
@@ -146,9 +147,7 @@ const Tips: React.FC = () => {
                     marginTop: "1rem",
                     textAlign: "center",
                   }}>
-                  Looking for advice before you head off to your freshman year
-                  of college? Here is the best college advice for freshman that
-                  will make it so much easier.
+                  {t("tips.Tips.description")}
                 </Typography>
               </ThemeProvider>
               <Grid item>
@@ -167,18 +166,18 @@ const Tips: React.FC = () => {
             }}>
             <Typography
               sx={{
-                marginBottom: "10rem",
+                marginBottom: "5rem",
                 fontStyle: "italic",
                 textAlign: "center",
               }}>
-              This post is all about college advice for freshman.
+              {t("tips.Tips.advice")}
             </Typography>
             <Typography
               sx={{
-                marginBottom: "2rem",
+                marginBottom: "1rem",
                 marginLeft: "5rem",
               }}>
-              TABLE OF CONTENTS:
+              {t("tips.Tips.content")}
             </Typography>
             <ButtonGroup
               sx={{
@@ -212,18 +211,7 @@ const Tips: React.FC = () => {
                   textAlign: "center",
                   marginLeft: "5rem",
                 }}>
-                Every college student remembers how nervous they were before
-                their freshman year. I can tell you first hand I was absolutely
-                terrified. Leaving all your friends from home and going to a
-                place you essentially know no one is very intimidating. Coming
-                from a recent college graduate, I also remember being scared
-                ?-less. But, looking back I was anxious over nothing and ended
-                up meeting the best friends and making the most fun memories.
-                Although going to college is scary, it is also really exciting
-                and a great place to meet new friends and begin your career
-                path. Because I have been through college, I am here to give you
-                all my best advice - from being successful in school to making
-                life long friends your freshman year of college.
+                {t("tips.Tips.explain")}
               </Typography>
             </Grid>
           </Grid>
@@ -246,7 +234,7 @@ const Tips: React.FC = () => {
                 textAlign: "center",
                 color: "#173992",
               }}>
-              Tips for decoration in your dormitory room and living room
+              {t("tips.Tips.tips")}
             </Typography>
           </ThemeProvider>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
