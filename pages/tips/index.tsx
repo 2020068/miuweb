@@ -20,6 +20,7 @@ import Fresh from "./Fresh/Fresh";
 import Social from "./Social/Social";
 import Survive from "./Survive/Survive";
 import Success from "./Success/Success";
+import Breadcrumb from "../../pages/visit/breadcrumb";
 
 const OPTIONS: EmblaOptionsType = {};
 const SLIDE_COUNT = 5;
@@ -98,6 +99,24 @@ const Tips: React.FC = () => {
             </ThemeProvider>
           </Grid>
         </Grid>
+        <Breadcrumb
+          homeElement={"Home"}
+          separator={
+            <span
+              style={{
+                fontSize: "0.8rem",
+                fontFamily: "Arial, sans-serif",
+                margin: "0 0.4rem",
+                lineHeight: "1.6rem",
+              }}>
+              {"\u27A4\u200B"}
+            </span>
+          }
+          containerClasses={" "}
+          listClasses={" "}
+          activeClasses={" "}
+          capitalizeLinks={false}
+        />
         <Grid
           item
           direction='row'
