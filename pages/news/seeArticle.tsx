@@ -1,6 +1,5 @@
 import React from "react";
 import { Article } from "@/types/types";
-import { getStrapiURL } from "@/utils/api";
 
 interface Props {
   article: Article | null;
@@ -28,8 +27,7 @@ const SeeArticle: React.FC<Props> = ({ article }) => {
       <div className="w-full max-w-2xl mx-auto bg-white bg-cover mt-8 rounded">
         <img
           src={
-            thumbnail?.data?.attributes?.url &&
-            getStrapiURL(thumbnail.data.attributes.url)
+            thumbnail?.data?.attributes?.url && thumbnail.data.attributes.url
           }
           alt={title}
           className="w-full h-full object-cover"
