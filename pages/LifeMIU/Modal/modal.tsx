@@ -27,7 +27,7 @@ interface FormModalProps {
   handleClose: () => void;
 }
 
-export default function TutorModal({ open, handleClose }: FormModalProps) {
+const TutorModal = ({ open, handleClose }: FormModalProps) => {
   const [value, setValue] = React.useState<Dayjs | null>(
     dayjs("2022-04-17T15:30")
   );
@@ -268,4 +268,5 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
       </Grid>
     </div>
   );
-}
+};
+export default TutorModal;
