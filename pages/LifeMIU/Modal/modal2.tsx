@@ -10,7 +10,6 @@ import Grid from "@mui/material/Grid";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import { styled } from "@mui/system";
 import dayjs, { Dayjs } from "dayjs";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -118,7 +117,7 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
             >
               <FormGrid item xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DemoContainer components={["DatePicker", "DatePicker"]}>
+                  <div>
                     <div
                       style={{
                         borderRadius: "10px",
@@ -133,7 +132,7 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                         onChange={(newValue) => setValue(newValue)}
                       />
                     </div>
-                  </DemoContainer>
+                  </div>
                 </LocalizationProvider>
               </FormGrid>
 
@@ -147,7 +146,7 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                 }}
               >
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DemoContainer components={["TimeField", "TimeField"]}>
+                  <div>
                     <TimeField
                       label="Choose appointment time"
                       value={value}
@@ -159,7 +158,7 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                         marginBottom: "1rem",
                       }}
                     />
-                  </DemoContainer>
+                  </div>
                 </LocalizationProvider>
               </FormGrid>
             </Grid>

@@ -1,10 +1,7 @@
-// @ts-nocheck
-// @ts-ignore
 import * as React from "react";
 import { Grid, Modal, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import dayjs, { Dayjs } from "dayjs";
-
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -182,7 +179,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
             >
               <FormGrid item xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <Grid components={["DatePicker", "DatePicker"]}>
+                  <div>
                     <div
                       style={{
                         borderRadius: "10px",
@@ -197,7 +194,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                         onChange={(newValue) => setValue(newValue)}
                       />
                     </div>
-                  </Grid>
+                  </div>
                 </LocalizationProvider>
               </FormGrid>
 
@@ -211,7 +208,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                 }}
               >
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <Grid components={["TimeField", "TimeField"]}>
+                  <div>
                     <TimeField
                       label="Choose appointment time"
                       value={value}
@@ -223,7 +220,7 @@ export default function TutorModal({ open, handleClose }: FormModalProps) {
                         marginBottom: "1rem",
                       }}
                     />
-                  </Grid>
+                  </div>
                 </LocalizationProvider>
               </FormGrid>
             </Grid>
