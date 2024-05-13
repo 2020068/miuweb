@@ -1,11 +1,10 @@
-// @ts-nocheck
-// @ts-ignore
+/** @format */
 
 import * as React from "react";
 import { Grid, Modal, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import dayjs, { Dayjs } from "dayjs";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -17,6 +16,7 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import { Button } from "@mui/material";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo/DemoContainer";
 
 const FormGrid = styled(Grid)(() => ({
   display: "flex",
@@ -28,7 +28,7 @@ interface FormModalProps {
   handleClose: () => void;
 }
 
-const TutorModal = ({ open, handleClose }: FormModalProps) => {
+export default function TutorModal({ open, handleClose }: FormModalProps) {
   const [value, setValue] = React.useState<Dayjs | null>(
     dayjs("2022-04-17T15:30")
   );
@@ -269,5 +269,4 @@ const TutorModal = ({ open, handleClose }: FormModalProps) => {
       </Grid>
     </div>
   );
-};
-export default TutorModal;
+}
