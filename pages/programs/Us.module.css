@@ -1,4 +1,6 @@
 .container {
+    display: flex;
+    justify-content: center;
     background-color: white;
     color: black;
     margin: 0 auto;
@@ -31,7 +33,7 @@
 .programBox3,
 .programBox5 {
     grid-column: 1/4;
-    margin-left: 5%;
+    margin-left: 100px;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 .programBox5 {
@@ -40,7 +42,7 @@
 .programBox2,
 .programBox4 {
     grid-column: 3/4;
-    margin-left: -10%;
+    margin-left: 0px;
     box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
