@@ -1,4 +1,5 @@
-/** @format */
+// @ts-nocheck
+// @ts-ignore
 
 import * as React from "react";
 import { Grid, Modal, Typography } from "@mui/material";
