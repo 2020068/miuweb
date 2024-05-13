@@ -19,7 +19,6 @@ const academicProgramPage: React.FC = () => {
         textdesc=""
         image={"/images/programImg/graduation.jpg"}
       />
-      <div className={styles.programImg}></div>
       <div className={styles.Exboxes}>
         <div className={styles.Exbox1}>
           {t("academic.exchange.program")}

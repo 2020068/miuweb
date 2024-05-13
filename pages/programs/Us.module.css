@@ -1,12 +1,9 @@
 .container {
-    display: flex;
+
     justify-content: center;
     background-color: white;
     color: black;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+
 }
 
 .programBox1,
@@ -32,7 +29,7 @@
 .programBox1,
 .programBox3,
 .programBox5 {
-    grid-column: 1/4;
+
     margin-left: 100px;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
@@ -41,8 +38,9 @@
 }
 .programBox2,
 .programBox4 {
-    grid-column: 3/4;
+
     margin-left: 0px;
+    left: 1000px;
     box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 

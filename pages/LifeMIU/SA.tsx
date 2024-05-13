@@ -25,13 +25,34 @@ const SAPage: React.FC = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
+                    <div className={styles.CNtxt}>
                     Culture Night
+                    <div className={styles.uppertxt}>
+                        <br />
+                        Through Culture Night, you will know different cultures from six nationalities. Different traditional clothes, songs, instruments, and foods are here. Korean Hanbok, Russian Song with strong rhythm, Chinese Dragon Dance, Central Asian Special Meal, Mongolian Game and American Cookies are all here in one place.
+                        </div>
+                    </div>
                     </div> 
                     <div className={styles.artfestival}>
                     <Image src="/LifePage/SA/artfestival.jpg" alt="" width={400} height={100}/>
+                    <div className={styles.CNtxt}>
+                    art festival
+                    <div className={styles.uppertxt}>
+                        <br />
+                        Here you can shine like a star, it’s a great opportunity to show off your talents on the stage. There are over 10 departments’ teams ready to compete with you, so enjoy and be the star you are meant to be.
+                        </div>
+                    </div>
                     </div>
                     <div className={styles.openday}>
                     <Image src="/LifePage/SA/openday.jpg" alt="" width={400} height={100}/>
+                    <div className={styles.CNtxt}>
+                    open day
+                    <div className={styles.uppertxt}>
+                        <br />
+                    It is an event for the people outside the school. Through this event, people learn more about MIU, school activities, and student lives and participate in the international food festival, departments’ classes, and taking a free English test.  
+                    </div>
+                    </div>
+                    
                     </div> 
             <div className={styles.basketball}>
                 <div className={styles.SAText}>
@@ -54,7 +75,7 @@ const SAPage: React.FC = () => {
                 <div className={styles.SAText}>student clubs
                 <div className={styles.clubtxt}>
                     <br />
-                We aim to win while also focusing on how sports can enhance health, build character, and create community. <br /> 
+                We aim to win while also focusing on how sports can enhance health, build character, and create community. <br /> <br />
                 – Drama &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Soccer/Futzal/ <br />
                 – Ping-Pong &nbsp; &nbsp; &nbsp; &nbsp;  - Dance
                 </div>

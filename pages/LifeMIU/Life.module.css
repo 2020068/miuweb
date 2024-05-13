@@ -1,32 +1,29 @@
 /** @format */
 
 .container {
-  background-color: white;
-  color: black;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-family: "Helvetica", sans-serif;
-  overflow-x: hidden;
+    background-color: white;
+    color: black;
+    font-family: "Helvetica", sans-serif;
+    overflow-x: hidden;
 }
 .SU,
 .SS,
 .SA {
-  opacity: 0;
-  position: relative;
-  grid-column: 1/4;
-  background-color: #6b93ff;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  top: 400px;
-  left: 300px;
-  font-size: 50px;
-  color: black;
-  z-index: 30;
-  transform: translateY(60px);
+    opacity: 0;
+    position: relative;
+    background-color: #6b93ff;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 400px;
+    left: 300px;
+    font-size: 50px;
+    color: black;
+    z-index: 30;
+    transform: translateY(60px);
 }
 
 .SS {
@@ -132,8 +129,31 @@
     display: flex;
     grid-column: 1/4;
     top: 500px;
+
+}
+.cultureNight {
+    margin-bottom: 10px;
     left: 150px;
+}
+.artfestival {
+    margin-bottom: 10px;
+    left: 200px;
+}
+.openday {
     margin-bottom: 3%;
+    left: 250px;
+}
+.CNtxt,
+.AFtxt,
+.OPtxt {
+    font-size: 30px;
+    color: #668efd;
+    padding-left: 50px;
+}
+.uppertxt {
+    font-size: 14px;
+    color:black;
+    width: 450px;
 }
 .basketball,
 .club,
@@ -170,20 +190,17 @@
     color: #668efd;
 }
 .cdptxt1 {
-    font-size: 12px;
+    font-size: 14px;
     padding-right: 20px;
     color:black;
     width: 400px;
 }
-.bbtxt {
-    font-size: 12px;
+.bbtxt,
+.clubtxt,
+.textsize {
+    font-size: 14px;
     color:black;
-    width: 350px;
-}
-.clubtxt {
-    font-size: 12px;
-    color:black;
-    width: 350px;
+    width: 400px;
 }
 
 .textsize {
