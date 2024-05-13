@@ -1,32 +1,29 @@
 /** @format */
 
 .container {
-  background-color: white;
-  color: black;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-family: "Helvetica", sans-serif;
-  overflow-x: hidden;
+    background-color: white;
+    color: black;
+    font-family: "Helvetica", sans-serif;
+    overflow-x: hidden;
 }
 .SU,
 .SS,
 .SA {
-  opacity: 0;
-  position: relative;
-  grid-column: 1/4;
-  background-color: #6b93ff;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  top: 400px;
-  left: 300px;
-  font-size: 50px;
-  color: black;
-  z-index: 30;
-  transform: translateY(60px);
+    opacity: 0;
+    position: relative;
+    background-color: #6b93ff;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 400px;
+    left: 300px;
+    font-size: 50px;
+    color: black;
+    z-index: 30;
+    transform: translateY(60px);
 }
 
 .SS {
@@ -123,16 +120,90 @@
   display: flex;
   flex-direction: row;
 }
-.basketball {
-  position: relative;
-  display: flex;
-  grid-column: 2/4;
-  flex-direction: row;
-  margin-bottom: 50%;
-  top: 500px;
+
+/* Student Activity page */
+.cultureNight,
+.artfestival,
+.openday {
+    position: relative;
+    display: flex;
+    grid-column: 1/4;
+    top: 500px;
+
+}
+.cultureNight {
+    margin-bottom: 10px;
+    left: 150px;
+}
+.artfestival {
+    margin-bottom: 10px;
+    left: 200px;
+}
+.openday {
+    margin-bottom: 3%;
+    left: 250px;
+}
+.CNtxt,
+.AFtxt,
+.OPtxt {
+    font-size: 30px;
+    color: #668efd;
+    padding-left: 50px;
+}
+.uppertxt {
+    font-size: 14px;
+    color:black;
+    width: 450px;
+}
+.basketball,
+.club,
+.cdp  {
+    position: relative;
+    display: flex;
+    grid-column: 1/4;
+    flex-direction: row;
+    justify-content: center;
+    top: 500px;
+    width: fit-content;
+}
+.basketball{
+    left: 500px;
 }
 .club {
+    margin-top: 10px;
+    left: 600px;
+}
+.cdp {
+    margin-top: 10px;
+    left: 450px;
+    margin-bottom: 50%;
+
+}
+.SAText {
+    font-size: 35px;
+    padding-right: 20px;
+    color: #668efd;
+}
+.cdptxt {
+    font-size: 30px;
+    padding-right: 20px;
+    color: #668efd;
+}
+.cdptxt1 {
+    font-size: 14px;
+    padding-right: 20px;
+    color:black;
+    width: 400px;
+}
+.bbtxt,
+.clubtxt,
+.textsize {
+    font-size: 14px;
+    color:black;
+    width: 400px;
 }
 
-.sdp {
+.textsize {
+    font-size: 12px;
+    font-weight: bold;
 }

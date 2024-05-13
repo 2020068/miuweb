@@ -29,9 +29,12 @@ const Menu: React.FC<MenuProps> = ({
     router.push("/news");
   };
 
-  const navigateToPrograms = (program: string) => {
-    router.push(`/programs/${program}`);
+  const navigateToPrograms = () => {
+    router.push("/programs");
   };
+  const navigateToLEI = () => {
+    router.push("/programs/LEI")
+  }
 
   const toggleSidebarMenu = () => {
     setSidebarMenuOpen(!sidebarMenuOpen);
@@ -112,7 +115,7 @@ const Menu: React.FC<MenuProps> = ({
                 fullWidth
                 className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100 "
                 style={{ borderRadius: "8px 0 0 8px" }}
-                onClick={() => navigateToPrograms("academic-programs")}
+                onClick={() => navigateToPrograms()}
               >
                 {t("menu.programs.academicPrograms")}
               </Button>
@@ -120,7 +123,7 @@ const Menu: React.FC<MenuProps> = ({
                 fullWidth
                 className="block w-full px-4 py-2 text-gray-800 hover:bg-blue-100"
                 style={{ borderRadius: "8px 0 0 8px" }}
-                onClick={() => navigateToPrograms("LEI")}
+                onClick={() => navigateToLEI()}
               >
                 {t("menu.programs.LEI")}
               </Button>

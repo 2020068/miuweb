@@ -1,18 +1,16 @@
 .container {
     background-color: white;
     color: black;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    overflow-x: hidden;
+    font-family: "Helvetica", sans-serif;
 }
 
 .Exboxes {
-    grid-column: 1/4;
+
     width: 300px; /* Adjusted width to accommodate three boxes */
     height: 600px;
     background-color: #4070f4;
-    margin: 30% 5% 10%; /* Center the container horizontally */
+    margin: 300px 50px 300px; /* Center the container horizontally */
     opacity: 0.8;
     font-size: 20px;
     display: flex;
@@ -22,6 +20,8 @@
     text-align: center;
     position: relative; /* Position relative for the lines */
     z-index: 10;
+    top: 150px;
+    left: 40px;
 
 }
 
