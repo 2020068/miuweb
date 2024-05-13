@@ -52,19 +52,19 @@ const Planning: React.FC<PropType> = (props) => {
 
   return (
     <div>
-      <div className='title'>{t("about.employee.title3")}</div>
-      <div className='employee-list'>
+      <div className="title">{t("about.employee.title3")}</div>
+      <div className="employee-list">
         {employees.map((employee, index) => (
-          <div className='employee-item' key={index}>
-            <div className='employee-details'>
+          <div className="employee-item" key={index}>
+            <div className="employee-details">
               <img
-                className='employee-img'
+                className="employee-img"
                 src={`/aboutPage/employee/planning/planning${index + 1}.jpg`}
                 alt={`Profile of ${employee.name}`}
               />
 
-              <p className='employee-name'>{employee.name}</p>
-              <p className='employee-description'>{employee.description}</p>
+              <p className="employee-name">{employee.name}</p>
+              <p className="employee-description">{employee.description}</p>
             </div>
           </div>
         ))}

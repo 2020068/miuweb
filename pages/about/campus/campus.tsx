@@ -51,19 +51,20 @@ const Campus: React.FC = () => {
     <Grid container>
       <Grid
         item
-        className='campus-container'
+        className="campus-container"
         xs={12}
         sx={{
           borderBottom: "solid 2px #173992",
-        }}>
-        <Box className='button flex flex-col items-start justify-start h-full'>
-          <Link href='..'>
-            <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
+        }}
+      >
+        <Box className="button flex flex-col items-start justify-start h-full">
+          <Link href="..">
+            <Button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]">
               <FastRewindTwoToneIcon />
             </Button>
           </Link>
-          <Link href='../employee/employee'>
-            <Button className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'>
+          <Link href="../employee/employee">
+            <Button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]">
               <GroupTwoToneIcon />
             </Button>
           </Link>
@@ -75,8 +76,9 @@ const Campus: React.FC = () => {
           {/* Left Column */}
           <Grid item xs={12} lg={6}>
             <Typography
-              variant='h2'
-              sx={{ color: "#173992", marginTop: "1rem" }}>
+              variant="h2"
+              sx={{ color: "#173992", marginTop: "1rem" }}
+            >
               {t("about.campus.about")}
             </Typography>
           </Grid>
@@ -88,7 +90,7 @@ const Campus: React.FC = () => {
                 <Grid key={category.Id} item xs={12}>
                   <Box sx={{ width: "100%" }}>
                     <Box sx={{ borderLeft: "solid 2px #173992", mt: 2, ml: 2 }}>
-                      <Typography variant='h3' sx={{ color: "#173992" }}>
+                      <Typography variant="h3" sx={{ color: "#173992" }}>
                         {t(category.Name)}
                       </Typography>
                     </Box>

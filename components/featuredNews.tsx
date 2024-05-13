@@ -1,4 +1,4 @@
-import { ArticleProps } from "@/pages/news/types";
+import { ArticleProps } from "@/types/types";
 import { getStrapiURL } from "@/utils/api";
 import React, { useEffect } from "react";
 
