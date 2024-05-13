@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import TypewriterAnimation from "../components/typewriteAnimation";
 const imageUrls = [
   "/bannerPics/image1.jpg",
@@ -9,6 +10,7 @@ const imageUrls = [
 ];
 
 const Banner = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ const Banner = () => {
           isVisible ? "fade-in" : ""
         }`}
       >
-        Shaping Global Leaders for an Interconnected World
+        {t("banner.title")}
       </div>
       <div className="flex flex-col md:flex-row items-start justify-between max-w-full gap-8 md:flex-wrap md:justify-center">
         <div className="">
@@ -59,10 +61,13 @@ const Banner = () => {
           }`}
         >
           <div className="self-stretch font-light text-white">
-            <TypewriterAnimation children={undefined}></TypewriterAnimation>
+            <TypewriterAnimation
+              children={t("banner.typewriter")}
+            ></TypewriterAnimation>
           </div>
           <div className="self-stretch flex flex-row items-start justify-center">
             <Button
+              onClick={() => (window.location.href = "/LifeMIU/Life")}
               className="self-stretch w-48"
               endIcon={<ArrowForward />}
               disableElevation={true}
@@ -75,7 +80,7 @@ const Banner = () => {
                 "&:hover": { borderColor: "#fff" },
               }}
             >
-              LIFE AT MIU
+              {t("banner.button")}
             </Button>
           </div>
         </div>

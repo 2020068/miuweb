@@ -1,11 +1,13 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import Spline from "@splinetool/react-spline";
 import HomeImageCarousel from "@/components/homeImageCarousel";
-import HomePageLighting from "@/components/homePageLighting";
+
 import { useTranslation } from "react-i18next";
+import { Button } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import HomePageLighting from "@/components/homepageLighting";
 const HomePage = () => {
-  const router = useRouter();
   const { t } = useTranslation();
   const splineSceneUrl =
     "https://prod.spline.design/aq9nu5lzr0amJAQ1/scene.splinecode";
@@ -19,17 +21,6 @@ const HomePage = () => {
   ];
 
   const [showSpan, setShowSpan] = useState(false);
-  const colors = [
-    "bg-teal-500",
-    "bg-blue-500",
-    "bg-purple-500",
-    "bg-pink-500",
-    // Add more colors to the array
-  ];
-
-  const getRandomColor = () => {
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSpan(true);
@@ -37,6 +28,28 @@ const HomePage = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  const handleClick = () => {
+    const bannerElement = document.getElementById("banner");
+    if (bannerElement) {
+      const scrollTo = bannerElement.offsetTop;
+      const duration = 1000; // Duration of the scroll animation in milliseconds
+      const start = window.pageYOffset;
+      const distance = scrollTo - start;
+      let startTime: number | null = null;
+
+      const step = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        window.scrollTo(0, start + distance * progress);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+
+      requestAnimationFrame(step);
+    }
+  };
   return (
     <div className="min-h-screen relative">
       <div className="absolute inset-0">
@@ -48,9 +61,9 @@ const HomePage = () => {
         ))}
       </div>
 
-      <div className="absolute flex-col inset-0 z-30 xl:top-[-20%] md:top-[-10%] top-[45%] flex items-center text-center md:flex md:justify-center">
+      <div className="absolute flex-col opacity-0 sm:opacity-100 inset-0 z-30 xl:top-[-20%] md:top-[-10%] top-[45%] flex items-center text-center md:flex md:justify-center">
         <span
-          className={` uppercase font-thin text-left text-[3vh] text-white  sm:text-[4vh] md:text-[6vh] xl:text-[7vh] ${
+          className={` font-thin text-left text-[3vh] text-white  sm:text-[4vh] md:text-[6vh] xl:text-[7vh] ${
             showSpan
               ? "opacity-100 transition-opacity duration-1000"
               : "opacity-0"
@@ -62,18 +75,18 @@ const HomePage = () => {
 
       <div className="absolute flex flex-col h-full justify-center inset-0 z-30 text-center text-italic">
         <span
-          className={`pt-[149%] md:pt-[60%] xl:pt-[50%] 2xl:pt-[40%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
+          className={`pt-[149%]  md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[35%] lg:pt-[55%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
             showSpan
               ? "opacity-100 transition-opacity duration-1000"
               : "opacity-0"
           }`}
         >
-          ///
+          {t("homepage.miu.desc")}
         </span>
       </div>
 
       <div
-        className={`absolute inset-0 z-40 flex justify-center items-center top-[30%] ${
+        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[35%] xl:top-[30%] top-[30%] ${
           showSpan
             ? "opacity-100 transition-opacity duration-1000"
             : "opacity-0"
@@ -89,7 +102,14 @@ const HomePage = () => {
           allowFullScreen
         ></iframe>
       </div>
-
+      <div className="text-white text-3xl absolute inset-0 z-50  flex justify-center items-center top-[85%]">
+        <Button
+          onClick={handleClick}
+          style={{ color: "white", fontSize: "80px" }}
+        >
+          <KeyboardArrowDownIcon fontSize="inherit" />
+        </Button>
+      </div>
       <div className="absolute inset-0 z-30 opacity-80">
         <Spline className="w-full h-full " scene={splineSceneUrl} />
       </div>
