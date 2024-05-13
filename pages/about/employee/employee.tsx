@@ -10,6 +10,8 @@ import General from "./EmployeeDep/GE";
 import Admission from "./EmployeeDep/Admission";
 import FastRewindTwoToneIcon from "@mui/icons-material/FastRewindTwoTone";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 interface EmployeeType {
   // Define properties for EmployeeType here if needed
@@ -21,6 +23,7 @@ type PropType = {
 };
 
 const Employee: React.FC<PropType> = (props) => {
+  const { t } = useTranslation();
   const { slides, options } = props;
   const employees = [
     {
@@ -32,27 +35,28 @@ const Employee: React.FC<PropType> = (props) => {
       description: "President",
     },
   ];
-
   return (
     <div>
-      <div className="headerTitle">FACULTY IMFORMATION</div>
       <div className="container">
         <div className="button">
           <div className="flex flex-col items-end justify-end h-full">
             <Link href="..">
-              <button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]">
+              <Button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]">
                 <FastRewindTwoToneIcon />
-              </button>
+              </Button>
             </Link>
             <Link href="../campus/campus">
-              <button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-full mb-4 w-[100px]">
+              <Button className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[100px]">
                 <LocationOnOutlinedIcon />
-              </button>
+              </Button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="title"> LEADERSHIP</div>
+      <div className="sight-word">
+        <div className="headerTitle">{t("about.employee.headerTitle")}</div>
+      </div>
+      <div className="title"> {t("about.employee.title1")}</div>
 
       <div className="employee-list">
         {employees.map((employee, index) => (
@@ -69,12 +73,12 @@ const Employee: React.FC<PropType> = (props) => {
           </div>
         ))}
       </div>
-      <POFFICE />
-      <Planning />
-      <Academic />
-      <Admission />
-      <Marketing />
-      <General />
+      <POFFICE slides={[1, 2, 3, 4, 5]} />
+      <Planning slides={[1, 2, 3, 4, 5]} />
+      <Academic slides={[1, 2, 3, 4, 5]} />
+      <Admission slides={[1, 2, 3, 4, 5]} />
+      <Marketing slides={[1, 2, 3, 4, 5]} />
+      <General slides={[1, 2, 3, 4, 5]} />
       <div className="employeeG">
         <img
           className="employeeG-img"

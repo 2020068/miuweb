@@ -28,42 +28,46 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
-  const names = ["John", "Steven", "Kevin", "Emily", "Haewook"];
-  const descriptions = [
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
-    "Sed vestibulum, arcu vitae consequat molestie, ligula ipsum viverra mi, sit amet suscipit odio quam sit amet sapien. Donec vel nunc vitae arcu ultricies sollicitud.",
+  const names = [
+    "Idea1",
+    "Idea2",
+    "Idea3",
+    "Idea4",
+    "Idea5",
+    "Idea6",
+    "Idea7",
+    "Idea8",
   ];
   return (
     <div className='embla'>
-      <div className='embla__viewport' ref={emblaRef}>
-        <div className='embla__container'>
-          {slides.map((index) => (
-            <div className='embla__slide embla__class-names' key={index}>
-              <div className='embla__card'>
+      <div className='embla__controls'>
+        <div className='embla__viewport' ref={emblaRef}>
+          <div className='embla__container'>
+            {slides.map((index) => (
+              <div className='embla__slide embla__class-names' key={index}>
                 <img
                   className='embla__slide__img'
-                  src={`/images/slideimg/profile${index + 1}.jpg`}
+                  src={`/tips/idea/idea${index + 1}.jpg`}
                   alt={`Slide ${index + 1}`}
                 />
                 <div className='embla__card__content'>
                   <p className='embla__slide__index'> {names[index]}</p>
-                  <p className='embla__slide__description'>
-                    {descriptions[index]}
-                  </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-
-      <div className='embla__controls'>
         <div className='embla__buttons'>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton
+            onClick={onPrevButtonClick}
+            disabled={prevBtnDisabled}
+            className='embla__button embla__button--prev'
+          />
+          <NextButton
+            onClick={onNextButtonClick}
+            disabled={nextBtnDisabled}
+            className='embla__button embla__button--next'
+          />
         </div>
 
         <div className='embla__dots'>

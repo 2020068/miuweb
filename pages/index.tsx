@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import Banner from "@/components/banner";
 import HomePage from "./homepage";
@@ -28,7 +30,7 @@ const App = ({ articles }: ArticleProps) => {
       <Bubbles />
       <Marquee />
 
-      <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] flex justify-center">
+      <div className="bg-gradient-to-b from-[rgba(1,41,142,0.92)] to-[rgba(71,124,153,0.85)] flex justify-center theme-light">
         <FeaturedPrograms masters={false} programs={Bachelorprograms} />
         <FeaturedPrograms masters={true} programs={Masterprograms} />
       </div>

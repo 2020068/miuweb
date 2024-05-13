@@ -1,8 +1,20 @@
 /** @format */
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const Academic = () => {
+interface EmployeeType {
+  // Define properties for EmployeeType here if needed
+}
+
+type PropType = {
+  slides: number[];
+  options?: EmployeeType;
+};
+
+const Academic: React.FC<PropType> = (props) => {
+  const { t } = useTranslation();
+  const { slides, options } = props;
   const employees = [
     {
       name: "Jung-ho park",
@@ -37,7 +49,7 @@ const Academic = () => {
 
   return (
     <div>
-      <div className="title"> ACADEMIC & STUDENT AFFAIRS</div>
+      <div className="title"> {t("about.employee.title4")}</div>
 
       <div className="employee-list">
         {employees.map((employee, index) => (
