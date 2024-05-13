@@ -16,7 +16,7 @@ import {
   OutlinedInput,
 } from "@mui/material";
 import { Button } from "@mui/material";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo/DemoContainer";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 
 const FormGrid = styled(Grid)(() => ({
   display: "flex",

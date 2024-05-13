@@ -37,13 +37,14 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
         <Modal
           open={open}
           onClose={handleClose}
-          aria-labelledby='modal-modal-title'
-          aria-describedby='modal-modal-description'
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-          }}>
+          }}
+        >
           <Box
             sx={{
               backgroundColor: "white",
@@ -55,7 +56,8 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
               padding: "1rem",
               overflowY: "auto",
               maxHeight: "70%",
-            }}>
+            }}
+          >
             <Typography
               sx={{
                 fontFamily: "fantasy",
@@ -63,19 +65,20 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                 fontSize: "1.5rem",
                 marginBottom: "1rem",
                 marginTop: "1rem",
-              }}>
+              }}
+            >
               Find a Councelor
             </Typography>
             <FormGrid item md={6}>
-              <FormLabel htmlFor='first-name' required>
+              <FormLabel htmlFor="first-name" required>
                 First name
               </FormLabel>
               <OutlinedInput
-                id='first-name'
-                name='first-name'
-                type='name'
-                placeholder='John'
-                autoComplete='first name'
+                id="first-name"
+                name="first-name"
+                type="name"
+                placeholder="John"
+                autoComplete="first name"
                 required
                 style={{
                   borderRadius: "10px",
@@ -86,15 +89,15 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
               />
             </FormGrid>
             <FormGrid item xs={6}>
-              <FormLabel htmlFor='address1' required>
+              <FormLabel htmlFor="address1" required>
                 Contact Information
               </FormLabel>
               <OutlinedInput
-                id='address1'
-                name='address1'
-                type='address1'
-                placeholder='Enter your contact information'
-                autoComplete='shipping address-line1'
+                id="address1"
+                name="address1"
+                type="address1"
+                placeholder="Enter your contact information"
+                autoComplete="shipping address-line1"
                 required
                 style={{
                   borderRadius: "10px",
@@ -111,7 +114,8 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
               style={{
                 display: "flex",
                 alignItems: "center",
-              }}>
+              }}
+            >
               <FormGrid item xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker", "DatePicker"]}>
@@ -121,9 +125,10 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                         border: "1px solid #ccc",
                         fontSize: "16px",
                         marginBottom: "1rem",
-                      }}>
+                      }}
+                    >
                       <DatePicker
-                        label='When would you like to visit?'
+                        label="When would you like to visit?"
                         value={value}
                         onChange={(newValue) => setValue(newValue)}
                       />
@@ -139,11 +144,12 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
                   display: "flex",
                   justifyContent: "space-between",
                   marginLeft: "2rem",
-                }}>
+                }}
+              >
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["TimeField", "TimeField"]}>
                     <TimeField
-                      label='Choose appointment time'
+                      label="Choose appointment time"
                       value={value}
                       onChange={(newValue) => setValue(newValue)}
                       style={{
@@ -159,13 +165,14 @@ export default function CouncelorModal({ open, handleClose }: FormModalProps) {
             </Grid>
             <FormGrid item xs={12}>
               <FormControlLabel
-                control={<Checkbox name='saveAddress' value='yes' />}
-                label='By submitting this form, you agree to the Mongolia International University privacy notice.'
+                control={<Checkbox name="saveAddress" value="yes" />}
+                label="By submitting this form, you agree to the Mongolia International University privacy notice."
               />
             </FormGrid>
             <Button
-              className='bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]'
-              style={{ marginTop: "1rem" }}>
+              className="bg-blue-900 hover:bg-blue-500 bg-opacity-80 text-white font-bold py-3 rounded-l mb-4 w-[160px]"
+              style={{ marginTop: "1rem" }}
+            >
               Submit
             </Button>
           </Box>

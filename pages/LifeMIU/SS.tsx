@@ -12,9 +12,8 @@ import {
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import FormModal from "./Modal/modal";
-import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import CouncelorModal from "./Modal/modal2";
+import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import TutorModal from "./Modal/modal";
 
 const useStyles = makeStyles((theme) => ({
