@@ -46,11 +46,16 @@ const Departments: React.FC = () => {
 
   return (
     <div className={styles.container}>
+<<<<<<< Updated upstream:pages/programs/departments.tsx
       <ImageCarousel
         textContent="Departments"
         textdesc=""
         image={"/images/programImg/school.jpg"}
       />
+=======
+      <div className={styles.backgroundImg}></div>
+      <div className={styles.box1}>Departments</div>
+>>>>>>> Stashed changes:pages/programs/Usprograms.tsx
       <div className={styles.programBox1}>
         School of Management
         <div className={styles.PgText1}>

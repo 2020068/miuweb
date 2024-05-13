@@ -70,11 +70,19 @@ const MEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
+<<<<<<< Updated upstream
+=======
+            <div className={styles.backgroundImg}>
+>>>>>>> Stashed changes
             <ImageCarousel
                 textContent="Music Education"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MEbackgroundImg.jpg"}
+<<<<<<< Updated upstream
                 />
+=======
+                /></div>
+>>>>>>> Stashed changes
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>

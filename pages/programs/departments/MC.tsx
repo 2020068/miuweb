@@ -81,11 +81,19 @@ const MCPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
+<<<<<<< Updated upstream
+=======
+            <div className={styles.backgroundImg}>
+>>>>>>> Stashed changes
             <ImageCarousel
                 textContent="Media & Communication"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MCbackgroundImg.jpg"}
+<<<<<<< Updated upstream
                 />
+=======
+                /></div>
+>>>>>>> Stashed changes
             <div className={styles.box1}>
                 Media & Communication
             </div>
