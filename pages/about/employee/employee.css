@@ -1,36 +1,46 @@
-/** @format */
+/**
+ * Base styles
+ *
+ * @format
+ */
 
 .container {
   position: relative;
   max-width: 100%;
+  height: 40%;
   margin: 0 auto;
-  background-image: url("../../../public/aboutPage/employee/flowerschool.jpg");
+  background-image: url("../../../public/aboutPage/aboutpage/graduation.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  padding: 400px;
-  /* opacity: 70%; */
+  padding: 10rem;
 }
+
 .headerTitle {
-  position: absolute;
-  font-size: 50px;
-  font-weight: bold;
+  color: #173992;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   text-align: center;
-  -webkit-text-stroke: 3px #173992;
-  color: white;
-  background-color: transparent;
-  z-index: 999;
-  margin-top: 80px;
-  margin-left: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;
 }
 
 .title {
-  font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+  width: 80%;
+  font-size: 1.5rem; /* 24px */
+  margin-left: 3rem;
+  margin-bottom: 1.25rem; /* 20px */
   color: #333;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
 }
 
 .employee-list {
@@ -40,82 +50,113 @@
   --slide-size: 20%;
   display: flex;
   flex-direction: row;
+  flex-basis: 25%;
   flex-wrap: wrap;
   margin-bottom: var(--slide-spacing);
 }
 
 .employee-item {
-  width: 25%;
+  width: 20%;
   box-sizing: border-box;
-  padding: 10px;
   overflow: hidden;
-  height: 300px;
-  margin-bottom: 10px;
+  padding: 0.625rem; /* 10px */
+  height: 18.75rem; /* 300px */
+  margin-bottom: 0.625rem; /* 10px */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .employee-item {
+    width: 100%; /* Adjust as needed for smaller screens */
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .employee-item {
+    width: 100%; /* Adjust as needed for even smaller screens */
+  }
+}
 
 .employee-item img {
-  height: 145px;
-  width: 145px;
+  height: 9.0625rem; /* 145px */
+  width: 9.0625rem; /* 145px */
+  border: 0.25rem solid #173992; /* 4px */
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #173992;
   background-color: #efefef;
 }
 
-.employee-item .employee-details {
-  align-items: center;
-  border-radius: 10px;
-  /* background-color: #ebe9e9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  padding: 10px;
-}
 .employee-details {
-  /* background-color: #ebe9e9; */
-  border-radius: 10px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  padding: 10px;
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 300px;
-  width: 300px;
+  padding: 0.625rem; /* 10px */
+  height: 18.75rem; /* 300px */
+  width: 18.75rem; /* 300px */
 }
+
 .employee-img {
   border-radius: 50%;
   object-fit: cover;
-  height: 150px;
-  width: 150px;
   background: #efefef;
-  padding: 3px;
-  margin-bottom: 30px;
+  height: 9.375rem; /* 150px */
+  width: 9.375rem; /* 150px */
+  padding: 0.1875rem; /* 3px */
+  margin-bottom: 1.875rem; /* 30px */
 }
 
 .employee-name {
-  font-size: 1.6rem;
   font-weight: bold;
   color: #333333;
+  font-size: 1rem; /* 16px */
   margin-top: 1rem;
   margin: 0;
 }
 
 .employee-description {
-  font-size: 1.4rem;
   color: #666666;
-  margin-top: 5px;
+  font-size: 0.875rem; /* 14px */
+  margin-top: 0.3125rem; /* 5px */
   line-height: 1.6;
   margin: 0;
 }
-.employeeG {
-  font-display: none;
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .headerTitle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10rem;
+  }
+  .employee-item {
+    width: 100%;
+  }
+  .button {
+    position: relative;
+    margin-top: 0;
+  }
 }
-.employeeG-img {
-  font-display: none;
+
+@media screen and (max-width: 480px) {
+  .headerTitle {
+    font-size: 2.5rem; /* Adjust as needed */
+    margin-top: 2.5rem; /* Adjust as needed */
+    margin-top: 10rem;
+  }
+  .employee-item {
+    width: 100%;
+  }
+  .button {
+    position: relative;
+    margin-top: 0;
+  }
 }
+
 .button {
   margin-top: 30px;
   position: absolute;

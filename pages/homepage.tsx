@@ -1,14 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import Spline from "@splinetool/react-spline";
 import HomeImageCarousel from "@/components/homeImageCarousel";
-import HomePageLighting from "@/components/homePageLighting/HomePageLighting";
+
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import HomePageLighting from "@/components/homepageLighting";
 const HomePage = () => {
-  const router = useRouter();
   const { t } = useTranslation();
   const splineSceneUrl =
     "https://prod.spline.design/aq9nu5lzr0amJAQ1/scene.splinecode";
@@ -62,7 +61,7 @@ const HomePage = () => {
         ))}
       </div>
 
-      <div className="absolute flex-col inset-0 z-30 xl:top-[-20%] md:top-[-10%] top-[45%] flex items-center text-center md:flex md:justify-center">
+      <div className="absolute flex-col opacity-0 sm:opacity-100 inset-0 z-30 xl:top-[-20%] md:top-[-10%] top-[45%] flex items-center text-center md:flex md:justify-center">
         <span
           className={` font-thin text-left text-[3vh] text-white  sm:text-[4vh] md:text-[6vh] xl:text-[7vh] ${
             showSpan
@@ -76,7 +75,7 @@ const HomePage = () => {
 
       <div className="absolute flex flex-col h-full justify-center inset-0 z-30 text-center text-italic">
         <span
-          className={`pt-[149%] md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[40%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
+          className={`pt-[149%]  md:pt-[60%] uppercase font-thin xl:pt-[50%] 2xl:pt-[35%] lg:pt-[55%] text-[15px] text-white sm:text-[10px] md:text-[15px] xl:text-[20px] ${
             showSpan
               ? "opacity-100 transition-opacity duration-1000"
               : "opacity-0"
@@ -87,7 +86,7 @@ const HomePage = () => {
       </div>
 
       <div
-        className={`absolute inset-0 z-40 flex justify-center items-center top-[30%] ${
+        className={`absolute inset-0 z-40 flex justify-center items-center md:top-[35%] xl:top-[30%] top-[30%] ${
           showSpan
             ? "opacity-100 transition-opacity duration-1000"
             : "opacity-0"

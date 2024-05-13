@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -23,19 +25,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     setSidebarMenuOpen(!sidebarMenuOpen);
   };
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <Header isSearchVisible={isSearchVisible} />
-      <div className="menu-container">
+      <div className='menu-container'>
         <Menu
           toggleSearchBar={toggleSearchBar}
           toggleSidebarMenuParent={toggleSidebarMenu}
         />
       </div>
-      <div className="sidebar">
+      <div className='sidebar'>
         <Sidebar isOpen={sidebarMenuOpen}></Sidebar>
       </div>
 
-      <main className="main-content">
+      <main className='main-content'>
         <Component {...pageProps} />
       </main>
       <Footer />

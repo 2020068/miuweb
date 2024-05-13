@@ -3,7 +3,6 @@ const colors = [
   "bg-blue-500",
   "bg-purple-500",
   "bg-pink-500",
-  // Add more colors to the array
   "bg-yellow-500",
   "bg-red-500",
   "bg-green-500",

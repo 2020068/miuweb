@@ -16,7 +16,6 @@ export async function getArticleProps() {
 
     const res = await axios.get(API_URL, config);
     const articles = res.data.data;
-    console.log("Articles Data:", articles);
     return { props: { articles } };
   } catch (error) {
     console.error("Error fetching data:", error);

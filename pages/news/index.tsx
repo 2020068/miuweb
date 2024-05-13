@@ -1,8 +1,7 @@
-import NewsComponent from "../../components/newsEvent";
 import ImageCarousel from "@/components/imageCarousel";
-import FeaturedNews from "@/components/featuredNews";
 import { getArticleProps } from "@/utils/articleApi";
-import { Article } from "./types";
+import { Article } from "../../types/types";
+import NewsHomepage from "@/pages/news/newsHomepage";
 
 interface NewsProps {
   articles: Article[];
@@ -18,9 +17,8 @@ export default function News({ articles }: NewsProps) {
       />
 
       <div className="mt-[50vh] w-full">
-        <NewsComponent articles={articles} />
+        <NewsHomepage articles={articles} />
       </div>
-      <FeaturedNews articles={articles} />
     </div>
   );
 }

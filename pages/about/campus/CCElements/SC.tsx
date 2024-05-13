@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import ClassNames from "embla-carousel-class-names";
 
 type PropType = {
-  slides: number[];
+  slides?: number[];
   options?: EmblaOptionsType;
 };
 
@@ -29,19 +29,24 @@ const SC: React.FC<PropType> = (props) => {
     "Running track in the third floor of the complex.",
     "Prayer room for who wanted to pray.",
   ];
+
+  if (!slides) {
+    return <div>No slides found</div>;
+  }
+
   return (
-    <div className='cc'>
-      <div className='cc__viewport' ref={emblaRef}>
-        <div className='cc__container'>
+    <div className="cc">
+      <div className="cc__viewport" ref={emblaRef}>
+        <div className="cc__container">
           {slides.map((SC, index) => (
-            <div className='cc__slide cc__class-names' key={index}>
-              <div className='cc__content'>
-                <p className='description'>{descriptions[index]}</p>
+            <div className="cc__slide cc__class-names" key={index}>
+              <div className="cc__content">
+                <p className="description">{descriptions[index]}</p>
               </div>
               <img
-                className='cc__slide__img'
+                className="cc__slide__img"
                 src={`/aboutPage/campus/SC/SC${index + 1}.jpg`}
-                alt='Your alt text'
+                alt="Your alt text"
               />
             </div>
           ))}

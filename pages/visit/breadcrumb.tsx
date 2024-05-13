@@ -40,9 +40,10 @@ const Breadcrumb = ({
           let href = `/${pathNames.slice(0, index + 1).join("/")}`;
           let itemClasses =
             paths === href ? `${listClasses} ${activeClasses}` : listClasses;
+          let decodedLink = decodeURIComponent(link); // Decode the URL-encoded link
           let itemLink = capitalizeLinks
-            ? link[0].toUpperCase() + link.slice(1, link.length)
-            : link;
+            ? decodedLink[0].toUpperCase() + decodedLink.slice(1)
+            : decodedLink;
           return (
             <React.Fragment key={index}>
               <div className={itemClasses}>

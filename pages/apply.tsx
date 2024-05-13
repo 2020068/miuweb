@@ -1,3 +1,5 @@
+/** @format */
+
 import { InputField, SelectField } from "@/components/inputselect";
 import axios from "axios";
 import React, { useState, ChangeEvent, FormEvent } from "react";
@@ -65,32 +67,34 @@ const ApplyPage: React.FC = () => {
     degreelevel: "",
   });
 
-  const token =
-    "3636a7528d3bc250df940378a4d5d837c9d5a48de167a6428402b09a199f3b6fdceb82c9d9371ed554bb29c64badd877d972dc0e3fc35ec9dbc55c28ba2740961d9cee48761ffdfd06ad0d27560ace978b4e6aa02b35fb71e45f9b3bb6a9eaaadfecfb642ffb6fef8c00014ffb6a4d31960f6a7fa215d0b0a29ea1b0f237bdea";
-
+  const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
+  const postapi =
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337";
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form data:", formData);
-
+    const formattedDate = formData.graddate
+      ? formData.graddate.toISOString().split("T")[0]
+      : null;
     try {
       const config = {
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json", // Specify JSON content type
+          "Content-Type": "application/json",
         },
       };
 
       const requestBody = {
-        data: formData, // Wrap formData in a 'data' key
+        data: {
+          ...formData,
+          graddate: formattedDate,
+        },
       };
-
       const response = await axios.post(
-        "http://127.0.0.1:1337/api/forms",
-        requestBody, // Send the modified request body
+        postapi + "/api/forms",
+        requestBody,
         config
       );
-      console.log("Response:", response.data);
-      console.log("Form submitted successfully!");
+      console.log("Form submitted successfully:", response.data);
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -110,124 +114,124 @@ const ApplyPage: React.FC = () => {
     <div>
       <h1>Applicant Details</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <div className="input-row">
+        <div className='form-group'>
+          <div className='input-row'>
             <InputField
-              label="First Name"
-              name="firstName"
+              label='First Name'
+              name='firstName'
               value={formData.firstName}
               onChange={handleInputChange}
-              placeholder="Enter your first name"
+              placeholder='Enter your first name'
             />
             <InputField
-              label="Last Name"
-              name="lastName"
+              label='Last Name'
+              name='lastName'
               value={formData.lastName}
               onChange={handleInputChange}
-              placeholder="Enter your last name"
+              placeholder='Enter your last name'
             />
           </div>
         </div>
-        <div className="input-row">
+        <div className='input-row'>
           {/* More input fields and select fields */}
           <SelectField
-            label="Program of Study (1st choice)"
-            name="programFirstChoice"
+            label='Program of Study (1st choice)'
+            name='programFirstChoice'
             value={formData.programFirstChoice}
             onChange={handleInputChange}
             options={programOptions}
           />
           <InputField
-            label="Email"
-            name="email"
+            label='Email'
+            name='email'
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="Enter your email"
+            placeholder='Enter your email'
           />
         </div>
-        <div className="input-row">
+        <div className='input-row'>
           <InputField
-            label="Phone"
-            name="phone"
+            label='Phone'
+            name='phone'
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder="Enter your phone number"
+            placeholder='Enter your phone number'
           />
           <InputField
-            label="Registration Number"
-            name="registrationnumber"
+            label='Registration Number'
+            name='registrationnumber'
             value={formData.registrationnumber}
             onChange={handleInputChange}
-            placeholder="Enter your registration number"
+            placeholder='Enter your registration number'
           />
         </div>
-        <div className="input-row">
+        <div className='input-row'>
           <InputField
-            label="Country"
-            name="country"
+            label='Country'
+            name='country'
             value={formData.country}
             onChange={handleInputChange}
-            placeholder="Enter your country"
+            placeholder='Enter your country'
           />
           <InputField
-            label="Graduation Date"
-            name="graddate"
+            label='Graduation Date'
+            name='graddate'
             value={
               formData.graddate ? formData.graddate.toLocaleDateString() : ""
             }
             onChange={handleInputChange}
-            placeholder="Enter your graduation date"
+            placeholder='Enter your graduation date'
           />
         </div>
-        <div className="input-row">
+        <div className='input-row'>
           <InputField
-            label="School Certificate"
-            name="Schoolcertificate"
+            label='School Certificate'
+            name='Schoolcertificate'
             value={formData.Schoolcertificate}
             onChange={handleInputChange}
-            placeholder="Enter your school certificate"
+            placeholder='Enter your school certificate'
           />
           <InputField
-            label="No High School"
-            name="nohschool"
+            label='No High School'
+            name='nohschool'
             value={formData.nohschool}
             onChange={handleInputChange}
-            placeholder="Enter your no high school"
+            placeholder='Enter your no high school'
           />
         </div>{" "}
-        <div className="input-row">
+        <div className='input-row'>
           <InputField
-            label="High School Name"
-            name="hschoolname"
+            label='High School Name'
+            name='hschoolname'
             value={formData.hschoolname}
             onChange={handleInputChange}
-            placeholder="Enter your high school name"
+            placeholder='Enter your high school name'
           />
           <SelectField
-            label="Area of Study"
-            name="areaofstudy"
+            label='Area of Study'
+            name='areaofstudy'
             value={formData.areaofstudy}
             onChange={handleInputChange}
             options={areaOfStudyOptions}
           />
         </div>
-        <div className="input-row">
+        <div className='input-row'>
           <SelectField
-            label="Degree Level"
-            name="degreelevel"
+            label='Degree Level'
+            name='degreelevel'
             value={formData.degreelevel}
             onChange={handleInputChange}
             options={degreeLevelOptions}
           />
           <SelectField
-            label="Program of Study (2nd choice)"
-            name="programSecondChoice"
+            label='Program of Study (2nd choice)'
+            name='programSecondChoice'
             value={formData.programSecondChoice}
             onChange={handleInputChange}
             options={programOptions}
           />
         </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
           Submit
         </button>
       </form>

@@ -67,6 +67,7 @@ const Banner = () => {
           </div>
           <div className="self-stretch flex flex-row items-start justify-center">
             <Button
+              onClick={() => (window.location.href = "/LifeMIU/Life")}
               className="self-stretch w-48"
               endIcon={<ArrowForward />}
               disableElevation={true}
