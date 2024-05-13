@@ -58,19 +58,11 @@ const MIMPage: React.FC<PropType> = (props) => {
   
     return(
         <div className={styles.container}>
-<<<<<<< Updated upstream
-=======
-            <div className={styles.backgroundImg}>
->>>>>>> Stashed changes
             <ImageCarousel
                 textContent="Master in Business Administration"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MIMbackgroundImg.jpg"}
                 />
-<<<<<<< Updated upstream
-=======
-            </div>
->>>>>>> Stashed changes
 
             <div ref={overviewRef} className={`${styles.overview}`}>
               <br /><br /><br />

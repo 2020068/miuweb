@@ -93,19 +93,11 @@ const IRPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-<<<<<<< Updated upstream
-=======
-            <div className={styles.backgroundImg}>
->>>>>>> Stashed changes
             <ImageCarousel
                 textContent="International Relations"
                 textdesc=""
                 image={"/images/programImg/departmentImg/IRbackgroundImg.jpg"}
-<<<<<<< Updated upstream
                 />
-=======
-                /></div>
->>>>>>> Stashed changes
             <div className={styles.box1}>
                 International Relations
             </div>

@@ -85,19 +85,11 @@ const EEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-<<<<<<< Updated upstream
-=======
-            <div className={styles.backgroundImg}>
->>>>>>> Stashed changes
             <ImageCarousel
                 textContent="English Education"
                 textdesc=""
                 image={"/images/programImg/departmentImg/EEbackgroundImg.jpg"}
                 />
-<<<<<<< Updated upstream
-=======
-                </div>
->>>>>>> Stashed changes
 
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview

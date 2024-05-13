@@ -1,8 +1,6 @@
 
 .container {
   background-color: white;
-<<<<<<< Updated upstream
-=======
   color: black;
   margin: 0 auto;
   display: grid;
@@ -44,7 +42,6 @@
 
 .Introduction {
   position: relative;
->>>>>>> Stashed changes
   color: black;
   margin: 0 auto;
   display: grid;
@@ -63,13 +60,8 @@
   font-weight: bold;
   font-size: 40px;
   color: white;
-<<<<<<< Updated upstream
   margin-top: 80%;
   left: 0px;
-=======
-  margin-top: 130%;
-  left: -350px;
->>>>>>> Stashed changes
 }
 
 

@@ -59,19 +59,11 @@ const FLEPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-<<<<<<< Updated upstream
-=======
-            <div className={styles.backgroundImg}>
->>>>>>> Stashed changes
             <ImageCarousel
                 textContent="Foreigner Language Education"
                 textdesc=""
                 image={"/images/programImg/departmentImg/MIMbackgroundImg.jpg"}
-<<<<<<< Updated upstream
                 />
-=======
-                /></div>
->>>>>>> Stashed changes
             <div ref={overviewRef} className={`${styles.overview}`}>
                 <br /><br /><br /><br />
                 Overview

@@ -2,10 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styles from "./department.module.css"
 import Image from "next/image";
 import ImageCarousel from "@/components/imageCarousel";
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 interface FacultyType {
     // Define properties for EmployeeType here if needed
@@ -90,22 +86,11 @@ const IMPage: React.FC<PropType> = (props) => {
 
     return(
         <div className={styles.container}>
-<<<<<<< Updated upstream
-=======
-            <div className={styles.backgroundImg}>
->>>>>>> Stashed changes
                 <ImageCarousel
                 textContent="Buisiness Administration"
                 textdesc=""
                 image={"/images/programImg/departmentImg/IMbackgroundImg.jpg"}
                 />
-<<<<<<< Updated upstream
-=======
-            </div>
->>>>>>> Stashed changes
-            {/* <div className={styles.box1}>
-                Business Administration
-            </div> */}
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>
