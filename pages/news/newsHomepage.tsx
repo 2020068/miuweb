@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Article } from "@/pages/news/types";
+import { Article } from "@/types/types";
 
 import { Pagination, TextField } from "@mui/material";
 import NewsCard from "./newsCard";
 
 interface Props {
-  articles: Article[];
+  articles?: Article[];
 }
 
-const NewsHomepage: React.FC<Props> = ({ articles }) => {
+const NewsHomepage: React.FC<Props> = ({ articles = [] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searching, setSearching] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -56,6 +56,9 @@ const NewsHomepage: React.FC<Props> = ({ articles }) => {
     indexOfLastArticle
   );
 
+  if (!currentArticles) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="p-[100px] max-w-full mx-auto">
       <TextField

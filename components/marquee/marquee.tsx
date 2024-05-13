@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 const Marquee: React.FC = () => {
   const { t } = useTranslation();
-  console.log(t("marqueeText1"));
   return (
     <div className="marquee-container">
       <div className="content-wrapper">

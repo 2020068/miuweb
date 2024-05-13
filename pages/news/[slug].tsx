@@ -1,7 +1,7 @@
 import { getStrapiURL } from "@/utils/api";
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Article } from "./types";
+import { Article } from "../../types/types";
 import SeeArticle from "./seeArticle";
 import ImageCarousel from "@/components/imageCarousel";
 

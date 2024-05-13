@@ -12,9 +12,8 @@ import {
 import { makeStyles } from "@mui/styles";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import FormModal from "./Modal/modal";
-import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import CouncelorModal from "./Modal/modal2";
+import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined";
 import TutorModal from "./Modal/modal";
 
 const useStyles = makeStyles((theme) => ({
@@ -77,11 +76,11 @@ const SSPage: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <Grid container direction='column' spacing={2}>
+    <Grid container direction="column" spacing={2}>
       <Grid item>
         <ImageCarousel
-          textContent='Student Support'
-          textdesc='Where to turn when you need a helping hand'
+          textContent="Student Support"
+          textdesc="Where to turn when you need a helping hand"
           image={"/LifePage/Lifebg.jpg"}
         />
       </Grid>
@@ -95,20 +94,22 @@ const SSPage: React.FC = () => {
           backgroundColor: "rgba(255, 255, 255, 0.7)",
           border: "1px solid #173980",
           padding: "2rem",
-        }}>
+        }}
+      >
         <ThemeProvider theme={theme}>
           <Grid
             container
-            direction='column'
+            direction="column"
             spacing={2}
             className={classes.formContainer}
             sx={{
               backgroundColor: "rgba(255, 255, 255, 0.7)",
               marginTop: "20rem",
-            }}>
+            }}
+          >
             <Box>
               <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                   color: "#173980",
                   backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -116,7 +117,8 @@ const SSPage: React.FC = () => {
                   width: "100%",
                   fontSize: "2rem",
                   textAlign: "center",
-                }}>
+                }}
+              >
                 "Are you currently considering enlisting the expertise of a
                 tutor to augment your progress and proficiency in your
                 endeavors?"
@@ -128,7 +130,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 1.Customized Learning Plan:
               </Typography>
               <Typography>
@@ -141,7 +144,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 2. Motivation:
               </Typography>
               <Typography>
@@ -153,7 +157,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 3. Personalized Attention:
               </Typography>
               <Typography>
@@ -169,11 +174,13 @@ const SSPage: React.FC = () => {
                   display: "flex",
                   justifyContent: "end",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 If you want to find a tutor click here
                 <Button
                   onClick={handleOpenTutorModal}
-                  style={{ color: "#007bff", fontSize: "1.3rem" }}>
+                  style={{ color: "#007bff", fontSize: "1.3rem" }}
+                >
                   <ArrowRightAltOutlinedIcon />
                   Find a Tutor
                 </Button>
@@ -186,7 +193,7 @@ const SSPage: React.FC = () => {
             </Box>
             <Box>
               <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                   color: "#173980",
                   backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -194,7 +201,8 @@ const SSPage: React.FC = () => {
                   width: "100%",
                   fontSize: "2rem",
                   textAlign: "center",
-                }}>
+                }}
+              >
                 "Have you been contemplating the idea of seeking the assistance
                 of a counselor to enhance your journey towards personal growth
                 and emotional well-being?"
@@ -206,7 +214,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 1.Professional Guidance:
               </Typography>
               <Typography>
@@ -221,7 +230,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 2. Emotional Support:
               </Typography>
               <Typography>
@@ -237,7 +247,8 @@ const SSPage: React.FC = () => {
                   fontFamily: "fantasy",
                   fontStyle: "oblique",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 3. Empowerment:
               </Typography>
               <Typography>
@@ -257,11 +268,13 @@ const SSPage: React.FC = () => {
                   display: "flex",
                   justifyContent: "end",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 If you want to find a tutor click here
                 <Button
                   onClick={handleOpenCounselorModal}
-                  style={{ color: "#007bff", fontSize: "1.3rem" }}>
+                  style={{ color: "#007bff", fontSize: "1.3rem" }}
+                >
                   <ArrowRightAltOutlinedIcon />
                   Find a Counselor
                 </Button>
@@ -274,7 +287,7 @@ const SSPage: React.FC = () => {
             </Box>
             <Box sx={{ padding: "1rem", marginLeft: "2rem" }}>
               <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                   backgroundColor: "rgba(255, 255, 255, 0.7)",
                   padding: "2rem",
@@ -282,14 +295,16 @@ const SSPage: React.FC = () => {
                   fontSize: "2rem",
                   textAlign: "start",
                   marginTop: "2rem",
-                }}>
+                }}
+              >
                 Student Care Program (SCP)
               </Typography>
               <Typography
                 sx={{
                   width: "100%",
                   fontSize: "1.2rem",
-                }}>
+                }}
+              >
                 Student Care Program is a designated program for each student of
                 MIU. Please contact your department AS to get more information
                 about the program.
@@ -297,21 +312,23 @@ const SSPage: React.FC = () => {
             </Box>
             <Box sx={{ padding: "1rem", marginLeft: "2rem" }}>
               <Typography
-                variant='h2'
+                variant="h2"
                 sx={{
                   backgroundColor: "rgba(255, 255, 255, 0.7)",
                   padding: "2rem",
                   width: "100%",
                   fontSize: "2rem",
                   textAlign: "start",
-                }}>
+                }}
+              >
                 Membership Trainig Program (MTP)
               </Typography>
               <Typography
                 sx={{
                   width: "100%",
                   fontSize: "1.2rem",
-                }}>
+                }}
+              >
                 Member Training Program (MTP) is an off-campus event hosted
                 annually by each department at the start of the new academic
                 year. It aims to welcome the newly enrolled students to their
