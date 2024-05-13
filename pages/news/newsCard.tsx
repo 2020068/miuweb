@@ -17,7 +17,7 @@ const NewsCard: React.FC<ArticleCardProps> = ({ article }) => {
         <img
           src={
             article?.attributes?.thumbnail?.data?.attributes?.url &&
-            getStrapiURL(article.attributes.thumbnail.data.attributes.url)
+            article.attributes.thumbnail.data.attributes.url
           }
           alt={article?.attributes?.title ?? ""}
           className="w-full h-[40vh] object-cover"
