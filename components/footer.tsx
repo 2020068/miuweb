@@ -12,9 +12,9 @@ const Footer = () => {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false);
   const { t } = useTranslation();
   const navigateToAbout = () => {
+
     router.push("/about");
   };
-
   const handleTelephoneClick = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     if (

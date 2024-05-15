@@ -188,8 +188,8 @@ const ApplyForm: React.FC = () => {
               value={
                 formData.graddate ? formData.graddate.toLocaleDateString() : ""
               }
-              onChange={handleInputChange}
               placeholder="Enter your graduation date"
+              onChange={handleInputChange}
             />
           </div>
           <div className="input-row">
