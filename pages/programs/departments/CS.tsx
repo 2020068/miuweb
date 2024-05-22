@@ -91,14 +91,12 @@ const CsPage: React.FC<PropType> = (props) => {
       />
 
       <div ref={overviewRef} className={`${styles.overview}`}>
-        <h1>{t("csPage.overview.title")}</h1>
-        <div className={styles.h1}>
-          <p>{t("csPage.overview.description")}</p>
-        </div>
+        {t("csPage.overview.title")}
+        <div className={styles.h1}>{t("csPage.overview.description")}</div>
       </div>
 
       <div ref={curriculumRef} className={`${styles.curriculum}`}>
-        <h1>{t("csPage.curriculum.title")}</h1>
+        {t("csPage.curriculum.title")}
         <a className={styles.a}>
           <h2>{t("csPage.curriculum.year1")}</h2>
         </a>
