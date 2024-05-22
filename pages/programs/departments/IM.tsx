@@ -91,9 +91,6 @@ const IMPage: React.FC<PropType> = (props) => {
                 textdesc=""
                 image={"/images/programImg/departmentImg/IMbackgroundImg.jpg"}
                 />
-            {/* <div className={styles.box1}>
-                Business Administration
-            </div> */}
             <div ref={overviewRef} className={`${styles.overview}`}>
                 Overview
                 <div className={styles.h1}>

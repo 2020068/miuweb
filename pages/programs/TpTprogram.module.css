@@ -2,16 +2,14 @@
     background-color: white;
     color: black;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+
     overflow: hidden;
 }
 .introduction,
 .qualification,
 .contact {
     position: relative;
-    grid-column: 1/4;
-    top: 400px;
+    top: 600px;
     margin-left: 100px;
     margin-bottom: 200px;
     width: 400px;
@@ -35,12 +33,12 @@
     margin-top: 50px;
 }
 .contact {
-    margin-bottom: 500px;
+    margin-bottom: 40%;
 }
 .introductionBox,
 .qualificationBox,
 .contactBox {
-    grid-column: 2/4;
+
     position: absolute;
     width: 900px;
     height: 500px;
