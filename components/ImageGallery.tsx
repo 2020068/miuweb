@@ -20,6 +20,11 @@ const images = [
   "/images/PRimg/PR14.jpeg",
   "/images/PRimg/PR15.jpeg",
   "/images/PRimg/PR16.jpeg",
+  "/images/PRimg/Accreditation-1.jpeg",
+  "/images/PRimg/Accreditation-2.jpeg",
+  "/images/PRimg/Accreditation-3.jpeg",
+  "/images/PRimg/Accreditation-4.jpeg",
+  "/images/PRimg/Accreditation-5.jpeg",
 ];
 
 const ImageGallery: React.FC = () => {
